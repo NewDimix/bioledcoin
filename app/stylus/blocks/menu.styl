@@ -1,0 +1,183 @@
+$xs = 768px // min width for full-screen menu
+
+$menu-icon-bgc = white // color menu icon
+$menu-btn-c = white // the color of the inscription "MENU"
+$menu-btn-bgc = red // background color of the menu button
+
+
+
+//////////////////////////////////////////// Mobile (xs):
+
+// 1 level menu:
+$menu-1-bgc-m = red // background color
+$menu-1-c-m = white // text color
+
+menu-1-p-m() // padding for a/span
+    padding 17px 30px 17px 41px
+
+
+$menu-1-bw-m = 1px // border width for li
+$menu-1-bc-m = red // border color for li
+
+
+
+//////////////////////////////////////////// Desktop (sm):
+
+// 1 level menu:
+$menu-1-bgc-d = red // background color
+$menu-1-c-d = white // text color
+
+menu-1-p-d() // padding for a/span
+    padding 10px 20px
+
+
+
+menu__icon()
+    cursor pointer
+    border-radius 1px
+    height 3px
+    width 25px
+    background-color $menu-icon-bgc
+    position absolute
+    display block
+    content ''
+    transition all .2s ease .2s, transform .2s ease 0s
+
+ul()
+    list-style none
+    padding-left 0
+    transition all 0s ease-out 0s
+    margin-top 0
+    margin-bottom 0
+
+a()
+    {ibt}
+    width 100%
+    font-size-func(16)
+    font-weight 700
+    line-height 18px
+    line-height 1.8rem
+    letter-spacing 0.05em
+    text-transform uppercase
+    text-decoration none
+
+.menu
+    position relative
+
+    ul
+        ul()
+
+    li
+        hyphens()
+
+    a
+        a()
+
+    span
+        {ibt}
+        font-size-func(16)
+        font-weight 700
+        line-height 16px
+        line-height 1.6rem
+        text-transform uppercase
+        text-decoration none
+        cursor pointer
+
+    &__btn
+        width 100%
+        background-color $menu-btn-bgc
+        color $menu-btn-c
+        width 100%
+        text-align left
+        position relative
+        cursor pointer
+        user-select none
+        padding-left 45px
+        border none
+        ellipsis()
+
+        @media (min-width $xs)
+            display none
+
+        &:focus
+            outline 1px dotted red
+
+        &.open
+            .menu__icon
+                background-color transparent
+
+                &:before
+                    transform rotate(45deg)
+                    top 0
+                    transition all .2s ease 0s, transform .2s ease .2s
+
+                &:after
+                    transform rotate(-45deg)
+                    bottom 0
+                    transition all .2s ease 0s, transform .2s ease .2s
+
+    &__icon
+        position absolute
+        top 50%
+        left 10px
+        transform translatey(-50%)
+        menu__icon()
+
+        &:before, &:after
+            menu__icon()
+
+        &:before
+            top 8px
+
+        &:after
+            bottom 8px
+
+    &__title
+        text-transform uppercase
+        font-size-func(18)
+        padding-top 8px
+        padding-bottom 8px
+        font-weight 700
+
+    &__ul
+        background-color $menu-1-bgc-m
+        display none
+        max-width 100%
+
+        @media (min-width $xs)
+            background-color $menu-1-bgc-d
+            display block
+            padding 14px 0
+
+        ul
+            display none
+
+        span
+            width 100%
+            font-size-func(12)
+            line-height 16px
+            line-height 1.6rem
+            letter-spacing 0
+
+        > li
+            position relative
+            border-bottom $menu-1-bw-m solid $menu-1-bc-m
+
+            @media (min-width $xs)
+                {ibt}
+                border none
+
+            &:last-child
+                @media (min-width $xs)
+                    margin-right 0
+
+    &__link
+        menu-1-p-m()
+        color $menu-1-c-m
+
+        @media (min-width $xs)
+            menu-1-p-d()
+            color $menu-1-c-d
+
+        &:hover
+            background-color rgba(255, 255, 255, 0.15)
