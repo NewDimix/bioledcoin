@@ -1,15 +1,16 @@
-$xs = 768px // min width for full-screen menu
+$xs = 480px // min width for full-screen menu
+$sm = 992px
 
 $menu-icon-bgc = white // color menu icon
 $menu-btn-c = white // the color of the inscription "MENU"
-$menu-btn-bgc = red // background color of the menu button
+$menu-btn-bgc = #00833e // background color of the menu button
 
 
 
 //////////////////////////////////////////// Mobile (xs):
 
 // 1 level menu:
-$menu-1-bgc-m = red // background color
+$menu-1-bgc-m = #00b254 // background color
 $menu-1-c-m = white // text color
 
 menu-1-p-m() // padding for a/span
@@ -17,18 +18,18 @@ menu-1-p-m() // padding for a/span
 
 
 $menu-1-bw-m = 1px // border width for li
-$menu-1-bc-m = red // border color for li
+$menu-1-bc-m = rgba(255, 255, 255, 0.7) // border color for li
 
 
 
 //////////////////////////////////////////// Desktop (sm):
 
 // 1 level menu:
-$menu-1-bgc-d = red // background color
+$menu-1-bgc-d = transparent // background color
 $menu-1-c-d = white // text color
 
 menu-1-p-d() // padding for a/span
-    padding 10px 20px
+    padding 15px 22px
 
 
 
@@ -49,26 +50,35 @@ ul()
     transition all 0s ease-out 0s
     margin-top 0
     margin-bottom 0
+    padding-top 0
+    padding-bottom 0
 
 a()
     {ibt}
     width 100%
     font-size-func(16)
-    font-weight 700
+    font-weight 400
     line-height 18px
     line-height 1.8rem
-    letter-spacing 0.05em
-    text-transform uppercase
     text-decoration none
 
 .menu
     position relative
+    font-size 0
+
+    @media (min-width $xs)
+        display block
+        text-align center
+
+    @media (min-width $sm)
+        {ibm}
 
     ul
         ul()
 
     li
         hyphens()
+        text-align left
 
     a
         a()
@@ -78,7 +88,7 @@ a()
         font-size-func(16)
         font-weight 700
         line-height 16px
-        line-height 1.6rem
+        line-height 2.6rem
         text-transform uppercase
         text-decoration none
         cursor pointer
@@ -86,6 +96,7 @@ a()
     &__btn
         width 100%
         background-color $menu-btn-bgc
+        background linear-gradient(-27deg, rgba(48, 180, 184, 0.7) 10%, rgba(89, 220, 186, 0.7) 45%, #59dcba 55%, rgba(141, 186, 78, 0.7) 90%) center
         color $menu-btn-c
         width 100%
         text-align left
@@ -94,6 +105,8 @@ a()
         user-select none
         padding-left 45px
         border none
+        border-top 2px solid rgba(255, 255, 255, 0.7)
+        border-bottom 2px solid rgba(255, 255, 255, 0.7)
         ellipsis()
 
         @media (min-width $xs)
@@ -141,12 +154,14 @@ a()
 
     &__ul
         background-color $menu-1-bgc-m
+        background linear-gradient(-45deg, rgba(48, 180, 184, 0.7) 10%, rgba(89, 220, 186, 0.7) 50%, rgba(141, 186, 78, 0.7) 90%) center
         display none
         max-width 100%
 
         @media (min-width $xs)
             background-color $menu-1-bgc-d
-            display block
+            background none
+            display block !important
             padding 14px 0
 
         ul
@@ -174,10 +189,16 @@ a()
     &__link
         menu-1-p-m()
         color $menu-1-c-m
+        transition all .15s ease
 
         @media (min-width $xs)
             menu-1-p-d()
             color $menu-1-c-d
+            border 2px solid transparent
+            border-radius 50px
 
         &:hover
-            background-color rgba(255, 255, 255, 0.15)
+            background-color rgba(255, 255, 255, 0.1)
+
+            @media (min-width $xs)
+                border 2px solid white

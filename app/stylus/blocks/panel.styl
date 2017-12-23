@@ -1,0 +1,67 @@
+.panel
+    {ibm}
+    text-align right
+
+    .jq-selectbox
+        {ibm}
+        margin-right 10px
+
+        &:hover
+            .jq-selectbox__trigger-arrow
+                border-top-color white
+
+        &__select
+            background transparent
+            color white
+            text-shadow none
+            box-shadow none
+            border none
+            font-weight 700
+            text-transform uppercase
+            font-size-func(14)
+            padding-left 0
+            padding-right 20px
+
+        &.focused
+            .jq-selectbox__select
+                border none
+
+        &__trigger
+            border-left none
+            width 20px
+
+        &__trigger-arrow
+            border-top-color rgba(255, 255, 255, 0.6)
+            border-width 4px
+            top 50%
+            left none
+            right 0
+            transform translate(-4px, -2px)
+
+        &__dropdown
+            margin-top 0
+
+        li
+            padding-left 5px
+
+            &:hover
+                background-color red
+
+    &__login
+        {ibm}
+        text-transform uppercase
+        color white
+        text-decoration none
+        font-weight 700
+        font-size-func(14)
+        padding 8px 35px
+        border 2px solid white
+        border-radius 100px
+        transition all .15s ease
+
+        @media (min-width 768px)
+            padding 16px 70px
+
+        &:hover
+            color #3d5364
+            background-color white

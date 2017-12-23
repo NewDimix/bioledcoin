@@ -1,5 +1,104 @@
+@keyframes gradient {
+    from {
+        background url(../img/header-bg-earth.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) bottom / 150%
+    }
+    50% {
+        background url(../img/header-bg-earth.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) center / 100%
+    }
+    to {
+        background url(../img/header-bg-earth.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) top / 150%
+    }
+}
+
 .header
-    font-family Calibri
-    font-size-func(19.5)
+    font-size 0
     position relative
     z-index 9
+    background url(../img/header-bg-earth.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) center
+    text-align right
+    padding-top 10px
+    padding-bottom 20px
+    animation gradient 10s ease infinite alternate
+
+    @media (min-width 480px)
+        padding-bottom 45px
+
+    @media (min-width 992px)
+        padding-top 35px
+        padding-bottom 110px
+
+    &__logo
+        width 100px
+        float left
+
+        @media (min-width 768px)
+            width 120px
+
+        @media (min-width 992px)
+            width auto
+
+    &__panel
+        padding-top 32px
+        padding-bottom 32px
+
+        @media (min-width 992px)
+            padding-top 18px
+            float right
+
+    &__menu
+        margin 10px -10px 20px -10px
+
+        @media (min-width 480px)
+            margin-bottom 10px
+            background linear-gradient(-27deg, rgba(48, 180, 184, 0.7) 10%, rgba(89, 220, 186, 0.7) 45%, #59dcba 55%, rgba(141, 186, 78, 0.7) 90%) center
+            border-top 2px solid rgba(255, 255, 255, 0.7)
+            border-bottom 2px solid rgba(255, 255, 255, 0.7)
+
+        @media (min-width 768px)
+            margin-bottom 25px
+            margin-top 15px
+
+        @media (min-width 992px)
+            background none
+            border none
+            margin-top 18px
+            margin-left 0px
+            margin-right 4.5%
+            margin-bottom 95px
+
+        @media (min-width 1265px)
+            margin-right 96px
+
+        li
+            @media (min-width 480px)
+                margin-top -2px
+                margin-bottom -2px
+
+            &:not(:last-child)
+                @media (min-width 664px)
+                    margin-right 40px
+
+                @media (min-width 768px)
+                    margin-right 60px
+
+                @media (min-width 992px)
+                    margin-right 0
+
+    &__content
+        text-align left
+
+    &__text-block
+        @media (min-width 992px)
+            {ibt}
+            width 50%
+
+    &__stages
+        margin-left auto
+        margin-right auto
+
+        @media (min-width 992px)
+            {ibt}
+            width 50%
+            float right
+            margin-left 0
+            margin-right 0

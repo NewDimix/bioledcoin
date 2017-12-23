@@ -1,0 +1,83 @@
+.date
+    &__text
+        font-size-func(14)
+        margin-bottom 5px
+
+    &__time
+        {ibt}
+        position relative
+        text-align center
+        width 60px
+        height 60px
+        line-height 60px
+        font-size-func(30)
+        border 1px solid #e8e8e8
+        border-radius 50%
+
+        @media (min-width 400px)
+            width 70px
+            height 70px
+            line-height 70px
+            font-size-func(34)
+
+        @media (min-width 480px)
+            width 78px
+            height 78px
+            line-height 78px
+            font-size-func(38)
+
+        &:not(:last-child)
+            margin-right 11px
+
+            @media (min-width 400px)
+                margin-right 25px
+
+            @media (min-width 480px)
+                margin-right 31px
+
+        &:before
+            content ':'
+            position absolute
+            top 0
+            right -11px
+
+            @media (min-width 400px)
+                right -17px
+
+            @media (min-width 480px)
+                right -19px
+
+        &:after
+            color $black-color
+            position absolute
+            top 65%
+            left 50%
+            transform translateX(-50%)
+            font-size-func(14)
+
+        &_days
+            color #00d7e9
+
+            &:after
+                content 'Days'
+
+        &_hours
+            color #00e1c8
+
+            &:after
+                content 'Hours'
+
+        &_min
+            color #00e193
+
+            &:after
+                content 'Min'
+
+        &_sec
+            color #7eed75
+
+            &:after
+                content 'Sec'
+
+            &:before
+                display none

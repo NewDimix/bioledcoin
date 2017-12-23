@@ -1,0 +1,111 @@
+@keyframes gradientbar1 {
+    from {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 0
+    }
+    to {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 275px
+    }
+}
+
+@keyframes gradientbar2 {
+    from {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 0
+    }
+    to {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 355px
+    }
+}
+
+@keyframes gradientbar3 {
+    from {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 0
+    }
+    to {
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%) 405px
+    }
+}
+
+.progress
+    &__stages-name
+        margin-bottom 3px
+        padding-left 0
+        lis-style none
+
+        .progress__stage-item
+            color #03ddb6
+            font-weight 700
+
+    &__stages-money
+        padding-left 0
+        lis-style none
+
+    &__stage-item
+        {ibt}
+        width 33.3333%
+        font-size-func(14)
+        text-transform uppercase
+        padding-top 6px
+        padding-bottom 6px
+        transition all .15s ease
+
+        &:first-child
+            border-right 1px solid #e8e8e8
+
+        &:nth-child(2)
+            text-align center
+            border-right 1px solid #e8e8e8
+
+        &:last-child
+            text-align right
+
+        &_active
+            border-right 3px solid #03ddb6
+
+    &__bar
+        background linear-gradient(267deg, #30b4b8 8%, #8dba4e 50%, #30b4b8 92%)
+        text-align center
+        padding-left 0
+        padding-top 4px
+        padding-bottom 4px
+        border-radius 50px
+        margin-bottom 3px
+        animation gradientbar1 2s linear infinite
+
+        @media (min-width 400px)
+            padding-top 5px
+            padding-bottom 5px
+            animation-name gradientbar2
+
+        @media (min-width 480px)
+            padding-top 6px
+            padding-bottom 6px
+            animation-name gradientbar3
+
+        li
+            {ibt}
+            width 6.5px
+            height 6.5px
+            background-color rgba(255, 255, 255, 0.4)
+            border-radius 50%
+            transition all .15s ease
+
+            &:not(:last-child)
+                margin-right 3px
+
+            @media (min-width 400px)
+                width 8px
+                height 8px
+
+                &:not(:last-child)
+                    margin-right 4px
+
+            @media (min-width 480px)
+                width 9px
+                height 9px
+
+                &:not(:last-child)
+                    margin-right 5px
+
+            &.active
+                background-color white
+                box-shadow 0 0 5px 0 white

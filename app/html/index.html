@@ -1,11 +1,126 @@
 @@include('elements/index/page-start.html')
 @@include('elements/loader.html')
 <header class="header">
+    <div class="container">
+        <div class="header__logo logo">
+            <a href="index.html"><img src="img/logo.png" alt="BioLedCoin"></a>
+        </div>
+
+        <div class="header__panel panel">
+            <select class="panel__langauge js-langauge">
+                <option>Eng</option>
+                <option>Rus</option>
+            </select>
+
+            <a href="#" class="panel__login">Login</a>
+        </div>
 @@include('elements/menu.html')
+        <div class="header__content">
+            <div class="header__text-block text-block">
+                <h1 class="text-block__title">Заголовок</h1>
+
+                <div class="text-block__subtitle">
+                    <p>Таким образом сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+                </div>
+
+                <ul class="text-block__links-wrap">
+                    <li><a class="text-block__link" href="#">White paper</a></li>
+                    <li><a class="text-block__link" href="#">Бизнес план</a></li>
+                    <li><a class="text-block__link" href="#">Bounty</a></li>
+                </ul>
+
+                <ul class="text-block__social social">
+                    <li><a class="social__item social__item_linkedin" href="#">BioLedCoin Linkedin</a></li>
+                    <li><a class="social__item social__item_facebook" href="#">BioLedCoin Facebook</a></li>
+                    <li><a class="social__item social__item_instagram" href="#">BioLedCoin Instagram</a></li>
+                    <li><a class="social__item social__item_vkontakte" href="#">BioLedCoin Vkontakte</a></li>
+                    <li><a class="social__item social__item_youtube" href="#">BioLedCoin Youtube</a></li>
+                </ul>
+            </div>
+
+            <div class="header__stages stages">
+                <div class="stages__title">
+                    <p>Start PreICO</p>
+                </div>
+
+                <div class="stages__rate">
+                    <p>1 LBC = 1 waves</p>
+                </div>
+
+                <div class="stages__progress progress">
+                    <ul class="progress__stages-name">
+                        <li class="progress__stage-item">Pre-Sale</li>
+                        <li class="progress__stage-item">Pre-Ico</li>
+                        <li class="progress__stage-item">Ico</li>
+                    </ul>
+
+                    <ul class="progress__bar">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <ul class="progress__stages-money">
+                        <li class="progress__stage-item">30 000 $</li>
+
+                        <li class="progress__stage-item">60 000 $</li>
+
+                        <li class="progress__stage-item">3 000 000 $</li>
+                    </ul>
+                </div>
+
+                <div class="stages__date date">
+                    <div class="date__text">
+                        <p>Stats PreICO on <b>January 01 th</b></p>
+                    </div>
+
+                    <div class="date__time-wrap">
+                        <div class="date__time date__time_days" id="js-days">12</div>
+                        <div class="date__time date__time_hours" id="js-hours">26</div>
+                        <div class="date__time date__time_min" id="js-min">02</div>
+                        <div class="date__time date__time_sec" id="js-sec">12</div>
+                    </div>
+                </div>
+
+                <a class="stages__buy" href="#">Купить токены!</a>
+            </div>
+        </div>
+    </div>
 </header>
 
-<main class="main main_one-page">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe officiis, obcaecati, atque soluta laudantium molestiae aperiam illo possimus laborum architecto quibusdam illum quas minima earum unde, voluptate ex voluptatem ab?</p>
+<main class="main">
+    <div class="container">
+        <p>Lorem ipsum 300 normal</p>
+        <p>Lorem ipsum 300 italic</p>
+        <p>Lorem ipsum 400 normal</p>
+        <p>Lorem ipsum 700 normal</p>
+        <p>Lorem ipsum 900 normal</p>
+    </div>
 </main>
 
 <footer class="footer">

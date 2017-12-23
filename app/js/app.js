@@ -1,3 +1,47 @@
+function timer() {
+  var d = new Date();
+  var x = new Date("01 Jan 2018 00:00");
+
+  d.setTime(Date.parse(x));
+
+  var days = Math.floor(-((+new Date - d) / 1000 / 60 / 60 / 24));
+  var hours = Math.floor(-((+new Date - d) / 1000 / 60 / 60));
+  var minutes = Math.floor(-((+new Date - d) / 1000 / 60));
+  var seconds = (Math.floor(-((+new Date - d) / 1000))) - (minutes * 60);
+  minutes = minutes - (hours * 60);
+  hours = hours - (days * 24);
+
+  if (days < 0) {
+    days = "0";
+    hours = "0";
+    minutes = "0";
+    seconds = "0";
+  };
+
+  if (days <= 9) days = "0" + days;
+  if (hours <= 9) hours = "0" + hours;
+  if (minutes <= 9) minutes = "0" + minutes;
+  if (seconds <= 9) seconds = "0" + seconds;
+
+  if (document.layers) {
+    document.layers.doc_time.document.write(seconds);
+    document.layers.doc_time.document.write(minutes);
+    document.layers.doc_time.document.write(hours);
+    document.layers.doc_time.document.write(days);
+    document.layers.doc_time.document.close();
+  } else
+    document.getElementById("js-sec").innerHTML = seconds;
+    document.getElementById("js-min").innerHTML = minutes;
+    document.getElementById("js-hours").innerHTML = hours;
+    document.getElementById("js-days").innerHTML = days;
+
+  setTimeout("timer()", 1000);
+};
+
+timer();
+
+
+
 $(window).on('load', function () {
   $preloader = $('.js-loader'),
     $loader = $preloader.find('.loader__img');
@@ -47,4 +91,10 @@ $(window).on('load', function () {
     $.myfn('.js-menu-content > li');
     $.myfn('.js-menu-content > li > ul > li');
   });
+
+  (function($) {
+    $(function() {
+      $('.js-langauge').styler();
+    });
+  })(jQuery);
 });
