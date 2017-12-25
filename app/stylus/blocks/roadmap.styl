@@ -1,0 +1,198 @@
+.roadmap
+    padding-top 30px
+    padding-bottom 35px
+
+    @media (min-width 480px)
+        padding-top 38px
+        padding-bottom 45px
+
+    @media (min-width 768px)
+        padding-top 45px
+        padding-bottom 55px
+
+    @media (min-width 992px)
+        padding-top 55px
+        padding-bottom 65px
+
+    @media (min-width 1265px)
+        padding-top 65px
+        padding-bottom 75px
+
+    &__title
+        h2
+            color #3d5364
+            text-align center
+            font-weight 300
+            font-size-func(35)
+            margin-top 0
+            margin-bottom 25px
+
+            @media (min-width 480px)
+                font-size-func(38)
+                margin-bottom 40px
+
+            @media (min-width 768px)
+                font-size-func(41)
+                margin-bottom 55px
+
+            @media (min-width 992px)
+                font-size-func(44)
+                margin-bottom 75px
+
+            @media (min-width 1265px)
+                font-size-func(48)
+                margin-bottom 95px
+
+    &__slider
+        position relative
+
+        @media (min-width 768px)
+            width 60%
+            margin-left auto
+            min-height 354px
+
+        @media (min-width 880px)
+            width 55%
+            min-height 430px
+
+        @media (min-width 992px)
+            width 50%
+            min-height 500px
+
+        .roadmap__roadmap-item, .roadmap-item, .slick-slide, .slick-current, .slick-active
+            outline none
+
+    &__dots
+        @media (min-width 768px)
+            position absolute
+            margin-top 0
+            top 0
+            left -35%
+            transform translate(-50%, -73px) scale(.7)
+            padding-left 0
+
+        @media (min-width 880px)
+            transform translate(-50%, -38px) scale(.85)
+            left -42.5%
+
+        @media (min-width 992px)
+            transform translateX(-50%)
+            left -50%
+
+        li
+            width 44px
+            height 44px
+            position relative
+            list-style none
+            border-radius 50%
+            text-align center
+
+            &:not(:last-child)
+                margin-bottom 110px
+
+                &:before
+                    content ''
+                    position absolute
+                    width 14px
+                    height 114px
+                    background-color red
+                    top 100%
+                    left 50%
+                    transform translateX(-50%)
+                    margin-top 10px
+
+            &:hover
+                cursor pointer
+
+            &:after
+                position absolute
+                white-space nowrap
+                color #3d5364
+                transition all .5s ease
+                font-weight 300
+
+            &:nth-child(2n-1)
+                &:after
+                    right 100%
+                    margin-right 40px
+
+            &:nth-child(2n)
+                &:after
+                    left 100%
+                    margin-left 40px
+
+            &:first-child
+                background-color #00cccf
+                border 12px solid #00b7ba
+
+                &:before
+                    background linear-gradient(180deg, #00b7ba 10%, #00c1b3 90%)
+
+                &:after
+                    content 'Pre-ICO'
+
+            &:nth-child(2)
+                background-color #00d5d0
+                border 12px solid #00c1b3
+
+                &:before
+                    background linear-gradient(180deg, #00c1b3 10%, #00ceab 90%)
+
+                &:after
+                    content 'ICO'
+
+            &:nth-child(3)
+                background-color #00e4bf
+                border 12px solid #00ceab
+
+                &:before
+                    background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
+
+                &:after
+                    content 'Реализация'
+
+            &:last-child
+                background-color #00e4bf
+                border 12px solid #00d8a4
+
+                &:after
+                    content 'Девиденты'
+
+        button
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            border-radius 50%
+            border none
+            background-color transparent
+            width 11px
+            height 11px
+            padding 0
+            font-size 0
+            transition all .5s ease
+            outline none
+
+            &:hover
+                cursor pointer
+
+        .slick-active
+            &:after
+                color #00b7bb
+
+            button
+                background-color white
+                box-shadow 0 0 15px 4px white
+
+    .slick-arrow
+        z-index 9
+        top 12px
+
+        &:before
+            color #3d5364
+
+    .slick-prev
+        left 10%
+
+    .slick-next
+        right 10%

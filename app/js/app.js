@@ -97,4 +97,25 @@ $(window).on('load', function () {
       $('.js-langauge').styler();
     });
   })(jQuery);
+
+  $('.js-roadmap-slider').slick({
+    dots: true,
+    infinite: true,
+    fade: true,
+    speed: 700,
+    dotsClass: "roadmap__dots",
+    arrows: false,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          arrows: true,
+          fade: false
+        }
+      }
+    ]
+  });
 });
