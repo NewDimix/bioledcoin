@@ -1,4 +1,5 @@
 .stages
+    position relative
     background-color white
     color $black-color
     border-radius 5px
@@ -13,6 +14,35 @@
         padding 32px 25px
         max-width 455px
 
+    @media (min-width 992px)
+
+        &:before, &:after
+            content ''
+            position absolute
+
+        &:before
+            left -50px
+            top -40px
+            width 23px
+            height 425px
+            background-image inline('diodes-left.png')
+
+        &:after
+            left -34px
+            top -40px
+            width 537px
+            height 22px
+            background-image inline('diodes-top.png')
+
+    @media (min-width 1265px)
+
+        &:before
+            left -70px
+            top -60px
+
+        &:after
+            left -54px
+            top -60px
     &__title
         text-align center
         font-size-func(28)

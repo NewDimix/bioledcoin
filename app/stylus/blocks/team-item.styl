@@ -1,0 +1,75 @@
+.team-item
+    text-align center
+    margin-bottom 40px
+
+    &:first-child
+        @media (min-width 768px)
+            margin-right 3%
+
+        @media (min-width 992px)
+            margin-right 1.25%
+
+        @media (min-width 1265px)
+            margin-right 4.25%
+
+    &:nth-child(2)
+        @media (min-width 768px)
+            margin-right 0
+
+        @media (min-width 992px)
+            margin-right 1.25%
+
+        @media (min-width 1265px)
+            margin-right 4.25%
+
+    &:last-child
+        margin-bottom 0
+
+        @media (min-width 768px)
+            margin-right 0
+
+    @media (min-width 768px)
+        {ibt}
+        width 48.5%
+
+    @media (min-width 992px)
+        width 32.5%
+        text-align left
+
+    @media (min-width 1265px)
+        width 30.5%
+
+    &__img
+        margin-bottom 20px
+
+        img
+            {ibt}
+            width 100%
+            height auto
+
+    &__name
+        margin-bottom 7px
+        font-size-func(24)
+
+    &__post
+        font-size-func(14)
+        font-style italic
+        text-transform uppercase
+        margin-bottom 7px
+
+    &__text
+        font-size-func(14)
+        margin-bottom 17px
+
+        p
+            margin-top 0
+            margin-bottom 0
+
+    &__line
+        width 80%
+        border-top 1px solid #d6d6d6
+        border-bottom none
+        margin-bottom 10px
+
+        @media (min-width 992px)
+            width 100%
