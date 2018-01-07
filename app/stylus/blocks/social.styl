@@ -7,9 +7,28 @@
 
     li
         {ibm}
+        position relative
+        transition all .1s ease
 
         &:not(:last-child)
             margin-right 20px
+
+        &:after
+            content ''
+            position absolute
+            width 100%
+            height 3px
+            background-color transparent
+            top 100%
+            left 0
+            transition all .1s ease
+
+        &:hover
+            .social__item
+                transform translateY(-5px)
+
+            &:after
+                background-color white
 
     &__item
         {ibm}
@@ -17,6 +36,7 @@
         height 28px
         background-position center
         background-repeat no-repeat
+        transition all .1s ease
 
         &_linkedin
             background-image inline('linkedin.png')
@@ -34,6 +54,11 @@
             background-image inline('youtube.png')
 
     &_grey
+        li
+            &:hover
+                &:after
+                    background-color #b9b9b9
+
         .social__item
             &_linkedin
                 background-image inline('linkedin-grey.png')
@@ -49,3 +74,21 @@
 
             &_youtube
                 background-image inline('youtube-grey.png')
+
+    &_circle
+        li
+            &:after
+                display none
+
+        .social__item
+            border-radius 50%
+            background-color #c8ccce
+            width 30px
+            height 30px
+            background-size 60%
+
+            &_linkedin
+                background-size 50%
+
+            &_facebook
+                background-size 35%

@@ -1,0 +1,62 @@
+.news
+    padding-top 30px
+    padding-bottom 35px
+    background-image url(../img/news-bg.jpg)
+    background-size cover
+    font-size 0
+
+    @media (min-width 480px)
+        padding-top 38px
+        padding-bottom 40px
+
+    @media (min-width 768px)
+        padding-top 45px
+        padding-bottom 60px
+
+    @media (min-width 992px)
+        padding-top 55px
+        padding-bottom 80px
+
+    @media (min-width 1265px)
+        padding-top 65px
+        padding-bottom 102px
+
+    &__title
+        h2
+            color white
+            text-align center
+            font-weight 300
+            font-size-func(35)
+            margin-top 0
+            margin-bottom 25px
+
+            @media (min-width 480px)
+                font-size-func(38)
+                margin-bottom 35px
+
+            @media (min-width 768px)
+                font-size-func(41)
+                margin-bottom 45px
+
+            @media (min-width 992px)
+                font-size-func(44)
+                margin-bottom 55px
+
+            @media (min-width 1265px)
+                font-size-func(48)
+                margin-bottom 70px
+
+    & .container
+        margin-bottom 40px
+
+    & .slick-slide
+        div:first-child
+            margin-bottom 20px
+
+    &__more
+        text-align center
+
+        a
+            font-size-func(24)
+            color white
+            font-weight 300

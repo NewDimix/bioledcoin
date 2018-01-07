@@ -1,6 +1,6 @@
 function timer() {
   var d = new Date();
-  var x = new Date("01 Jan 2018 00:00");
+  var x = new Date("01 Feb 2018 00:00");
 
   d.setTime(Date.parse(x));
 
@@ -39,6 +39,12 @@ function timer() {
 };
 
 timer();
+
+objectFit.polyfill({
+  selector: '.js-news-img', // this can be any CSS selector
+  fittype: 'cover', // either contain, cover, fill or none
+  disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+});
 
 
 
@@ -118,4 +124,50 @@ $(window).on('load', function () {
       }
     ]
   });
+
+//  $('.js-news-slider').slick({
+//    dots: false,
+//    infinite: true,
+//    speed: 300,
+//    centerMode: false,
+//    variableWidth: true,
+//    slidesPerRow: 3,
+//    rows: 2,
+//    responsive: [
+//      {
+//        breakpoint: 1284,
+//        settings: {
+//          centerMode: true,
+//          slidesPerRow: 1,
+//          rows: 1
+//        }
+//      }
+//    ]
+//  });
+
+var width = window.innerWidth || document.body.clientWidth;
+var $slick = $('.js-news-slider');
+
+if(width > 1265) {
+  $slick.slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    centerMode: false,
+    variableWidth: true,
+    slidesPerRow: 3,
+    rows: 2
+  });
+} else {
+  $slick.slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    centerMode: true,
+    variableWidth: true,
+    rows: 1
+  });
+}
+
+
 });
