@@ -113,6 +113,8 @@ $(window).on('load', function () {
     arrows: false,
     slidesToShow: 1,
     adaptiveHeight: true,
+    prevArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_prev"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>',
     responsive: [
       {
         breakpoint: 768,

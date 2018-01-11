@@ -71,8 +71,8 @@
         width 20px
         top 47.8%
         border none
-        border-left 2px solid white
-        border-top 2px solid white
+        border-left 2px solid rgba(255, 255, 255, .8)
+        border-top 2px solid rgba(255, 255, 255, .8)
         padding 0
         transition all .5s ease
 
@@ -81,6 +81,14 @@
             width 30px
             top 47.5%
 
+        &:hover
+            cursor pointer
+            border-color rgba(255, 255, 255, 1)
+
+        &:focus
+            outline none
+            border-width 4px
+
         &_prev
             left -20px
             transform rotate(-45deg)
@@ -88,12 +96,18 @@
             @media (min-width 1325px)
                 left -50px
 
+            &:hover
+                transform rotate(-45deg) scale(1.15)
+
         &_next
             right -20px
             transform rotate(135deg)
 
             @media (min-width 1325px)
                 right -50px
+
+            &:hover
+                transform rotate(135deg) scale(1.15)
 
         &.slick-disabled
             border-color transparent
@@ -108,6 +122,9 @@
 
         @media (max-width 1245px)
             opacity .5
+
+        &:focus
+            outline none
 
         &.slick-current
             opacity 1

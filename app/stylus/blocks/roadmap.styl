@@ -184,15 +184,38 @@
                 background-color white
                 box-shadow 0 0 15px 4px white
 
-    .slick-arrow
+    &__arrows
         z-index 9
-        top 12px
+        position absolute
+        background-color transparent
+        font-size 0
+        height 15px
+        width 15px
+        top 6px
+        border none
+        border-left 1px solid rgba(61, 83, 100, 0.8)
+        border-top 1px solid rgba(61, 83, 100, 0.8)
+        padding 0
+        transition all .5s ease
 
-        &:before
-            color #3d5364
+        &:hover
+            cursor pointer
+            border-color rgba(61, 83, 100, 1)
 
-    .slick-prev
-        left 10%
+        &:focus
+            outline none
+            border-width 2px
 
-    .slick-next
-        right 10%
+        &_prev
+            left 10%
+            transform rotate(-45deg)
+
+            &:hover
+                transform rotate(-45deg) scale(1.2)
+
+        &_next
+            right 10%
+            transform rotate(135deg)
+
+            &:hover
+                transform rotate(135deg) scale(1.2)
