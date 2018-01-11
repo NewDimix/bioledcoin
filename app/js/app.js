@@ -125,49 +125,30 @@ $(window).on('load', function () {
     ]
   });
 
-//  $('.js-news-slider').slick({
-//    dots: false,
-//    infinite: true,
-//    speed: 300,
-//    centerMode: false,
-//    variableWidth: true,
-//    slidesPerRow: 3,
-//    rows: 2,
-//    responsive: [
-//      {
-//        breakpoint: 1284,
-//        settings: {
-//          centerMode: true,
-//          slidesPerRow: 1,
-//          rows: 1
-//        }
-//      }
-//    ]
-//  });
-
-var width = window.innerWidth || document.body.clientWidth;
-var $slick = $('.js-news-slider');
-
-if(width > 1265) {
-  $slick.slick({
+  $('.js-news-slider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     centerMode: false,
     variableWidth: true,
-    slidesPerRow: 3,
-    rows: 2
+    slidesToShow: 2,
+    prevArrow: '<button type="button" class="news__arrows news__arrows_prev"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="news__arrows news__arrows_next"><span>Next</span></button>',
+    responsive: [
+      {
+        breakpoint: 1284,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 670,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1
+        }
+      }
+    ]
   });
-} else {
-  $slick.slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    centerMode: true,
-    variableWidth: true,
-    rows: 1
-  });
-}
-
-
 });

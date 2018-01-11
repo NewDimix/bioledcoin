@@ -46,12 +46,89 @@
                 font-size-func(48)
                 margin-bottom 70px
 
-    & .container
-        margin-bottom 40px
+    .container
+        margin-bottom 18px
+        padding-left 30px
+        padding-right 30px
 
-    & .slick-slide
-        div:first-child
-            margin-bottom 20px
+        @media (min-width 480px)
+            margin-bottom 28px
+
+        @media (min-width 768px)
+            margin-bottom 32px
+
+        @media (min-width 992px)
+            margin-bottom 38px
+
+        @media (min-width 1265px)
+            margin-bottom 40px
+
+    &__arrows
+        position absolute
+        background-color transparent
+        font-size 0
+        height 20px
+        width 20px
+        top 47.8%
+        border none
+        border-left 2px solid white
+        border-top 2px solid white
+        padding 0
+        transition all .5s ease
+
+        @media (min-width 1325px)
+            height 30px
+            width 30px
+            top 47.5%
+
+        &_prev
+            left -20px
+            transform rotate(-45deg)
+
+            @media (min-width 1325px)
+                left -50px
+
+        &_next
+            right -20px
+            transform rotate(135deg)
+
+            @media (min-width 1325px)
+                right -50px
+
+        &.slick-disabled
+            border-color transparent
+
+    &__path
+        width 600px
+        margin-right 45px
+        transition all 1s ease
+
+        @media (max-width 669px)
+            margin-right 0
+
+        @media (max-width 1245px)
+            opacity .5
+
+        &.slick-current
+            opacity 1
+
+    &__row
+        margin-bottom 15px
+
+        @media (min-width 400px)
+            margin-bottom 25px
+
+        @media (min-width 590px)
+            margin-bottom 35px
+
+        @media (min-width 768px)
+            margin-bottom 40px
+
+        @media (min-width 992px)
+            margin-bottom 45px
+
+        &:last-child
+            margin-bottom 0
 
     &__more
         text-align center
