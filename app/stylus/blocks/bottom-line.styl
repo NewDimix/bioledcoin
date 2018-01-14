@@ -1,12 +1,8 @@
 .bottom-line
     background-color #ededed
-    padding-top 15px
-    padding-bottom 5px
+    padding-top 20px
+    padding-bottom 20px
     font-size 0
-
-    @media (min-width 624px)
-        padding-top 20px
-        padding-bottom 20px
 
     @media (min-width 768px)
         padding-top 30px
@@ -21,23 +17,21 @@
         padding-bottom 45px
 
     &__logo
-        width 68px
-        height 69.3px
-        margin-left auto
-        margin-right auto
-        background-image inline('logo-grey.png')
-        background-repeat no-repeat
-        background-size contain
-        margin-bottom 25px
+        display none
 
-        @media (min-width 480px)
+        @media (min-width 624px)
+            width 68px
+            height 69.3px
+            margin-left auto
+            margin-right auto
+            background-image inline('logo-grey.png')
+            background-repeat no-repeat
+            background-size contain
+            margin-bottom 0
             width 102px
             height 104px
             {ibm}
             width 30%
-
-        @media (min-width 624px)
-            margin-bottom 0
 
     &__social
         text-align center
