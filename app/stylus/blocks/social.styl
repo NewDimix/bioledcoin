@@ -38,6 +38,9 @@
         background-repeat no-repeat
         transition all .1s ease
 
+        &:focus
+            outline 1px solid white
+
         &_linkedin
             background-image inline('linkedin.png')
 
@@ -60,6 +63,9 @@
                     background-color #b9b9b9
 
         .social__item
+            &:focus
+                outline 1px solid #b9b9b9
+
             &_linkedin
                 background-image inline('linkedin-grey.png')
 
@@ -80,12 +86,22 @@
             &:after
                 display none
 
+            &:hover
+                .social__item
+                    transform translateY(0)
+                    background-color #a7a7a7
+
         .social__item
             border-radius 50%
             background-color #c8ccce
             width 30px
             height 30px
             background-size 60%
+            transition all .3s ease
+
+            &:focus
+                outline none
+                background-color #b9b9b9
 
             &_linkedin
                 background-size 50%

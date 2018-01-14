@@ -1,22 +1,17 @@
 .bounty
     padding-top 30px
-    padding-bottom 35px
 
     @media (min-width 480px)
         padding-top 38px
-        padding-bottom 45px
 
     @media (min-width 768px)
         padding-top 45px
-        padding-bottom 65px
 
     @media (min-width 992px)
         padding-top 55px
-        padding-bottom 85px
 
     @media (min-width 1265px)
         padding-top 65px
-        padding-bottom 114px
 
     &__title
         h2
@@ -25,20 +20,100 @@
             font-weight 300
             font-size-func(35)
             margin-top 0
-            margin-bottom 25px
+            margin-bottom 24px
 
             @media (min-width 480px)
                 font-size-func(38)
-                margin-bottom 40px
+                margin-bottom 28px
 
             @media (min-width 768px)
                 font-size-func(41)
-                margin-bottom 55px
+                margin-bottom 32px
 
             @media (min-width 992px)
                 font-size-func(44)
-                margin-bottom 75px
+                margin-bottom 36px
 
             @media (min-width 1265px)
                 font-size-func(48)
-                margin-bottom 95px
+                margin-bottom 40px
+
+    &__img
+        margin-bottom 15px
+        max-width 400px
+        margin-left auto
+        margin-right auto
+        position relative
+        z-index 1
+
+        @media (min-width 768px)
+            float left
+            max-width 50%
+            margin-right 5%
+
+        img
+            display block
+            width 100%
+
+    &__content
+        text-align center
+
+        @media (min-width 768px)
+            padding-top 25px
+            text-align left
+
+    &__subtitle
+        margin-bottom 20px
+
+        @media (min-width 768px)
+            margin-bottom 40px
+
+        h3
+            font-weight 400
+            margin-top 0
+            margin-bottom 0
+            margin-top 0
+            margin-bottom 0
+            font-size-func(24)
+
+    &__text
+        font-size-func(14)
+        line-height 2em
+        margin-bottom 20px
+
+        @media (min-width 480px)
+            margin-bottom 25px
+
+        @media (min-width 768px)
+            margin-bottom 30px
+
+        @media (min-width 992px)
+            margin-bottom 35px
+
+        @media (min-width 1265px)
+            margin-bottom 40px
+
+    &__link
+        {ibm}
+        position relative
+        text-transform uppercase
+        color white
+        background-color #00d08e
+        text-decoration none
+        font-weight 700
+        font-size-func(14)
+        padding 20px 30px
+        border-radius 100px
+        text-align center
+        transition all .15s ease
+        z-index 1
+
+        &:hover
+            background-color rgba(0, 208, 142, 0.7)
+
+        &:focus
+            outline none
+            background-color rgba(0, 208, 142, 0.7)
+
+        &:active
+            transform scale(.95)

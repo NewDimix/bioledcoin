@@ -130,7 +130,6 @@ $(window).on('load', function () {
   $('.js-news-slider').slick({
     dots: false,
     infinite: false,
-    speed: 300,
     centerMode: false,
     variableWidth: true,
     slidesToShow: 2,

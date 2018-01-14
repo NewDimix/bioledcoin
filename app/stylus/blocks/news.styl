@@ -74,9 +74,9 @@
         border-left 2px solid rgba(255, 255, 255, .8)
         border-top 2px solid rgba(255, 255, 255, .8)
         padding 0
-        transition all .5s ease
+        transition transform .5s ease
 
-        @media (min-width 1325px)
+        @media (min-width 1370px)
             height 30px
             width 30px
             top 47.5%
@@ -93,7 +93,7 @@
             left -20px
             transform rotate(-45deg)
 
-            @media (min-width 1325px)
+            @media (min-width 1370px)
                 left -50px
 
             &:hover
@@ -103,7 +103,7 @@
             right -20px
             transform rotate(135deg)
 
-            @media (min-width 1325px)
+            @media (min-width 1370px)
                 right -50px
 
             &:hover
@@ -113,8 +113,8 @@
             border-color transparent
 
     &__path
-        width 600px
-        margin-right 45px
+        width 582.5px
+        margin-right 40px
         transition all 1s ease
 
         @media (max-width 669px)
@@ -154,3 +154,9 @@
             font-size-func(24)
             color white
             font-weight 300
+            text-decoration none
+            border-bottom 1px solid white
+            padding-bottom 5px
+
+            &:focus
+                outline-color white

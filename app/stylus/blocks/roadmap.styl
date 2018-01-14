@@ -46,6 +46,15 @@
     &__slider
         position relative
 
+        &:before
+            @media (min-width 768px)
+                content inline('rectangle2.png')
+                position absolute
+                left 0
+                bottom 0
+                transform translate(-290px, 220px)
+                z-index 9
+
         @media (min-width 768px)
             width 60%
             margin-left auto
@@ -111,12 +120,12 @@
                 transition all .5s ease
                 font-weight 300
 
-            &:nth-child(2n-1)
+            &:nth-child(2n)
                 &:after
                     right 100%
                     margin-right 40px
 
-            &:nth-child(2n)
+            &:nth-child(2n-1)
                 &:after
                     left 100%
                     margin-left 40px

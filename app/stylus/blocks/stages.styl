@@ -15,7 +15,6 @@
         max-width 455px
 
     @media (min-width 992px)
-
         &:before, &:after
             content ''
             position absolute
@@ -35,7 +34,6 @@
             background-image inline('diodes-top.png')
 
     @media (min-width 1265px)
-
         &:before
             left -70px
             top -60px
@@ -43,6 +41,7 @@
         &:after
             left -54px
             top -60px
+
     &__title
         text-align center
         font-size-func(28)
@@ -99,6 +98,10 @@
             {ibm}
 
         &:hover
+            background-color rgba(0, 208, 142, 0.7)
+
+        &:focus
+            outline none
             background-color rgba(0, 208, 142, 0.7)
 
         &:active

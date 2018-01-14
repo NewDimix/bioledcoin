@@ -14,13 +14,16 @@
     &:last-child
         margin-right 0
 
-    &:hover
+    &:hover, &:focus
         .news-item__img
             img
                 opacity 1
 
         .news-item__gradient
             transform translateY(0)
+
+    &:focus
+        outline none
 
     &_small
         display block
@@ -31,7 +34,7 @@
             width 46.5%
             margin-bottom 0
 
-        &:hover
+        &:hover, &:focus
             .news-item__img
                 img
                     transform scale(1.125)
@@ -39,7 +42,7 @@
     &_big
         display block
 
-        &:hover
+        &:hover, &:focus
             .news-item__img
                 img
                     transform scale(1.065)
