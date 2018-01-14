@@ -98,6 +98,15 @@ $(window).on('load', function () {
     $.myfn('.js-menu-content > li > ul > li');
   });
 
+  $(".js-menu").on("click","a", function (event) {
+    event.preventDefault();
+
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+
+    $('body,html').animate({scrollTop: top}, 500);
+  });
+
   (function($) {
     $(function() {
       $('.js-langauge').styler();
