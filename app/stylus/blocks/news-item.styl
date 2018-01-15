@@ -68,6 +68,8 @@
         padding 9px 10px
         color white
         font-size-func(14)
+        hyphens()
+        width 100%
 
         @media (min-width 400px)
             padding 12px 14px
@@ -80,9 +82,13 @@
     &__date
         position relative
         margin-bottom 8px
+        ellipsis()
 
     &__title
         position relative
+        max-height 50px
+        overflow hidden
+        hyphens()
 
         h3
             margin-top 0

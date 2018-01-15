@@ -47,6 +47,7 @@
         font-size-func(28)
         font-weight 300
         margin-bottom 10px
+        ellipsis()
 
         @media (min-width 480px)
             {ibb}
@@ -59,6 +60,7 @@
         font-size-func(20)
         font-weight 900
         margin-bottom 30px
+        ellipsis()
 
         @media (min-width 480px)
             {ibb}
@@ -88,11 +90,13 @@
         text-decoration none
         font-weight 700
         font-size-func(14)
-        padding 16px 0
+        padding 16px 10px
         border-radius 100px
         text-align center
-        width 190px
+        min-width 190px
+        max-width 100%
         transition all .15s ease
+        ellipsis()
 
         @media (min-width 992px)
             {ibm}

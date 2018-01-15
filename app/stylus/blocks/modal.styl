@@ -10,6 +10,7 @@
 .modal
     &__title
         margin-bottom 35px
+        hyphens()
 
         h3
             margin-top 0
@@ -26,6 +27,7 @@
         p
             margin-bottom 8px
             font-weight 700
+            ellipsis()
 
         span
             color #9ea9b1
@@ -69,6 +71,7 @@
                     text-align center
                     color #9ea9b1
                     transition all .3s ease
+                    hyphens()
 
                     &:nth-of-type(5n)
                         margin-right 0
@@ -201,9 +204,11 @@
                 position absolute
 
                 & + span
+                    display block
                     position relative
-                    padding 5px 5px 5px 30px
-                    margin-left -4px
+                    padding 5px
+                    margin-left 30px
+                    hyphens()
 
                     &:hover
                         cursor pointer
@@ -216,7 +221,7 @@
                         outline 1px solid #dddddd
                         background-color white
                         position absolute
-                        left 4px
+                        left -24px
                         top 50%
                         transform translateY(-50%)
                         transition all .15s ease
@@ -228,9 +233,6 @@
                 &:focus + span
                     &:before
                         outline-color #00d08e
-
-                &:active + span
-                    outline 1px solid #00d08e
 
         &_button
             margin-bottom 0

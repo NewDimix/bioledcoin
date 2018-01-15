@@ -18,6 +18,7 @@
         margin-top 0
         margin-bottom 10px
         font-weight 400
+        hyphens()
 
         @media (min-width 480px)
             font-size-func(50)
@@ -35,6 +36,7 @@
         font-size-func(14)
         line-height 1.6em
         margin-bottom 20px
+        hyphens()
 
         @media (min-width 768px)
             font-size-func(16)
@@ -72,23 +74,24 @@
         text-decoration none
         font-weight 700
         font-size-func(14)
-        padding 8px 0
+        padding 8px 10px
         border 2px solid white
         border-radius 100px
-        width 150px
+        min-width 150px
+        max-width 190px
         transition all .15s ease
         text-align center
+        ellipsis()
 
         @media (min-width 768px)
-            padding 16px 0
-            width 190px
+            padding 16px 10px
 
         @media (min-width 992px)
-            padding 8px 0
+            padding 8px 10px
             width 150px
 
         @media (min-width 1265px)
-            padding 16px 0
+            padding 16px 10px
             width 190px
 
         &:hover
