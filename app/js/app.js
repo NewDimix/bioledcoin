@@ -110,6 +110,7 @@ $(window).on('load', function () {
   (function($) {
     $(function() {
       $('.js-langauge').styler();
+      $('.js-modal').styler();
     });
   })(jQuery);
 

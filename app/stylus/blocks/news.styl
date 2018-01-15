@@ -87,7 +87,7 @@
 
         &:focus
             outline none
-            border-width 4px
+            border-color rgba(255, 255, 255, 1)
 
         &_prev
             left -20px
@@ -96,8 +96,12 @@
             @media (min-width 1370px)
                 left -50px
 
-            &:hover
-                transform rotate(-45deg) scale(1.15)
+            &:hover, &:focus
+                transform rotate(-45deg) scale(1.25)
+
+            &.slick-disabled
+                &:hover, &:focus
+                    transform rotate(-45deg) scale(1)
 
         &_next
             right -20px
@@ -106,14 +110,18 @@
             @media (min-width 1370px)
                 right -50px
 
-            &:hover
-                transform rotate(135deg) scale(1.15)
+            &:hover, &:focus
+                transform rotate(135deg) scale(1.25)
+
+            &.slick-disabled
+                &:hover, &:focus
+                    transform rotate(135deg) scale(1)
 
         &.slick-disabled
-            border-color transparent
+            border-color rgba(255, 255, 255, 0.25)
 
     &__path
-        width 582.5px
+        width 572.5px
         margin-right 40px
         transition all 1s ease
 
@@ -122,12 +130,14 @@
 
         @media (max-width 1245px)
             opacity .5
+            transform scale(.9)
 
         &:focus
             outline none
 
         &.slick-current
             opacity 1
+            transform scale(1)
 
     &__row
         margin-bottom 15px

@@ -1,22 +1,27 @@
 .roadmap
     padding-top 30px
-    padding-bottom 35px
+    padding-bottom 5px
 
     @media (min-width 480px)
         padding-top 38px
-        padding-bottom 45px
+        padding-bottom 7px
 
     @media (min-width 768px)
         padding-top 45px
-        padding-bottom 65px
+        padding-bottom 25px
+        min-height 576px
+
+    @media (min-width 880px)
+        min-height 632px
 
     @media (min-width 992px)
         padding-top 55px
-        padding-bottom 85px
+        padding-bottom 30px
+        min-height 793px
 
     @media (min-width 1265px)
         padding-top 65px
-        padding-bottom 114px
+        padding-bottom 49px
 
     &__title
         h2
@@ -58,20 +63,20 @@
         @media (min-width 768px)
             width 60%
             margin-left auto
-            min-height 354px
 
         @media (min-width 880px)
             width 55%
-            min-height 430px
 
         @media (min-width 992px)
             width 50%
-            min-height 500px
 
         .roadmap__roadmap-item, .roadmap-item, .slick-slide, .slick-current, .slick-active
             outline none
 
     &__dots
+        position relative
+        z-index 9
+
         @media (min-width 768px)
             position absolute
             margin-top 0
@@ -104,7 +109,6 @@
                     position absolute
                     width 14px
                     height 114px
-                    background-color red
                     top 100%
                     left 50%
                     transform translateX(-50%)
@@ -112,6 +116,9 @@
 
             &:hover
                 cursor pointer
+
+                &:after
+                    color #00b7bb
 
             &:after
                 position absolute
@@ -188,6 +195,7 @@
         .slick-active
             &:after
                 color #00b7bb
+                font-weight 400
 
             button
                 background-color white
