@@ -46,7 +46,20 @@
         img
             {ibt}
             width 100%
-            height auto
+            height 220px
+            object-fit cover
+
+            @media (min-width 480px)
+                height 260px
+
+            @media (min-width 768px)
+                height 180px
+
+            @media (min-width 992px)
+                height 230px
+
+            @media (min-width 1265px)
+                height 254px
 
     &__name
         margin-bottom 7px

@@ -41,9 +41,15 @@ function timer() {
 timer();
 
 objectFit.polyfill({
-  selector: '.js-news-img', // this can be any CSS selector
-  fittype: 'cover', // either contain, cover, fill or none
-  disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+  selector: '.js-news-img',
+  fittype: 'cover',
+  disableCrossDomain: 'true'
+});
+
+objectFit.polyfill({
+  selector: '.js-team-img',
+  fittype: 'cover',
+  disableCrossDomain: 'true'
 });
 
 
