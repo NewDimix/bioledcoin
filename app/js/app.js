@@ -1,4 +1,7 @@
 function timer() {
+  var element=document.getElementById('js-sec');
+  if(!element){return;}
+
   var d = new Date();
   var x = new Date("01 Feb 2018 00:00");
 
@@ -168,4 +171,21 @@ $(window).on('load', function () {
       }
     ]
   });
+
+//  $('.js-news2-slider').slick({
+//    slidesPerRow: 3,
+//    rows: 2,
+//    adaptiveHeight: true,
+//    responsive: [
+//    {
+//      breakpoint: 1284,
+//      settings: {
+//        slidesPerRow: 2,
+//        variableWidth: false,
+//        centerMode: true,
+//        rows: 2,
+//      }
+//    }
+//  ]
+//});
 });

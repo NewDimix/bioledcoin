@@ -1,31 +1,33 @@
-@@include('elements/index/page-start.html')
+@@include('elements/page-start.html')
 @@include('elements/loader.html')
 <header class="header">
     <div class="container">
+        <div class="header__logo">
 @@include('elements/logo.html')
+        </div>
 @@include('elements/panel.html')
-@@include('elements/menu.html')
+@@include('elements/index/menu.html')
         <div class="header__content">
-@@include('elements/text-block.html')
-@@include('elements/stages.html')
+@@include('elements/index/text-block.html')
+@@include('elements/index/stages.html')
         </div>
     </div>
 </header>
 
 <main class="main">
     <div class="container">
-@@include('elements/roadmap.html')
-@@include('elements/team.html')
+@@include('elements/index/roadmap.html')
+@@include('elements/index/team.html')
     </div>
-@@include('elements/news.html')
+@@include('elements/index/news.html')
 
     <div class="container">
-@@include('elements/bounty.html')
+@@include('elements/index/bounty.html')
     </div>
 
 </main>
 
 <footer class="footer">
-@@include('elements/bottom-line.html')
+@@include('elements/index/bottom-line.html')
 </footer>
 @@include('elements/page-end.html')

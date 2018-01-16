@@ -24,6 +24,19 @@
             bottom 0
             transform translate(-40%, 110px)
 
+    &__nav-left
+        position fixed
+        top 0
+        bottom 0
+        height 100%
+        width 211px
+        padding-top 25px
+        text-align center
+
+    &__content-right
+        padding-left 251px
+        padding-right 40px
+
     &_fixed
         height 95%
 
@@ -41,3 +54,13 @@
 
         &+.footer
             flex 0 0 auto
+
+    &_account
+        margin-bottom 0 !important
+
+        &:after
+            display none
+
+        .main
+            &__logo
+                margin-bottom 25px

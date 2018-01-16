@@ -201,12 +201,39 @@ a()
             background-color rgba(255, 255, 255, 0.1)
 
             @media (min-width $xs)
-                border 2px solid white
+                border-color white
 
         &:focus
-            border 2px solid rgba(255, 255, 255, 0.4)
+            border-color rgba(255, 255, 255, 0.4)
             outline none
 
         &:active
             @media (min-width $sm)
                 transform scale(.95)
+
+    &_left
+        width 100%
+
+        .menu
+            &__ul
+                li
+                    display block
+                    margin-top 0
+                    margin-bottom 0
+
+                    &.active
+                        .menu__link
+                            background-color rgba(0, 0, 0, 0.05)
+                            border-left-color white
+
+            &__link
+                border-radius 0
+                border none
+                padding 24px 0 24px 65px
+                font-size-func(12)
+                font-weight 700
+                border-left 2px solid transparent
+
+                &:hover
+                    background-color rgba(255, 255, 255, 0.15)
+                    border-color transparent
