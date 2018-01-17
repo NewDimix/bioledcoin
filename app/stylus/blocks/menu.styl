@@ -235,15 +235,6 @@ a()
                     margin-bottom 0
                     border-bottom none
 
-                    &.active
-                        .menu__link
-                            background-color rgba(0, 0, 0, 0.05)
-                            border-left-color white
-                            color white
-
-                            &:before
-                                opacity 1
-
             &__link
                 border-radius 0
                 border none
@@ -269,6 +260,14 @@ a()
 
                 &:active
                     transform none
+
+                &.active
+                    background-color rgba(0, 0, 0, 0.05)
+                    border-left-color white
+                    color white
+
+                    &:before
+                        opacity 1
 
                 &_buy
                     &:before

@@ -218,6 +218,8 @@ $(window).on('load', function () {
   };
 
   $.hideNav = function () {
+    var left = parseInt($('.js-nav-left').css('left'),10);
+
     $('.js-nav-left-btn').unbind('click');
 
     $('.js-nav-left').animate({
@@ -232,35 +234,20 @@ $(window).on('load', function () {
     $('.js-nav-left-btn').toggleClass('open');
   };
 
-  $(document).mouseup(function (e) {
-    var left = parseInt($('.js-nav-left').css('left'),10);
-
-    var container = $('.menu_left');
-
-    if (container.has(e.target).length != 0) {
-      if (left === 0) {
-        if ($(window).width() < '768') {
-          $.hideNav();
-        }
-      }
-    }
-    e.stopPropagation();
-  });
-
   jQuery(function ($) {
-    $(document).mouseup(function (e) { // отслеживаем событие клика по веб-документу
-      var block = $(".js-nav-left"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+    $(document).mouseup(function (e) {
+      var block = $(".js-nav-left");
       var left = parseInt($('.js-nav-left').css('left'), 10);
       var container = $('.menu_left');
-      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-        &&
-        block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+
+      if ((!block.is(e.target) && block.has(e.target).length === 0) || (container.has(e.target).length != 0)) {
         if ($(window).width() < '768') {
           if (left === 0) {
             $.hideNav();
           }
         }
       }
+      e.stopPropagation();
     });
   });
 
@@ -269,9 +256,49 @@ $(window).on('load', function () {
   $('.main__menu a').click(function(e) {
     e.preventDefault();
     $('.main__menu .active').removeClass('active');
-    $(this).parent('li').addClass('active');
+    $(this).addClass('active');
     var tab = $(this).attr('href');
     $('.tab').not(tab).css({'display':'none'});
-    $(tab).fadeToggle(400);
+    $(tab).fadeIn(400);
+  });
+
+  var progressBar = $(".js-progress-bar").outerWidth();
+  var progressItem = $(".js-progress-bar li").outerWidth() + 5;
+
+  $(".js-progress-bar").empty();
+
+  var amount = (progressBar - 10) / progressItem;
+
+  for (i = 0; i < amount - 1; i++) {
+    $("<li></li>").appendTo($(".js-progress-bar"));
+  }
+
+  var progressValue = 25;
+
+  var amountValue = amount / (100 / progressValue);
+  var items = $('.js-progress-bar li');
+
+  for (i = 0; i < amountValue - 1; i++) {
+    $(items[i]).addClass("active");
+  }
+
+    $(window).resize(function(){
+    var progressBar = $(".js-progress-bar").outerWidth();
+    var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));;
+
+    $(".js-progress-bar").empty();
+
+    var amount = (progressBar - 20) / progressItem;
+
+    for (i = 0; i < amount - 1; i++) {
+      $("<li></li>").appendTo($(".js-progress-bar"));
+    }
+
+    var amountValue = amount / (100 / progressValue);
+    var items = $('.js-progress-bar li');
+
+    for (i = 0; i < amountValue - 1; i++) {
+      $(items[i]).addClass("active");
+    }
   });
 });
