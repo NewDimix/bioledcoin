@@ -18,7 +18,7 @@
             max-width 150px
 
         &:hover
-            background-color white
+            background-color rgba(255, 255, 255, 0.7)
 
             .jq-selectbox__select
                 color #3d5364
@@ -30,7 +30,7 @@
             border-bottom 0
 
         &.opened
-            background-color white
+            background-color rgba(255, 255, 255, 0.7)
             border-bottom-left-radius 0
             border-bottom-right-radius 0
 
@@ -89,7 +89,8 @@
                 border-bottom-right-radius 10px
 
             &:hover
-                background-color rgba(0, 208, 142, 0.5)
+                background-color rgba(0, 208, 142, 0.4)
+                color black
 
             &.selected
                 background-color #00d08e
@@ -128,13 +129,13 @@
         @media (min-width 1265px)
             max-width 800px
 
-        &:hover
-            color #3d5364
-            background-color white
-
         &:focus
             outline none
             background-color rgba(255, 255, 255, 0.3)
+
+        &:hover
+            color #3d5364
+            background-color white
 
         &:active
             transform scale(.95)

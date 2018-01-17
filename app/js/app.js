@@ -59,7 +59,7 @@ objectFit.polyfill({
 
 $(window).on('load', function () {
   $preloader = $('.js-loader'),
-    $loader = $preloader.find('.loader__img');
+  $loader = $preloader.find('.loader__img');
   $loader.fadeOut();
   $preloader.delay(0).fadeOut('slow');
 
@@ -188,4 +188,90 @@ $(window).on('load', function () {
 //    }
 //  ]
 //});
+
+//  $('.js-nav-left-btn').click(function (event) {
+//    var width = parseInt($('.js-nav-left').css('left'),10);
+//
+//    $('.js-nav-left').animate({
+//      left: (width == 0) ? -$('.js-nav-left').outerWidth() : 0
+//    });
+//
+//    $('.js-nav-left-btn').toggleClass('open');
+//  });
+
+  var animateTest = function() {
+    var left = parseInt($('.js-nav-left').css('left'),10);
+
+    $(this).unbind('click');
+
+    $('.js-nav-left').animate(
+      {
+        left: (left == 0) ? -$('.js-nav-left').outerWidth() : 0
+      },
+      400,
+      (function(){
+        $('.js-nav-left-btn').bind('click', animateTest);
+      })
+    );
+
+    $('.js-nav-left-btn').toggleClass('open');
+  };
+
+  $.hideNav = function () {
+    $('.js-nav-left-btn').unbind('click');
+
+    $('.js-nav-left').animate({
+        left: -$('.js-nav-left').outerWidth()
+      },
+      400,
+      (function () {
+        $('.js-nav-left-btn').bind('click', animateTest);
+      })
+    );
+
+    $('.js-nav-left-btn').toggleClass('open');
+  };
+
+  $(document).mouseup(function (e) {
+    var left = parseInt($('.js-nav-left').css('left'),10);
+
+    var container = $('.menu_left');
+
+    if (container.has(e.target).length != 0) {
+      if (left === 0) {
+        if ($(window).width() < '768') {
+          $.hideNav();
+        }
+      }
+    }
+    e.stopPropagation();
+  });
+
+  jQuery(function ($) {
+    $(document).mouseup(function (e) { // отслеживаем событие клика по веб-документу
+      var block = $(".js-nav-left"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+      var left = parseInt($('.js-nav-left').css('left'), 10);
+      var container = $('.menu_left');
+      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+        &&
+        block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+        if ($(window).width() < '768') {
+          if (left === 0) {
+            $.hideNav();
+          }
+        }
+      }
+    });
+  });
+
+  $('.js-nav-left-btn').bind('click', animateTest);
+
+  $('.main__menu a').click(function(e) {
+    e.preventDefault();
+    $('.main__menu .active').removeClass('active');
+    $(this).parent('li').addClass('active');
+    var tab = $(this).attr('href');
+    $('.tab').not(tab).css({'display':'none'});
+    $(tab).fadeToggle(400);
+  });
 });

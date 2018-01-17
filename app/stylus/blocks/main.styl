@@ -24,25 +24,6 @@
             bottom 0
             transform translate(-40%, 110px)
 
-    &__nav-left
-        position fixed
-        top 0
-        bottom 0
-        height 100%
-        width 211px
-        padding-top 25px
-        text-align center
-
-    &__content-right
-        padding-left 251px
-        padding-right 40px
-
-    &_fixed
-        height 95%
-
-        @media (min-width 768px)
-            height 100%
-
     &_one-page
         flex 1 0 auto
         display flex
@@ -57,6 +38,7 @@
 
     &_account
         margin-bottom 0 !important
+        background none
 
         &:after
             display none
@@ -64,3 +46,33 @@
         .main
             &__logo
                 margin-bottom 25px
+
+            &__nav-left
+                position fixed
+                top 0
+                bottom 0
+                left -211px
+                height 100%
+                width 211px
+                padding-top 25px
+                text-align center
+                overflow-y auto
+                transition all 0s ease-out 0s
+                z-index 10
+
+                @media (min-width 768px)
+                    left 0 !important
+
+            &__content-right
+                padding-left 40px
+                padding-right 40px
+
+                @media (min-width 768px)
+                    padding-left 251px
+
+            &__panel
+                background-color #d9d9d9
+                text-align right
+
+            &__balance, &__earn, &__transactions, &__traiding, &__settings
+                display none

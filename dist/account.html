@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
 
-    <body>
+    <body class="body_account">
 
 <div class="loader js-loader">
     <img class="loader__img" src="img/loader.gif" alt="Loading...">
@@ -19,39 +19,34 @@
 
 
 <main class="main main_account">
-    <aside class="main__nav-left nav-left">
+    <div class="main__layer js-layer"></div>
+    <aside class="main__nav-left nav-left js-nav-left">
         <div class="main__logo">
 <div class="logo">
     <a href="index.html" tabindex="1"><img src="img/logo.png" alt="BioLedCoin"></a>
 </div>
 
         </div>
-<div class="main__menu menu menu_left js-menu">
-    <button class="menu__btn js-menu-btn">
-        <span class="menu__icon"></span>
-
-        <span class="menu__title">Menu</span>
-    </button>
-
+<div class="main__menu menu menu_left">
     <nav>
-        <ul class="menu__ul js-menu-content">
+        <ul class="menu__ul">
             <li class="active">
-                <a class="menu__link" href="#roadmap" tabindex="2" title="Buy LBC Token">Buy LBC Token</a>
+                <a class="menu__link menu__link_buy" href="#tab1" tabindex="2" title="Buy LBC Token">Buy LBC Token</a>
             </li>
             <li>
-                <a class="menu__link" href="#team" tabindex="3" title="Token Balance">Token Balance</a>
+                <a class="menu__link menu__link_balance" href="#tab2" tabindex="3" title="Token Balance">Token Balance</a>
             </li>
             <li>
-                <a class="menu__link" href="#news" tabindex="4" title="Earn Tokens">Earn Tokens</a>
+                <a class="menu__link menu__link_earn" href="#tab3" tabindex="4" title="Earn Tokens">Earn Tokens</a>
             </li>
             <li>
-                <a class="menu__link" href="#bounty" tabindex="5" title="Transactions">Transactions</a>
+                <a class="menu__link menu__link_transactions" href="#tab4" tabindex="5" title="Transactions">Transactions</a>
             </li>
             <li>
-                <a class="menu__link" href="#bounty" tabindex="5" title="Traiding">Traiding</a>
+                <a class="menu__link menu__link_traiding" href="#tab5" tabindex="5" title="Traiding">Traiding</a>
             </li>
             <li>
-                <a class="menu__link" href="#bounty" tabindex="5" title="Settings">Settings</a>
+                <a class="menu__link menu__link_settings" href="#tab6" tabindex="5" title="Settings">Settings</a>
             </li>
         </ul>
     </nav>
@@ -61,8 +56,13 @@
 
     </aside>
 
+    <button class="nav-left__button js-nav-left-btn">
+        <span class="nav-left__icon"></span>
+    </button>
+
     <section class="main__content-right content-right">
-<div class="header__panel panel">
+        <div class="main__panel">
+<div class="panel">
     <select class="panel__langauge js-langauge" id="js-switcher-lang" tabindex="6" title="Сменить язык">
         <option>Eng</option>
         <option>Rus</option>
@@ -71,41 +71,68 @@
     <a href="#" class="panel__login" title="Авторизация">Login</a>
 </div>
 
+        </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aliquam, ab voluptas porro adipisci reprehenderit ipsam animi ut debitis explicabo error, neque iusto similique! Laudantium optio, iusto hic veniam natus!</p>
+        <div class="main__buy buy tab" id="tab1">
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
+
+        <div class="main__balance balance tab" id="tab2">
+            <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
+
+        <div class="main__earn earn tab" id="tab3">
+            <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
+
+        <div class="main__transactions transactions tab" id="tab4">
+            <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
+
+        <div class="main__traiding traiding tab" id="tab5">
+            <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
+
+        <div class="main__settings settings tab" id="tab6">
+            <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
+        </div>
     </section>
 </main>
     <script src="js/vendor.min.js"></script>

@@ -215,16 +215,34 @@ a()
         width 100%
 
         .menu
+            @media (min-width $xs)
+                display block
+                text-align center
+
+            @media (min-width $sm)
+                {ibm}
+
+            &__btn
+                display none
+
             &__ul
+                display block
+                background none
+
                 li
                     display block
                     margin-top 0
                     margin-bottom 0
+                    border-bottom none
 
                     &.active
                         .menu__link
                             background-color rgba(0, 0, 0, 0.05)
                             border-left-color white
+                            color white
+
+                            &:before
+                                opacity 1
 
             &__link
                 border-radius 0
@@ -233,7 +251,45 @@ a()
                 font-size-func(12)
                 font-weight 700
                 border-left 2px solid transparent
+                color rgba(255, 255, 255, 0.7)
+
+                &:before
+                    content ''
+                    position absolute
+                    left 22px
+                    top 50%
+                    transform translateY(-50%)
+                    width 29px
+                    height 29px
+                    opacity .8
 
                 &:hover
                     background-color rgba(255, 255, 255, 0.15)
                     border-color transparent
+
+                &:active
+                    transform none
+
+                &_buy
+                    &:before
+                        background inline('icon-buy.png') center no-repeat
+
+                &_balance
+                    &:before
+                        background inline('icon-balance.png') center no-repeat
+
+                &_earn
+                    &:before
+                        background inline('icon-earn.png') center no-repeat
+
+                &_transactions
+                    &:before
+                        background inline('icon-transactions.png') center no-repeat
+
+                &_traiding
+                    &:before
+                        background inline('icon-traiding.png') center no-repeat
+
+                &_settings
+                    &:before
+                        background inline('icon-settings.png') center no-repeat
