@@ -29,6 +29,9 @@
         &.focused
             border-bottom 0
 
+            .jq-selectbox__select
+                border none
+
         &.opened
             background-color rgba(255, 255, 255, 0.7)
             border-bottom-left-radius 0
@@ -42,26 +45,18 @@
 
         &__select
             background transparent
-            color white
             text-shadow none
             box-shadow none
             border none
-            font-weight 700
             text-transform uppercase
-            font-size-func(14)
             padding-left 0
             padding-right 20px
-
-        &.focused
-            .jq-selectbox__select
-                border none
 
         &__trigger
             border-left none
             width 20px
 
         &__trigger-arrow
-            border-top-color rgba(255, 255, 255, 0.6)
             border-width 4px
             top 50%
             left none
@@ -139,3 +134,96 @@
 
         &:active
             transform scale(.95)
+
+    &__user
+        {ibm}
+        position relative
+        padding-top 11px
+        padding-bottom 11px
+        padding-left 20px
+        padding-right 40px
+        background none
+        border none
+
+        &:before
+            content ''
+            position absolute
+            right 16px
+            top 50%
+            transform translateY(-50%)
+            border 4px solid transparent
+            border-top-color #3d5364
+
+        &:hover
+            cursor pointer
+            background-color rgba(128, 128, 128, 0.1)
+
+    &__nickname
+        {ibm}
+        font-size-func(18)
+        margin-right 18px
+        color white
+
+    &__avatar
+        {ibm}
+
+        img
+            display block
+            border-radius 50%
+
+    &__menu
+        display none
+        width 100%
+        text-align left
+        position absolute
+        left 0
+        top 100%
+        margin-top 0
+        padding-left 0
+        list-style none
+
+    &_light
+        .panel
+            &__nickname
+                color white
+
+        .jq-selectbox
+            &__select
+                color white
+                font-weight 700
+                font-size-func(14)
+
+            &__trigger-arrow
+                border-top-color rgba(255, 255, 255, 0.6)
+
+    &_dark
+        .panel
+            &__user
+                border-left 1px solid #f0f0f0
+
+            &__nickname
+                color #3d5364
+
+        .jq-selectbox
+            &__select
+                color #3d5364
+                font-weight 400
+                font-size-func(18)
+
+            &__trigger-arrow
+                border-top-color rgba(61, 83, 100, 0.6)
+
+
+    &_authorized
+        .panel__login
+            display none
+
+        .panel__user
+            {ibm}
+
+    &_not-authorized
+        .panel__login
+            {ibm}
+
+        .panel__user
+            display none

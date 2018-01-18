@@ -262,12 +262,12 @@ $(window).on('load', function () {
     $(tab).fadeIn(400);
   });
 
-  var progressBar = $(".js-progress-bar").outerWidth();
+  var progressBarStart = $(".js-progress-bar").outerWidth();
   var progressItem = $(".js-progress-bar li").outerWidth() + 5;
 
   $(".js-progress-bar").empty();
 
-  var amount = (progressBar - 10) / progressItem;
+  var amount = (progressBarStart - 6) / progressItem;
 
   for (i = 0; i < amount - 1; i++) {
     $("<li></li>").appendTo($(".js-progress-bar"));
@@ -284,21 +284,23 @@ $(window).on('load', function () {
 
     $(window).resize(function(){
     var progressBar = $(".js-progress-bar").outerWidth();
-    var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));;
-
-    $(".js-progress-bar").empty();
+    var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));
 
     var amount = (progressBar - 20) / progressItem;
 
-    for (i = 0; i < amount - 1; i++) {
-      $("<li></li>").appendTo($(".js-progress-bar"));
-    }
+    if (progressBarStart != progressBar) {
+      $(".js-progress-bar").empty();
 
-    var amountValue = amount / (100 / progressValue);
-    var items = $('.js-progress-bar li');
+      for (i = 0; i < amount - 1; i++) {
+        $("<li></li>").appendTo($(".js-progress-bar"));
+      }
 
-    for (i = 0; i < amountValue - 1; i++) {
-      $(items[i]).addClass("active");
+      var amountValue = amount / (100 / progressValue);
+      var items = $('.js-progress-bar li');
+
+      for (i = 0; i < amountValue - 1; i++) {
+        $(items[i]).addClass("active");
+      }
     }
   });
 });
