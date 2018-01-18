@@ -238,7 +238,7 @@ $(window).on('load', function () {
     $(document).mouseup(function (e) {
       var block = $(".js-nav-left");
       var left = parseInt($('.js-nav-left').css('left'), 10);
-      var container = $('.menu_left');
+      var container = $('.js-account-menu');
 
       if ((!block.is(e.target) && block.has(e.target).length === 0) || (container.has(e.target).length != 0)) {
         if ($(window).width() < '768') {
@@ -253,40 +253,44 @@ $(window).on('load', function () {
 
   $('.js-nav-left-btn').bind('click', animateTest);
 
-  $('.main__menu a').click(function(e) {
+  $('.js-account-menu button').click(function(e) {
     e.preventDefault();
-    $('.main__menu .active').removeClass('active');
+    $('.js-account-menu .active').removeClass('active');
     $(this).addClass('active');
-    var tab = $(this).attr('href');
+    var tab = $(this).attr('data-href');
     $('.tab').not(tab).css({'display':'none'});
     $(tab).fadeIn(400);
   });
 
+  $.progress = function () {
+    $(".js-progress-bar").empty();
+
+    for (i = 0; i < amount - 1; i++) {
+      $("<li></li>").appendTo($(".js-progress-bar"));
+    }
+
+    var amountValue = amount / (100 / progressValue);
+    var items = $('.js-progress-bar li');
+
+    for (i = 0; i < amountValue - 1; i++) {
+      $(items[i]).addClass("active");
+    }
+  };
+
+  var progressValue = 33;
+
   var progressBarStart = $(".js-progress-bar").outerWidth();
   var progressItem = $(".js-progress-bar li").outerWidth() + 5;
 
-  $(".js-progress-bar").empty();
-
   var amount = (progressBarStart - 6) / progressItem;
 
-  for (i = 0; i < amount - 1; i++) {
-    $("<li></li>").appendTo($(".js-progress-bar"));
-  }
-
-  var progressValue = 25;
-
-  var amountValue = amount / (100 / progressValue);
-  var items = $('.js-progress-bar li');
-
-  for (i = 0; i < amountValue - 1; i++) {
-    $(items[i]).addClass("active");
-  }
+  $.progress();
 
   $(window).resize(function(){
     var progressBar = $(".js-progress-bar").outerWidth();
     var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));
 
-    var amount = (progressBar - 20) / progressItem;
+    var amount = (progressBar - 6) / progressItem;
 
     if (progressBarStart != progressBar) {
       $(".js-progress-bar").empty();
@@ -302,5 +306,22 @@ $(window).on('load', function () {
         $(items[i]).addClass("active");
       }
     }
+  });
+
+  $('.js-user-btn').on('click', function () {
+    $('.js-user-menu').slideToggle();
+    $('.js-user-btn').toggleClass('panel__user_open');
+  });
+
+  jQuery(function ($) {
+    $(document).mouseup(function (e) {
+      var block = $(".js-user-btn");
+
+      if (!block.is(e.target) && block.has(e.target).length === 0) {
+        $('.js-user-menu').slideUp();
+        $('.js-user-btn').removeClass('panel__user_open');
+      }
+      e.stopPropagation();
+    });
   });
 });

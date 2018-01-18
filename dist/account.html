@@ -27,26 +27,26 @@
 </div>
 
             </div>
-<div class="main__menu menu menu_left">
+<div class="main__menu menu menu_left js-account-menu">
     <nav>
         <ul class="menu__ul">
             <li>
-                <a class="menu__link menu__link_buy active" href="#tab1" tabindex="2" title="Buy LBC Token">Buy LBC Token</a>
+                <button class="menu__link menu__link_buy active" data-href="#tab1" tabindex="2" title="Buy LBC Token">Buy LBC Token</button>
             </li>
             <li>
-                <a class="menu__link menu__link_balance" href="#tab2" tabindex="3" title="Token Balance">Token Balance</a>
+                <button class="menu__link menu__link_balance" data-href="#tab2" tabindex="3" title="Token Balance">Token Balance</button>
             </li>
             <li>
-                <a class="menu__link menu__link_earn" href="#tab3" tabindex="4" title="Earn Tokens">Earn Tokens</a>
+                <button class="menu__link menu__link_earn" data-href="#tab3" tabindex="4" title="Earn Tokens">Earn Tokens</button>
             </li>
             <li>
-                <a class="menu__link menu__link_transactions" href="#tab4" tabindex="5" title="Transactions">Transactions</a>
+                <button class="menu__link menu__link_transactions" data-href="#tab4" tabindex="5" title="Transactions">Transactions</button>
             </li>
             <li>
-                <a class="menu__link menu__link_traiding" href="#tab5" tabindex="5" title="Traiding">Traiding</a>
+                <button class="menu__link menu__link_traiding" data-href="#tab5" tabindex="5" title="Traiding">Traiding</button>
             </li>
             <li>
-                <a class="menu__link menu__link_settings" href="#tab6" tabindex="5" title="Settings">Settings</a>
+                <button class="menu__link menu__link_settings" data-href="#tab6" tabindex="5" title="Settings">Settings</button>
             </li>
         </ul>
     </nav>
@@ -70,7 +70,7 @@
 
     <a href="#" class="panel__login" title="Авторизация">Login</a>
 
-    <button class="panel__user">
+    <button class="panel__user js-user-btn">
         <div class="panel__nickname">
             <p>Gleb124</p>
         </div>
@@ -79,118 +79,117 @@
             <img src="img/avatar.jpg" alt="Avatar">
         </div>
 
-        <ul class="panel__menu">
-            <li>1 qweqwe</li>
-            <li>2 asdasd</li>
-            <li>3 zxczxc</li>
+        <ul class="panel__menu js-user-menu">
+            <li><a href="#">1 qweqwe</a></li>
+            <li><a href="#">2 asdasd</a></li>
+            <li><a href="index.html">Выход</a></li>
         </ul>
     </button>
 </div>
 
             </div>
+<div class="main__buy buy tab" id="tab1">
+    <div class="buy__title">
+        <h1>Buy LBC Token</h1>
+    </div>
 
-            <div class="main__buy buy tab" id="tab1">
-                <div class="buy__title">
-                    <h1>Buy LBC Token</h1>
+    <div class="buy__block">
+        <div class="buy__text buy__text_big">
+            <p>Main Sale is live 1 LBC = 1 waves</p>
+        </div>
+
+        <div class="buy__text buy__text_small">
+            <p>Ends in: 2 days 21 : 4 : 16</p>
+        </div>
+
+        <div class="buy__text buy__text_bold">
+            <p>26,362,324NGC sold</p>
+        </div>
+
+        <div class="buy__progress progress">
+            <ul class="progress__stages-name">
+                <li class="progress__stage-item">Pre-Sale</li>
+                <li class="progress__stage-item">Pre-Ico</li>
+                <li class="progress__stage-item">Ico</li>
+            </ul>
+
+            <ul class="progress__bar js-progress-bar">
+                <li></li>
+            </ul>
+
+            <ul class="progress__stages-money">
+                <li class="progress__stage-item">30 000 $</li>
+
+                <li class="progress__stage-item">60 000 $</li>
+
+                <li class="progress__stage-item">3 000 000 $</li>
+            </ul>
+        </div>
+
+        <div class="buy__text buy__text_bold">
+            <p>$23,894,717 raised from 34,202 backers</p>
+        </div>
+    </div>
+
+    <div class="buy__block">
+        <div class="buy__text buy__text_big buy__title-block">
+            <p>Choose your payment method</p>
+        </div>
+
+        <ul class="buy__crypto-wrap">
+            <li class="buy__crypto-item buy__crypto-item_dash">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
                 </div>
-
-                <div class="buy__block">
-                    <div class="buy__text buy__text_big">
-                        <p>Main Sale is live 1 LBC = 1 waves</p>
-                    </div>
-
-                    <div class="buy__text buy__text_small">
-                        <p>Ends in: 2 days 21 : 4 : 16</p>
-                    </div>
-
-                    <div class="buy__text buy__text_bold">
-                        <p>26,362,324NGC sold</p>
-                    </div>
-
-                    <div class="buy__progress progress">
-                        <ul class="progress__stages-name">
-                            <li class="progress__stage-item">Pre-Sale</li>
-                            <li class="progress__stage-item">Pre-Ico</li>
-                            <li class="progress__stage-item">Ico</li>
-                        </ul>
-
-                        <ul class="progress__bar js-progress-bar">
-                            <li></li>
-                        </ul>
-
-                        <ul class="progress__stages-money">
-                            <li class="progress__stage-item">30 000 $</li>
-
-                            <li class="progress__stage-item">60 000 $</li>
-
-                            <li class="progress__stage-item">3 000 000 $</li>
-                        </ul>
-                    </div>
-
-                    <div class="buy__text buy__text_bold">
-                        <p>$23,894,717 raised from 34,202 backers</p>
-                    </div>
+                <div class="buy__crypto-name">
+                    <p>Dash</p>
                 </div>
-
-                <div class="buy__block">
-                    <div class="buy__text buy__text_big buy__title-block">
-                        <p>Choose your payment method</p>
-                    </div>
-
-                    <ul class="buy__crypto-wrap">
-                        <li class="buy__crypto-item buy__crypto-item_dash">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Dash</p>
-                            </div>
-                        </li>
-                        <li class="buy__crypto-item buy__crypto-item_eth">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Etherium</p>
-                            </div>
-                        </li>
-                        <li class="buy__crypto-item buy__crypto-item_ltc">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Litecoin</p>
-                            </div>
-                        </li>
-                        <li class="buy__crypto-item buy__crypto-item_btc">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Bitcoin</p>
-                            </div>
-                        </li>
-                        <li class="buy__crypto-item buy__crypto-item_bch">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Bitcoin cash</p>
-                            </div>
-                        </li>
-                        <li class="buy__crypto-item buy__crypto-item_card">
-                            <div class="buy__crypto-text">
-                                <p>Buy with</p>
-                            </div>
-                            <div class="buy__crypto-name">
-                                <p>Credit card</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <a class="buy__link" title="Verify your account" href="#">Verify your account</a>
+            </li>
+            <li class="buy__crypto-item buy__crypto-item_eth">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
                 </div>
-            </div>
+                <div class="buy__crypto-name">
+                    <p>Etherium</p>
+                </div>
+            </li>
+            <li class="buy__crypto-item buy__crypto-item_ltc">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
+                </div>
+                <div class="buy__crypto-name">
+                    <p>Litecoin</p>
+                </div>
+            </li>
+            <li class="buy__crypto-item buy__crypto-item_btc">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
+                </div>
+                <div class="buy__crypto-name">
+                    <p>Bitcoin</p>
+                </div>
+            </li>
+            <li class="buy__crypto-item buy__crypto-item_bch">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
+                </div>
+                <div class="buy__crypto-name">
+                    <p>Bitcoin cash</p>
+                </div>
+            </li>
+            <li class="buy__crypto-item buy__crypto-item_card">
+                <div class="buy__crypto-text">
+                    <p>Buy with</p>
+                </div>
+                <div class="buy__crypto-name">
+                    <p>Credit card</p>
+                </div>
+            </li>
+        </ul>
+
+        <a class="buy__link" title="Verify your account" href="#">Verify your account</a>
+    </div>
+</div>
 
             <div class="main__balance balance tab" id="tab2">
                 <div class="balance__title">
