@@ -282,7 +282,7 @@ $(window).on('load', function () {
     $(items[i]).addClass("active");
   }
 
-    $(window).resize(function(){
+  $(window).resize(function(){
     var progressBar = $(".js-progress-bar").outerWidth();
     var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));
 

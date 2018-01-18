@@ -14,13 +14,14 @@ nav-left__icon()
 
     &__button
         position fixed
-        left 7.5px
-        top 7.5px
+        left 18px
+        top 18px
         width 25px
         height 20px
         background-color transparent
         border none
         z-index 11
+        transition all .15s ease .3s
 
         @media (min-width 768px)
             display none
@@ -29,6 +30,9 @@ nav-left__icon()
             cursor pointer
 
         &.open
+            left 9px
+            top 9px
+
             .nav-left__icon
                 background-color transparent
 
