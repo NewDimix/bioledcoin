@@ -279,10 +279,10 @@ $(window).on('load', function () {
 
   var progressValue = 33;
 
-  var progressBarStart = $(".js-progress-bar").outerWidth();
+  var progressBar = $(".js-progress-bar").outerWidth();
   var progressItem = $(".js-progress-bar li").outerWidth() + 5;
 
-  var amount = (progressBarStart - 6) / progressItem;
+  var amount = (progressBar - 6) / progressItem;
 
   $.progress();
 
@@ -292,19 +292,17 @@ $(window).on('load', function () {
 
     var amount = (progressBar - 6) / progressItem;
 
-    if (progressBarStart != progressBar) {
-      $(".js-progress-bar").empty();
+    $(".js-progress-bar").empty();
 
-      for (i = 0; i < amount - 1; i++) {
-        $("<li></li>").appendTo($(".js-progress-bar"));
-      }
+    for (i = 0; i < amount - 1; i++) {
+      $("<li></li>").appendTo($(".js-progress-bar"));
+    }
 
-      var amountValue = amount / (100 / progressValue);
-      var items = $('.js-progress-bar li');
+    var amountValue = amount / (100 / progressValue);
+    var items = $('.js-progress-bar li');
 
-      for (i = 0; i < amountValue - 1; i++) {
-        $(items[i]).addClass("active");
-      }
+    for (i = 0; i < amountValue - 1; i++) {
+      $(items[i]).addClass("active");
     }
   });
 

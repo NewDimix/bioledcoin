@@ -1,0 +1,48 @@
+.content-right
+    color #3d5364
+    font-size 0
+    padding-bottom 87px
+    padding-left 40px
+    padding-right 40px
+
+    @media (min-width 768px)
+        padding-left 251px
+
+    &__balance, &__earn, &__transactions, &__traiding, &__settings
+        display none
+
+    &__panel
+        text-align right
+        border-bottom 1px solid #f0f0f0
+        margin-bottom 30px
+        margin-left -50px
+        margin-right -50px
+
+    &__title
+        h1
+            margin-top 0
+            margin-bottom 18px
+            font-weight 400
+            font-size-func(24)
+
+    &__block
+        background-color white
+        border-radius 7px
+        padding 20px
+        box-shadow 0 0 15px 0px rgba(0, 0, 0, 0.05)
+
+        &:not(:last-child)
+            margin-bottom 26px
+
+    &__text
+        &_big
+            font-size-func(18)
+            font-weight 400
+
+        &_small
+            font-size-func(12)
+            font-weight 400
+
+        &_bold
+            font-size-func(12)
+            font-weight 700

@@ -1,0 +1,54 @@
+.block-payment
+    &__title
+        margin-bottom 38px
+        font-size-func(18)
+
+    &__crypto-wrap
+        padding-left 0
+        margin-bottom 35px
+
+    &__crypto-item
+        padding-bottom 18px
+        {ibt}
+        width 15%
+        padding-top 110px
+        border 1px solid #dddddd
+        text-align center
+        background-position center 18px
+        background-repeat no-repeat
+
+        &:not(:last-child)
+            margin-right 2%
+
+        &_dash
+            background-image url(../img/dash.png)
+
+        &_eth
+            background-image url(../img/eth.png)
+
+        &_ltc
+            background-image url(../img/ltc.png)
+
+        &_btc
+            background-image url(../img/btc.png)
+
+        &_bch
+            background-image url(../img/bch.png)
+
+        &_card
+            background-image url(../img/card.png)
+
+    &__crypto-text
+        font-size-func(12)
+        margin-bottom 5px
+
+    &__crypto-name
+        font-size-func(14)
+        text-transform uppercase
+        color #76bb43
+        font-weight 700
+
+    &__link
+        font-size-func(12)
+        min-width 205px
+        max-width 100%

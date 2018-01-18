@@ -1,0 +1,37 @@
+.btn
+    {ibt}
+    width auto
+    position relative
+    border none
+    text-transform uppercase
+    color white
+    text-decoration none
+    font-weight 700
+    font-size-func(14)
+    padding 18px 10px
+    border-radius 100px
+    text-align center
+    transition all .15s ease
+    z-index 1
+    ellipsis()
+
+    &:hover
+        cursor pointer
+
+    &:focus
+        outline none
+
+    &:active
+        transform scale(.95)
+
+    &_green
+        background-color #76bb43
+
+        &:hover, &:focus
+            background-color #9dc480
+
+    &_turquoise
+        background-color #00d08e
+
+        &:hover, &:focus
+            background-color #51d1a9
