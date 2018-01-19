@@ -8,17 +8,37 @@
         margin-bottom 35px
 
     &__crypto-item
-        padding-bottom 18px
         {ibt}
-        width 15%
+        width 31.36%
+        height 164px
+        margin-right 2.96%
+        margin-bottom 20px
         padding-top 110px
         border 1px solid #dddddd
         text-align center
         background-position center 18px
         background-repeat no-repeat
 
-        &:not(:last-child)
+        @media (min-width 1050px)
+            width 15.83%
+            margin-right 1%
+            margin-bottom 0
+
+        @media (min-width 1265px)
+            width 15%
             margin-right 2%
+
+        &:nth-child(3)
+            margin-right 0
+
+            @media (min-width 1050px)
+                margin-right 1%
+
+            @media (min-width 1265px)
+                margin-right 2%
+
+        &:last-child
+            margin-right 0
 
         &_dash
             background-image url(../img/dash.png)

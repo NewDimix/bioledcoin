@@ -2,8 +2,24 @@
     position relative
     border-radius 5px
     border 1px solid #dddddd
-    padding 24px 62px
+    padding 24px 12px
     overflow hidden
+
+    @media (min-width 550px)
+        padding 24px 24px 24px 62px
+
+    &:after
+        content ''
+        position absolute
+        right 7px
+        top 23px
+        width 29px
+        height 26px
+        background inline('warning.png') no-repeat
+
+        @media (min-width 550px)
+            left 17px
+            right inherit
 
     &__gradient
         width 100%
@@ -21,7 +37,9 @@
 
     &__btn
         font-size-func(12)
-        max-width 100%
-        min-width 330px
+        width auto
         padding-top 12px
         padding-bottom 12px
+
+        @media (min-width 550px)
+            min-width 330px

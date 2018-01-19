@@ -262,49 +262,45 @@ $(window).on('load', function () {
     $(tab).fadeIn(400);
   });
 
-  $.progress = function () {
-    $(".js-progress-bar").empty();
 
-    for (i = 0; i < amount - 1; i++) {
-      $("<li></li>").appendTo($(".js-progress-bar"));
-    }
 
-    var amountValue = amount / (100 / progressValue);
-    var items = $('.js-progress-bar li');
-
-    for (i = 0; i < amountValue - 1; i++) {
-      $(items[i]).addClass("active");
-    }
-  };
 
   var progressValue = 33;
 
-  var progressBar = $(".js-progress-bar").outerWidth();
-  var progressItem = $(".js-progress-bar li").outerWidth() + 5;
+  var progress = function() {
+    if ($('.js-progress-bar').is(":visible")) {
+      var progressBar = $(".js-progress-bar").outerWidth();
+      var progressItem = $(".js-progress-bar li").outerWidth() + 5;
 
-  var amount = (progressBar - 6) / progressItem;
+      var amount = (progressBar - 6) / progressItem;
 
-  $.progress();
+      $(".js-progress-bar").empty();
+
+      for (i = 0; i < amount - 1; i++) {
+        $("<li></li>").appendTo($(".js-progress-bar"));
+      }
+
+      var amountValue = amount / (100 / progressValue);
+      var items = $('.js-progress-bar li');
+
+      for (i = 0; i < amountValue - 1; i++) {
+        $(items[i]).addClass("active");
+      }
+    }
+  };
+
+  progress();
+
+ $('.js-buy-btn').on('click', function () {
+    progress();
+  });
 
   $(window).resize(function(){
-    var progressBar = $(".js-progress-bar").outerWidth();
-    var progressItem = $(".js-progress-bar li").outerWidth() + parseInt($(".js-progress-bar li:first-child").css("margin-right"));
-
-    var amount = (progressBar - 6) / progressItem;
-
-    $(".js-progress-bar").empty();
-
-    for (i = 0; i < amount - 1; i++) {
-      $("<li></li>").appendTo($(".js-progress-bar"));
-    }
-
-    var amountValue = amount / (100 / progressValue);
-    var items = $('.js-progress-bar li');
-
-    for (i = 0; i < amountValue - 1; i++) {
-      $(items[i]).addClass("active");
-    }
+    progress();
   });
+
+
+
 
   $('.js-user-btn').on('click', function () {
     $('.js-user-menu').slideToggle();

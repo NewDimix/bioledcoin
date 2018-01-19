@@ -1,8 +1,53 @@
 .balance
     &__message-security
+        position relative
         margin-bottom 35px
+
+    &__value-wrap
+        margin-bottom 28px
+
+        & > p
+            margin-bottom 0
+            {ibm}
+
+    &__value
+        {ibm}
+        font-weight 700
+        color #76bc43
+
+    &__list
+        padding-left 15px
+        margin-top 0
+        margin-bottom 35px
+
+        li
+            &:not(:last-child)
+                margin-bottom 23px
+
+    &__form
+        margin-bottom 28px
+
+        .form__row
+            margin-bottom 0
+
+            @media (min-width 992px)
+                {ibb}
+
+            &:first-child
+                width 100%
+                max-width 480px
+                margin-bottom 10px
+
+                @media (min-width 992px)
+                    margin-right 23px
+                    margin-bottom 0
 
     &__btn
         input
             padding-top 10.5px
             padding-bottom 10.5px
+
+    &__text
+        &:not(:last-child)
+            margin-bottom 23px
+
