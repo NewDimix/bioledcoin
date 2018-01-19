@@ -3,15 +3,15 @@
         position relative
         margin-bottom 35px
 
-    &__value-wrap
+    &__balance-row
         margin-bottom 28px
 
-        & > p
-            margin-bottom 0
+        & > div
             {ibm}
 
     &__value
         {ibm}
+        margin-left 12px
         font-weight 700
         color #76bc43
 
@@ -47,7 +47,17 @@
             padding-top 10.5px
             padding-bottom 10.5px
 
+    &__text-bottom
+        .balance__text
+            &:not(:last-child)
+                margin-bottom 23px
+
     &__text
-        &:not(:last-child)
-            margin-bottom 23px
+        font-size-func(12)
+
+        &_grey
+            color #9ea9b1
+
+        &_big
+            font-size-func(18)
 

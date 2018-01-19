@@ -62,13 +62,13 @@
 
         <div class="main__content-right content-right">
             <div class="content-right__panel">
-<div class="panel panel_authorized panel_dark">
+<div class="panel panel_dark">
     <select class="panel__langauge js-langauge" id="js-switcher-lang" tabindex="6" title="Сменить язык">
         <option>Eng</option>
         <option>Rus</option>
     </select>
 
-    <a href="#" class="panel__login" title="Авторизация">Login</a>
+<!--    <a href="#" class="panel__login" title="Авторизация">Login</a>-->
 
     <button class="panel__user js-user-btn">
         <div class="panel__nickname">
@@ -94,15 +94,15 @@
     </div>
 
     <div class="content-right__block block-progress">
-        <div class="content-right__text content-right__text_big">
+        <div class="block-progress__text block-progress__text_big">
             <p>Main Sale is live 1 LBC = 1 waves</p>
         </div>
 
-        <div class="content-right__text content-right__text_small block-progress__ends">
+        <div class="block-progress__text block-progress__text_small">
             <p>Ends in: 2 days 21 : 4 : 16</p>
         </div>
 
-        <div class="content-right__text content-right__text_bold">
+        <div class="block-progress__text block-progress__text_bold">
             <p>26,362,324NGC sold</p>
         </div>
 
@@ -126,7 +126,7 @@
             </ul>
         </div>
 
-        <div class="content-right__text content-right__text_bold">
+        <div class="block-progress__text block-progress__text_bold">
             <p>$23,894,717 raised from 34,202 backers</p>
         </div>
     </div>
@@ -191,83 +191,96 @@
     </div>
 </div>
 
-            <div class="content-right__balance tab" id="tab2">
-                <div class="content-right__title">
-                    <h1>Token Balance</h1>
-                </div>
+<div class="content-right__balance tab" id="tab2">
+    <div class="content-right__title">
+        <h1>Token Balance</h1>
+    </div>
 
-                <div class="content-right__block balance">
-                    <div class="balance__message-security message-security">
-                        <div class="message-security__gradient"></div>
+    <div class="content-right__block balance">
+        <div class="balance__message-security message-security">
+            <div class="message-security__gradient"></div>
 
-                        <div class="message-security__title content-right__text content-right__text_big">
-                            <p>Low Account Security</p>
-                        </div>
+            <div class="message-security__title">
+                <p>Low Account Security</p>
+            </div>
 
-                        <div class="message-security__text content-right__text content-right__text_small">
-                            <p>Please enable two-factor authentication on your account.</p>
-                        </div>
+            <div class="message-security__text">
+                <p>Please enable two-factor authentication on your account.</p>
+            </div>
 
-                        <a class="message-security__btn btn btn_green" href="#">Enable Two-Factor Authentication</a>
-                    </div>
+            <a class="message-security__btn btn btn_green" href="#">Enable Two-Factor Authentication</a>
+        </div>
 
-                    <div class="balance__value-wrap content-right__text content-right__text_big">
-                        <p>Your token balance:</p>
+        <div class="balance__balance-row">
+            <div class="balance__text balance__text_big">
+                <p>Your token balance:</p>
+            </div>
 
-                        <div class="balance__value">
-                            <p>0.00000000LBC</p>
-                        </div>
-                    </div>
+            <div class="balance__value balance__text balance__text_big">
+                <p>0.00000000LBC</p>
+            </div>
+        </div>
 
-                    <ol class="balance__list content-right__text content-right__text_small">
-                        <li>Please provide your personal ETH-address from an wallet that supports ERC20-Tokens (For example MyEtherWallet).<br>
-                        We will send the tokens to you to this address. If you have no ETH-address, visit our Help Center or Contact our Support.</li>
-                        <li>Once you saved your address, we will allow you to change it until the END of ICO (A confirmation via e-mail will be required).</li>
-                        <li>We will release your NGC tokens within 7 days after the ICO.</li>
-                        <li>We will send you an e-mail after the distribution of tokens was successful</li>
-                        <li>After the succesfull distribution you will see your NGC tokens in your wallet.</li>
-                    </ol>
+        <ol class="balance__list balance__text">
+            <li>Please provide your personal ETH-address from an wallet that supports ERC20-Tokens (For example MyEtherWallet).<br> We will send the tokens to you to this address. If you have no ETH-address, visit our Help Center or Contact our Support.</li>
+            <li>Once you saved your address, we will allow you to change it until the END of ICO (A confirmation via e-mail will be required).</li>
+            <li>We will release your NGC tokens within 7 days after the ICO.</li>
+            <li>We will send you an e-mail after the distribution of tokens was successful</li>
+            <li>After the succesfull distribution you will see your NGC tokens in your wallet.</li>
+        </ol>
 
-                    <form class="balance__form form" action="#" method="post">
-                        <div class="form__row">
-                            <label>
+        <form class="balance__form form" action="#" method="post">
+            <div class="form__row">
+                <label>
                                 <p>Provide the address you want to receive your NGCs to:</p>
                                 <input type="text">
                             </label>
-                        </div>
-
-                        <div class="form__row form__row_button balance__btn">
-                            <input class="form__button btn btn_green" type="submit" value="Save">
-                        </div>
-                    </form>
-
-                    <div class="content-right__text content-right__text_small content-right__text_grey balance__text">
-                        <p>If you decide to change your recipient address, we will send you a confirmation e-mail.<br>A change can be requested only once per hour.</p>
-                    </div>
-
-                    <div class="content-right__text content-right__text_small balance__text">
-                        <p>We are here for you.</p>
-                    </div>
-
-                    <div class="content-right__text content-right__text_small content-right__text_grey balance__text">
-                        <p>If you have any questions, simply contact our support team, we ll help you to receive<br>your tokens in the right way.</p>
-                    </div>
-                </div>
             </div>
 
-            <div class="content-right__earn earn tab" id="tab3">
+            <div class="form__row form__row_button balance__btn">
+                <input class="form__button btn btn_green" type="submit" value="Save">
+            </div>
+        </form>
+
+        <div class="balance__text-bottom">
+            <div class="balance__text balance__text_grey">
+                <p>If you decide to change your recipient address, we will send you a confirmation e-mail.<br>A change can be requested only once per hour.</p>
+            </div>
+
+            <div class="balance__text">
+                <p>We are here for you.</p>
+            </div>
+
+            <div class="balance__text balance__text_grey">
+                <p>If you have any questions, simply contact our support team, we ll help you to receive<br>your tokens in the right way.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="content-right__earn tab" id="tab3">
                 <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
             </div>
+<div class="content-right__transactions tab" id="tab4">
+    <div class="content-right__title">
+        <h1>Transactions</h1>
+    </div>
 
-            <div class="content-right__transactions transactions tab" id="tab4">
-                <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
-            </div>
+    <div class="content-right__block block-transactions block-transactions_no js-block-transactions">
+        <ol class="block-transactions__list js-transactions-list">
+        </ol>
 
-            <div class="content-right__traiding traiding tab" id="tab5">
+        <div class="block-transactions__not">
+            <p>You do not have any transactions yet</p>
+        </div>
+    </div>
+</div>
+
+            <div class="content-right__traiding tab" id="tab5">
                 <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
             </div>
 
-            <div class="content-right__settings settings tab" id="tab6">
+            <div class="content-right__settings tab" id="tab6">
                 <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nam doloremque beatae, suscipit unde iste eaque at animi neque veniam quaerat facilis ullam nostrum est assumenda ad cupiditate quia aut.</p>
             </div>
         </div>

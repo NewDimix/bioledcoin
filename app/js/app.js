@@ -318,4 +318,17 @@ $(window).on('load', function () {
       e.stopPropagation();
     });
   });
+
+
+
+
+
+
+  if(!$('.js-transactions-list').children('li').length > 0) {
+    $('.js-block-transactions').removeClass('block-transactions_yes');
+    $('.js-block-transactions').addClass('block-transactions_no');
+  } else {
+    $('.js-block-transactions').removeClass('block-transactions_no');
+    $('.js-block-transactions').addClass('block-transactions_yes');
+  }
 });
