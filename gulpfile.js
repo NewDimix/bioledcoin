@@ -125,7 +125,8 @@ gulp.task('js-vendors', function () {
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/object-fit/dist/polyfill.object-fit.js',
-    'node_modules/remodal/dist/remodal.min.js'
+    'node_modules/remodal/dist/remodal.min.js',
+    'node_modules/clipboard/dist/clipboard.min.js'
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())

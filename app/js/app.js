@@ -330,5 +330,12 @@ $(window).on('load', function () {
   } else {
     $('.js-block-transactions').removeClass('block-transactions_no');
     $('.js-block-transactions').addClass('block-transactions_yes');
-  }
+  };
+
+
+
+
+
+
+  new Clipboard('.js-clipboard');
 });
