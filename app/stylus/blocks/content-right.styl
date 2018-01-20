@@ -8,6 +8,9 @@
     @media (min-width 768px)
         padding-left 241px
 
+    @media print
+        padding-left 30px
+
     &__balance, &__earn, &__transactions, &__traiding, &__settings
         display none
 
@@ -18,12 +21,18 @@
         margin-left -40px
         margin-right -40px
 
+        @media print
+            display none
+
     &__title
         h1
             margin-top 0
             margin-bottom 18px
             font-weight 400
             font-size-func(24)
+
+        @media print
+            display none
 
     &__block
         background-color white
