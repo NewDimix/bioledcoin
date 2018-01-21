@@ -181,6 +181,7 @@
                     transform translate(-4px, -2px)
 
                 &__dropdown
+                    top 37px !important
                     margin 0
                     left 0
                     box-shadow none
@@ -204,6 +205,24 @@
 
                         &:hover
                             background-color rgba(0, 208, 142, 0.5)
+
+        &_half-items
+            font-size 0
+
+            label
+                display block
+                font-size-func(12)
+
+                @media (min-width 992px)
+                    {ibt}
+                    width 49%
+
+                &:first-child
+                    margin-bottom 20px
+
+                    @media (min-width 992px)
+                        margin-right 2%
+                        margin-bottom 0
 
         &_check
             margin-bottom 25px
@@ -245,7 +264,7 @@
                     &:before
                         outline-color #00d08e
 
-        &_button
+        &_btn
             margin-bottom 0
 
             input
