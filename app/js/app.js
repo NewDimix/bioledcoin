@@ -336,4 +336,13 @@ $(window).on('load', function () {
 
 
   new Clipboard('.js-clipboard');
+
+
+
+
+  $(document).on('closed', '.remodal', function (e) {
+    $('.js-login-form')[0].reset();
+    $('.js-registration-form')[0].reset();
+    $('.js-modal-form')[0].reset();
+  });
 });

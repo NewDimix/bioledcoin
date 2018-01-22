@@ -33,8 +33,80 @@
         <option>Rus</option>
     </select>
 
-<!--    <button class="panel__login" title="Авторизация">Login</button>-->
+    <button class="panel__login" title="Авторизация" data-remodal-target="login">Login</button>
 
+    <div class="remodal panel__modal-login modal-login js-modal-login" data-remodal-id="login">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <form class="modal-login__form form js-login-form" action="#" method="post">
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="text">
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Password:</p>
+                    <input type="password">
+                </label>
+            </div>
+
+            <div class="form__row form__row_reg">
+                <p>Если у вас нет учетной записи, то вам необходимо <a href="#" class="form__row_reg-link" data-remodal-target="registration">зарегистрироваться</a>.</p>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <div class="remodal panel__modal-register modal-register js-modal-register" data-remodal-id="registration">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <form class="modal-register__form form js-registration-form" action="#" method="post">
+           <div class="form__row">
+                <label>
+                    <p>Nickname:</p>
+                    <input type="text">
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="text">
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Password:</p>
+                    <input type="password">
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Или с помощью соц. сетей:</p>
+
+                    <ul class="form__social social social_circle">
+                        <li><a class="social__item social__item_linkedin" href="#" title="Linkedin"></a></li>
+                        <li><a class="social__item social__item_facebook" href="#" title="Facebook"></a></li>
+                        <li><a class="social__item social__item_vkontakte" href="#" title="Vkontakte"></a></li>
+                    </ul>
+                </label>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Registration">
+            </div>
+        </form>
+    </div>
+
+<!--
     <div class="panel__user js-user-btn">
         <div class="panel__nickname">
             <p>Gleb124</p>
@@ -50,6 +122,7 @@
             <li><a href="index.html">Выход</a></li>
         </ul>
     </div>
+-->
 </div>
 
         </div>
@@ -735,7 +808,7 @@
             <h3>Social Media Bounty Campaign</h3>
         </div>
 
-        <form class="modal__form form" action="#" method="post">
+        <form class="modal__form form js-modal-form" action="#" method="post">
             <div class="form__row">
                 <label>
                     <p>Email:</p>
