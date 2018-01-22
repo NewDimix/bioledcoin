@@ -3,76 +3,56 @@
     height 160px
     overflow hidden
     background-color white
+    width 260px
+    transition all 1s ease
 
     @media (min-width 480px)
         height 200px
+        width 400px
 
     @media (min-width 590px)
         height 221px
 
     @media (min-width 690px)
-        margin-right 7%
+        margin-right 40px
         height 271px
+        width 550px
 
-    &:first-child
-        margin-bottom 15px
+    @media (min-width 1245px)
+        height 271px
+        width 375px
+
+    @media (max-width 1245px)
+        opacity .5
+        transform scale(.9)
+
+    display block
+
+    &__video-wrap
+        padding-bottom 61.25%
+        padding-top 0px
+
+        @media (min-width 480px)
+            padding-bottom 50.25%
+            padding-top 0px
+
+        @media (min-width 590px)
+            padding-bottom 55.25%
+            padding-top 0px
 
         @media (min-width 690px)
-            margin-bottom 35px
+            padding-bottom 71.25%
+            padding-top 0px
 
     &:focus
         outline none
 
-    &_small
-        display block
-        margin-bottom 15px
+    &.slick-current
+        opacity 1
+        transform scale(1)
 
-        @media (min-width 690px)
-            {ibt}
-            width 46.5%
-            margin-bottom 0
-
-        &+.videos-item_small
-            @media (min-width 480px)
-                margin-right 0
-
-        .videos-item__video-wrap
-            padding-bottom 61.25%
-            padding-top 0px
-
-            @media (min-width 480px)
-                padding-bottom 50.25%
-                padding-top 0px
-
-            @media (min-width 590px)
-                padding-bottom 55.25%
-                padding-top 0px
-
-            @media (min-width 690px)
-                padding-bottom 100.25%
-                padding-top 0px
-
-    &_big
-        display block
-
-        @media (min-width 690px)
-            margin-right 0
-
-        .videos-item__video-wrap
-            padding-bottom 61.25%
-            padding-top 0px
-
-            @media (min-width 480px)
-                padding-bottom 50.25%
-                padding-top 0px
-
-            @media (min-width 590px)
-                padding-bottom 55.25%
-                padding-top 0px
-
-            @media (min-width 690px)
-                padding-bottom 46.25%
-                padding-top 0px
+    &:focus
+        outline none
 
     &__video
         position absolute

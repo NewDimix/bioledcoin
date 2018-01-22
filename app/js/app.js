@@ -177,9 +177,9 @@ $(window).on('load', function () {
     infinite: false,
     centerMode: false,
     variableWidth: true,
-    slidesToShow: 2,
-    prevArrow: '<button type="button" class="news__arrows news__arrows_prev"><span>Previous</span></button>',
-    nextArrow: '<button type="button" class="news__arrows news__arrows_next"><span>Next</span></button>',
+    slidesToShow: 3,
+    prevArrow: '<button type="button" class="videos__arrows videos__arrows_prev"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="videos__arrows videos__arrows_next"><span>Next</span></button>',
     responsive: [
       {
         breakpoint: 1284,
