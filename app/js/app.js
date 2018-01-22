@@ -172,32 +172,30 @@ $(window).on('load', function () {
     ]
   });
 
-//  $('.js-news2-slider').slick({
-//    slidesPerRow: 3,
-//    rows: 2,
-//    adaptiveHeight: true,
-//    responsive: [
-//    {
-//      breakpoint: 1284,
-//      settings: {
-//        slidesPerRow: 2,
-//        variableWidth: false,
-//        centerMode: true,
-//        rows: 2,
-//      }
-//    }
-//  ]
-//});
+  $('.js-videos-slider').slick({
+    dots: false,
+    infinite: false,
+    centerMode: false,
+    variableWidth: true,
+    slidesToShow: 2,
+    prevArrow: '<button type="button" class="news__arrows news__arrows_prev"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="news__arrows news__arrows_next"><span>Next</span></button>',
+    responsive: [
+      {
+        breakpoint: 1284,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 
-//  $('.js-nav-left-btn').click(function (event) {
-//    var width = parseInt($('.js-nav-left').css('left'),10);
-//
-//    $('.js-nav-left').animate({
-//      left: (width == 0) ? -$('.js-nav-left').outerWidth() : 0
-//    });
-//
-//    $('.js-nav-left-btn').toggleClass('open');
-//  });
+
+
+
+
+
 
   var animateTest = function() {
     var left = parseInt($('.js-nav-left').css('left'),10);

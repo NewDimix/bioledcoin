@@ -52,6 +52,18 @@
             @media (min-width 400px)
                 margin-right 0
 
+        .news-item__video-wrap
+            padding-bottom 50.25%
+            padding-top 0px
+
+            @media (min-width 400px)
+                padding-bottom 110.25%
+                padding-top 0px
+
+            @media (min-width 590px)
+                padding-bottom 100.25%
+                padding-top 0px
+
     &_big
         display block
 
@@ -62,6 +74,18 @@
             .news-item__img
                 img
                     transform scale(1.065)
+
+        .news-item__video-wrap
+            padding-bottom 50.25%
+            padding-top 0px
+
+            @media (min-width 400px)
+                padding-bottom 51.25%
+                padding-top 0px
+
+            @media (min-width 590px)
+                padding-bottom 46.25%
+                padding-top 0px
 
     &__img
         position absolute
@@ -76,6 +100,24 @@
             height 271px
             opacity .7
             transition all .5s ease
+
+    &__video
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%) scale(1.01)
+        width 100%
+
+     &__video-wrap
+        position relative
+        height 0
+
+        iframe
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
 
     &__text
         position absolute
