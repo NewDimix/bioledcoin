@@ -318,6 +318,23 @@ $(window).on('load', function () {
     });
   });
 
+  $('.js-langauge-btn').on('click', function () {
+    $('.js-langauge-menu').slideToggle();
+    $('.js-langauge-btn').toggleClass('panel__langauge_open');
+  });
+
+  jQuery(function ($) {
+    $(document).mouseup(function (e) {
+      var block = $(".js-langauge-btn");
+
+      if (!block.is(e.target) && block.has(e.target).length === 0) {
+        $('.js-langauge-menu').slideUp();
+        $('.js-langauge-btn').removeClass('panel__langauge_open');
+      }
+      e.stopPropagation();
+    });
+  });
+
 
 
 
