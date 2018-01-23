@@ -302,7 +302,7 @@ $(window).on('load', function () {
 
 
   $('.js-user-btn').on('click', function () {
-    $('.js-user-menu').slideToggle();
+    $('.js-user-menu').toggle();
     $('.js-user-btn').toggleClass('panel__user_open');
   });
 
@@ -311,25 +311,25 @@ $(window).on('load', function () {
       var block = $(".js-user-btn");
 
       if (!block.is(e.target) && block.has(e.target).length === 0) {
-        $('.js-user-menu').slideUp();
+        $('.js-user-menu').hide();
         $('.js-user-btn').removeClass('panel__user_open');
       }
       e.stopPropagation();
     });
   });
 
-  $('.js-langauge-btn').on('click', function () {
-    $('.js-langauge-menu').slideToggle();
-    $('.js-langauge-btn').toggleClass('panel__langauge_open');
+  $('.js-language-btn').on('click', function () {
+    $('.js-language-menu').toggle();
+    $('.js-language-btn').toggleClass('panel__language_open');
   });
 
   jQuery(function ($) {
     $(document).mouseup(function (e) {
-      var block = $(".js-langauge-btn");
+      var block = $(".js-language-btn");
 
       if (!block.is(e.target) && block.has(e.target).length === 0) {
-        $('.js-langauge-menu').slideUp();
-        $('.js-langauge-btn').removeClass('panel__langauge_open');
+        $('.js-language-menu').hide();
+        $('.js-language-btn').removeClass('panel__language_open');
       }
       e.stopPropagation();
     });
