@@ -1,0 +1,127 @@
+.block-calculate
+    padding-bottom 35px
+
+    &__title
+        margin-bottom 28px
+        font-size-func(18)
+
+    &__text
+        font-size-func(12)
+
+        &_small
+            font-weight 400
+
+        &_bold
+            font-weight 700
+
+    &__exchange-img
+        font-size 0
+        margin-top 25px
+        margin-bottom 32px
+
+    &__exchange-item
+        border 1px solid #dddddd
+        width 130px
+        height 130px
+        {ibt}
+
+        @media (min-width 600px)
+            width 140px
+            height 140px
+
+        &:first-child
+            margin-right 100px
+            position relative
+            background-image url(../img/dash.png)
+            background-position center
+            background-repeat no-repeat
+
+            &:after
+                content ''
+                position absolute
+                top 50%
+                right -65px
+                height 17px
+                width 17px
+                border-top 3px solid #dddddd
+                border-right 3px solid #dddddd
+                transform rotate(45deg) translateY(-70%)
+
+            &:before
+                content ''
+                position absolute
+                top 50%
+                right -74px
+                transform translateY(-50%)
+                height 3px
+                width 48px
+                background-color #dddddd
+
+        &:last-child
+            background-image url(../img/logo.png)
+            background-size 70%
+            background-position center
+            background-repeat no-repeat
+
+    &__rates-row
+        margin-bottom 20px
+
+        .block-calculate__text_small
+            margin-right 5px
+
+        & > div
+            {ibt}
+
+    .form__row
+        max-width 380px
+        margin-top 18px
+        margin-bottom 28px
+
+        label
+            {ibt}
+            width 47%
+            position relative
+
+            &:first-child
+                margin-right 6%
+
+            &:last-child
+                &:before
+                    content 'lbc'
+
+            &:before
+                position absolute
+                text-transform uppercase
+                right 10px
+                top 33px
+                font-size-func(12)
+                color #76bb43
+                font-weight 700
+
+            &.dash
+                &:before
+                    content 'dash'
+
+            &.eth
+                &:before
+                    content 'eth'
+
+            &.ltc
+                &:before
+                    content 'ltc'
+
+            &.btc
+                &:before
+                    content 'btc'
+
+            &.bch
+                &:before
+                    content 'bch'
+
+            &.card
+                &:before
+                    content 'card'
+
+        input
+            padding-right 55px
+

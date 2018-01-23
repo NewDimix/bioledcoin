@@ -156,7 +156,7 @@ $(window).on('load', function () {
     nextArrow: '<button type="button" class="news__arrows news__arrows_next"><span>Next</span></button>',
     responsive: [
       {
-        breakpoint: 1284,
+        breakpoint: 1285,
         settings: {
           centerMode: true,
           slidesToShow: 1
@@ -177,12 +177,13 @@ $(window).on('load', function () {
     infinite: false,
     centerMode: false,
     variableWidth: true,
+    touchMove: false,
     slidesToShow: 3,
     prevArrow: '<button type="button" class="videos__arrows videos__arrows_prev"><span>Previous</span></button>',
     nextArrow: '<button type="button" class="videos__arrows videos__arrows_next"><span>Next</span></button>',
     responsive: [
       {
-        breakpoint: 1284,
+        breakpoint: 1285,
         settings: {
           centerMode: true,
           slidesToShow: 1
@@ -344,5 +345,91 @@ $(window).on('load', function () {
     $('.js-login-form')[0].reset();
     $('.js-registration-form')[0].reset();
     $('.js-modal-form')[0].reset();
+  });
+
+
+
+  $("input[name=method]").change(function(){
+    var value = $('input[name=method]:checked').val();
+    var url;
+    var classText;
+    var allClassText = "dash eth ltc btc bch card";
+    var rate = 912.38;
+
+    switch (value) {
+      case 'dash':
+        url = "url(../img/dash.png)";
+        classText = 'dash';
+        rate = 912.38;
+        break;
+      case 'etherium':
+        url = "url(../img/eth.png)";
+        classText = 'eth';
+        rate = 954.38;
+        break;
+      case 'litecoin':
+        url = "url(../img/ltc.png)";
+        classText = 'ltc';
+        rate = 922.38;
+        break;
+      case 'bitcoin':
+        url = "url(../img/btc.png)";
+        classText = 'btc';
+        rate = 976.38;
+        break;
+      case 'bitcoinCash':
+        url = "url(../img/bch.png)";
+        classText = 'bch';
+        rate = 923.38;
+        break;
+      case 'card':
+        url = "url(../img/card.png)";
+        classText = 'card';
+        rate = 965.38;
+        break;
+      default:
+        alert( 'ничего не выбрано' );
+    }
+
+    $(".js-send-img").css("background-image", url);
+    $(".js-send-text").removeClass(allClassText);
+    $(".js-send-text").addClass(classText);
+
+    $(".js-send-text-rate").html(classText);
+    $(".js-send-value-rate").html(rate);
+
+    var recelveValue = $('.js-send').val() * rate;
+    $('.js-recelve').val(recelveValue);
+  });
+
+  $('.js-send').on('input', function(){
+    var value = $('input[name=method]:checked').val();
+    var rate = 912.38;
+
+    switch (value) {
+      case 'dash':
+        rate = 912.38;
+        break;
+      case 'etherium':
+        rate = 954.38;
+        break;
+      case 'litecoin':
+        rate = 922.38;
+        break;
+      case 'bitcoin':
+        rate = 976.38;
+        break;
+      case 'bitcoinCash':
+        rate = 923.38;
+        break;
+      case 'card':
+        rate = 965.38;
+        break;
+      default:
+        alert( 'ничего не выбрано' );
+    }
+
+    var recelveValue = $('.js-send').val() * rate;
+    $('.js-recelve').val(recelveValue);
   });
 });
