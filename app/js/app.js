@@ -417,6 +417,18 @@ $(window).on('load', function () {
 
     var recelveValue = $('.js-send').val() * rate;
     $('.js-recelve').val(recelveValue);
+
+    $('.js-block-progress').slideUp();
+    $('.js-block-payment').slideUp();
+    $('.js-block-calculate').slideDown();
+    $('.js-block-copy').slideDown();
+  });
+
+  $('.js-back-btn').on('click', function () {
+    $('.js-block-progress').slideDown();
+    $('.js-block-payment').slideDown();
+    $('.js-block-calculate').slideUp();
+    $('.js-block-copy').slideUp();
   });
 
   $('.js-send').on('input', function(){

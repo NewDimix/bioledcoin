@@ -1,5 +1,52 @@
 .block-calculate
     padding-bottom 35px
+    display none
+    position relative
+
+    &__back
+        color #76bb42
+        font-size-func(14)
+        position absolute
+        top 0
+        right 0
+        padding 20px 22px 20px 30px
+        border none
+        background none
+        border-radius 3px
+        outline none
+
+        &:hover, &:focus
+            cursor pointer
+            color white
+            background-color #76bb42
+
+            &:after
+                background-color white
+
+            &:before
+                border-color white
+
+        &:after
+            content ''
+            height 2px
+            width 12px
+            background-color #76bb42
+            position absolute
+            left 10px
+            top 50%
+            transform translateY(-50%)
+
+        &:before
+            content ''
+            height 7px
+            width 7px
+            border-top 2px solid #76bb42
+            border-left 2px solid #76bb42
+            position absolute
+            left 10px
+            top 50%
+            transform translateY(-50%) rotate(-45deg)
+
 
     &__title
         margin-bottom 28px
