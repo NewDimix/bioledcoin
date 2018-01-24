@@ -2,13 +2,9 @@
     text-align center
 
     &__videos-item
-        margin-right 0
-
-    .videos-item
         position relative
         display block
         overflow hidden
-        background-color white
         transition all 1s ease
         margin-bottom 35px
         height 154px
@@ -24,10 +20,6 @@
             {ibt}
             margin-right 40px
 
-        @media (max-width 1284px)
-            opacity 1
-            transform none
-
         &:nth-child(2n)
             @media (min-width 850px) and (max-width 1264px)
                 margin-right 0
@@ -40,27 +32,18 @@
             @media (min-width 850px)
                 margin-right 0
 
-        &__video-wrap
-            padding-bottom 59.25%
-            padding-top 0px
-
         &:focus
             outline none
 
-        &.slick-current
-            opacity 1
-            transform scale(1)
+    &__video-wrap
+        padding-bottom 59.25%
+        padding-top 0px
+        position relative
+        height 0
 
-        &:focus
-            outline none
-
-         &__video-wrap
-            position relative
-            height 0
-
-            iframe
-                position absolute
-                top 0
-                left 0
-                width 100%
-                height 100%
+        iframe
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
