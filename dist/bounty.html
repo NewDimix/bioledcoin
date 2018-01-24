@@ -39,7 +39,7 @@
         </ul>
     </button>
 
-<!--    <button class="panel__login" title="Авторизация" data-remodal-target="login">Login</button>-->
+    <button class="panel__login" title="Авторизация" data-remodal-target="login">Login</button>
 
     <div class="remodal panel__modal-login modal-login js-modal-login" data-remodal-id="login">
         <button data-remodal-action="close" class="remodal-close"></button>
@@ -48,14 +48,21 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="text">
+                    <input type="text" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
-                    <p>Password:</p>
-                    <input type="password">
+                    <p>Password: (<a href="#" class="form__row_reg-link">Забыли пароль?</a>)</p>
+                    <input type="password" required>
+                </label>
+            </div>
+
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox">
+                    <span>Запомнить меня</span>
                 </label>
             </div>
 
@@ -76,21 +83,35 @@
            <div class="form__row">
                 <label>
                     <p>Nickname:</p>
-                    <input type="text">
+                    <input type="text" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="text">
+                    <input type="text" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
-                    <p>Password:</p>
-                    <input type="password">
+                    <p>Пароль:</p>
+                    <input type="password" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Повторите пароль:</p>
+                    <input type="password" required>
+                </label>
+            </div>
+
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox" required>
+                    <span>Я соглашаюсь на обратку персональных данных</span>
                 </label>
             </div>
 
@@ -112,6 +133,7 @@
         </form>
     </div>
 
+<!--
     <button class="panel__user js-user-btn">
         <div class="panel__nickname">
             <p>Gleb124</p>
@@ -126,6 +148,7 @@
             <li><a href="index.html">Выход</a></li>
         </ul>
     </button>
+-->
 </div>
 
         </div>
