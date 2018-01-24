@@ -417,7 +417,9 @@ $(window).on('load', function () {
 
     var recelveValue = $('.js-send').val() * rate;
     $('.js-recelve').val(recelveValue);
+  });
 
+  $('.js-next-btn').on('click', function () {
     $('.js-block-progress').slideUp();
     $('.js-block-payment').slideUp();
     $('.js-block-calculate').slideDown();
