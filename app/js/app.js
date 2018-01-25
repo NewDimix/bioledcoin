@@ -340,7 +340,7 @@ $(window).on('load', function () {
 
 
 
-  if(!$('.js-transactions-list').children('li').length > 0) {
+  if(!$('.js-transactions-list tbody').children('tr').length > 0) {
     $('.js-block-transactions').removeClass('block-transactions_yes');
     $('.js-block-transactions').addClass('block-transactions_no');
   } else {

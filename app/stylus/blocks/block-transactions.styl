@@ -2,9 +2,6 @@
     min-height 600px
     position relative
 
-    &__list
-        font-size-func(12)
-
     &__not
         position absolute
         top 50%
@@ -19,15 +16,15 @@
         opacity .5
 
     &_no
-        .block-transactions__list
+        .block-transactions__transactions-table
             display none
 
         .block-transactions__not
-            display block
+            display table
 
     &_yes
-        .block-transactions__list
-            display block
+        .block-transactions__transactions-table
+            display table
 
         .block-transactions__not
             display none
