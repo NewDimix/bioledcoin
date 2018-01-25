@@ -3,8 +3,18 @@
     display none
 
     &__title
+        position relative
         margin-bottom 28px
         font-size-func(18)
+        padding-left 35px
+
+        &:after
+            content '03.'
+            color #76bb43
+            font-weight 700
+            position absolute
+            top 0
+            left 0
 
     .form__row
         margin-bottom 30px

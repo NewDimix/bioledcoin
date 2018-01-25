@@ -436,6 +436,10 @@ $(window).on('load', function () {
     $('.js-block-copy').slideUp();
   });
 
+  $('.js-back-btn').on('click', function () {
+    progress();
+  });
+
   $('.js-send').on('input', function(){
     var value = $('input[name=method]:checked').val();
     var rate = 912.38;

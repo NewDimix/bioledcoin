@@ -1,7 +1,24 @@
 .block-payment
+    text-align center
+    padding-bottom 33px
+
+    @media (min-width 768px)
+        text-align left
+
     &__title
+        position relative
         margin-bottom 38px
         font-size-func(18)
+        text-align left
+        padding-left 35px
+
+        &:after
+            content '01.'
+            color #76bb43
+            font-weight 700
+            position absolute
+            top 0
+            left 0
 
     &__crypto-wrap
         padding-left 0
@@ -97,5 +114,6 @@
         transition all .2s ease
 
     &__btn
+        text-align center
         min-width 205px
         max-width 100%
