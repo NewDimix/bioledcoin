@@ -1,0 +1,73 @@
+.tokens
+    font-size 0
+    padding-left 0
+    list-style none
+    text-align center
+
+    &__item
+        display block
+        max-width 300px
+        margin-left auto
+        margin-right auto
+        margin-bottom 25px
+
+        &:nth-child(2n)
+            @media (min-width 550px) and (max-width 991px)
+                margin-right 0
+
+        &:last-child
+            @media (min-width 550px)
+                margin-right 0
+
+        @media (min-width 550px)
+            {ibt}
+            width 40%
+            margin-right 10%
+
+        @media (min-width 768px)
+            width 30%
+            margin-right 10%
+
+        @media (min-width 992px)
+            width 22%
+            margin-right 4%
+
+        @media (min-width 992px)
+            width 22%
+            margin-right 4%
+
+    &__name
+        color #3d5364
+        font-weight 700
+        padding-top 22px
+        padding-bottom 22px
+        text-transform uppercase
+        background-color white
+        border-radius 70px
+        margin-bottom 10px
+
+        @media (min-width 480px)
+            margin-bottom 15px
+
+        @media (min-width 768px)
+            margin-bottom 20px
+
+        @media (min-width 992px)
+            margin-bottom 28px
+
+        h2
+            font-size-func(14)
+            margin-top 0
+            margin-bottom 0
+
+    &__amount
+        color white
+        font-size-func(14)
+        font-weight 300
+        margin-bottom 7px
+
+    &__participants
+        color white
+        font-size-func(14)
+        font-weight 300
+
