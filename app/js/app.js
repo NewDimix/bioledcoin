@@ -214,6 +214,7 @@ $(window).on('load', function () {
     );
 
     $('.js-nav-left-btn').toggleClass('open');
+    $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0.4)");
   };
 
   $.hideNav = function () {
@@ -231,6 +232,7 @@ $(window).on('load', function () {
     );
 
     $('.js-nav-left-btn').toggleClass('open');
+    $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0.4)");
   };
 
   jQuery(function ($) {
@@ -243,6 +245,7 @@ $(window).on('load', function () {
         if ($(window).width() < '768') {
           if (left === 0) {
             $.hideNav();
+            $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0)");
           }
         }
       }
