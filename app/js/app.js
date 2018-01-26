@@ -250,7 +250,6 @@ $(window).on('load', function () {
     );
 
     $('.js-nav-left-btn').toggleClass('open');
-    $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0.4)");
   };
 
   jQuery(function ($) {
@@ -284,8 +283,8 @@ $(window).on('load', function () {
 
 
 
-
-  var progressValue = 33;
+  // START progress-bar
+  var progressValue = 33; // fill percentage
 
   var progress = function() {
     if ($('.js-progress-bar').is(":visible")) {
@@ -318,13 +317,19 @@ $(window).on('load', function () {
   $(window).resize(function(){
     progress();
   });
+  // END progress-bar
 
 
 
-
+  // START panel
   $('.js-user-btn').on('click', function () {
     $('.js-user-menu').toggle();
     $('.js-user-btn').toggleClass('panel__user_open');
+  });
+
+  $('.js-language-btn').on('click', function () {
+    $('.js-language-menu').toggle();
+    $('.js-language-btn').toggleClass('panel__language_open');
   });
 
   jQuery(function ($) {
@@ -335,32 +340,22 @@ $(window).on('load', function () {
         $('.js-user-menu').hide();
         $('.js-user-btn').removeClass('panel__user_open');
       }
-      e.stopPropagation();
-    });
-  });
 
-  $('.js-language-btn').on('click', function () {
-    $('.js-language-menu').toggle();
-    $('.js-language-btn').toggleClass('panel__language_open');
-  });
-
-  jQuery(function ($) {
-    $(document).mouseup(function (e) {
-      var block = $(".js-language-btn");
+      block = $(".js-language-btn");
 
       if (!block.is(e.target) && block.has(e.target).length === 0) {
         $('.js-language-menu').hide();
         $('.js-language-btn').removeClass('panel__language_open');
       }
+
       e.stopPropagation();
     });
   });
+  // END panel
 
 
 
-
-
-
+  // START transactions
   if(!$('.js-transactions-list tbody').children('tr').length > 0) {
     $('.js-block-transactions').removeClass('block-transactions_yes');
     $('.js-block-transactions').addClass('block-transactions_no');
@@ -368,26 +363,29 @@ $(window).on('load', function () {
     $('.js-block-transactions').removeClass('block-transactions_no');
     $('.js-block-transactions').addClass('block-transactions_yes');
   };
+  // END transactions
 
 
 
-
-
-
+  // START clipboard
   new Clipboard('.js-clipboard');
+  // END clipboard
 
 
 
-
+  // START reset forms
   $(document).on('closed', '.remodal', function (e) {
     $('.js-login-form')[0].reset();
     $('.js-registration-form')[0].reset();
     $('.js-modal-form')[0].reset();
+    $('.js-forgot-form')[0].reset();
   });
+  // END reset forms
 
 
 
-  $("input[name=method]").change(function(){
+  // START buy page
+  $("input[name=method]").change(function() {
     var value = $('input[name=method]:checked').val();
     var url;
     var classText;
@@ -452,9 +450,7 @@ $(window).on('load', function () {
     $('.js-block-payment').slideDown();
     $('.js-block-calculate').slideUp();
     $('.js-block-copy').slideUp();
-  });
 
-  $('.js-back-btn').on('click', function () {
     progress();
   });
 
@@ -488,4 +484,5 @@ $(window).on('load', function () {
     var recelveValue = $('.js-send').val() * rate;
     $('.js-recelve').val(recelveValue);
   });
+  // END buy page
 });
