@@ -1,4 +1,5 @@
-function timer() {
+// START countdown timer
+function countdown() {
   var element=document.getElementById('js-sec');
   if(!element){return;}
 
@@ -38,11 +39,15 @@ function timer() {
     document.getElementById("js-hours").innerHTML = hours;
     document.getElementById("js-days").innerHTML = days;
 
-  setTimeout("timer()", 1000);
+  setTimeout("countdown()", 1000);
 };
 
-timer();
+countdown();
+// END countdown timer
 
+
+
+// START polyfill.object-fit settings
 objectFit.polyfill({
   selector: '.js-news-img',
   fittype: 'cover',
@@ -54,14 +59,20 @@ objectFit.polyfill({
   fittype: 'cover',
   disableCrossDomain: 'true'
 });
+// END polyfill.object-fit settings
 
 
 
 $(window).on('load', function () {
+  // START preloader
   $preloader = $('.js-loader'),
   $loader = $preloader.find('.loader__img');
   $loader.fadeOut();
   $preloader.delay(0).fadeOut('slow');
+  // END preloader
+
+
+
 
   $('.js-menu-btn').click(function (event) {
     $('.js-menu-content').slideToggle();
@@ -107,6 +118,9 @@ $(window).on('load', function () {
     $.myfn('.js-menu-content > li > ul > li');
   });
 
+
+
+  // START smooth scrolling
   $(".js-menu").on("click","a", function (event) {
     event.preventDefault();
 
@@ -115,14 +129,21 @@ $(window).on('load', function () {
 
     $('body,html').animate({scrollTop: top}, 500);
   });
+  // END smooth scrolling
 
+
+
+  // START jquery.formstyler
   (function($) {
     $(function() {
-      $('.js-langauge').styler();
       $('.js-modal').styler();
     });
   })(jQuery);
+  // END jquery.formstyler
 
+
+
+  // START slick
   $('.js-roadmap-slider').slick({
     dots: true,
     infinite: true,
@@ -191,10 +212,7 @@ $(window).on('load', function () {
       }
     ]
   });
-
-
-
-
+// END slick
 
 
 
