@@ -16,20 +16,19 @@
         input
             width 100%
             padding 12px
-            color #3d5364
-            border 1px solid #dddddd
+            border 1px solid $grey-light-color
 
             &:focus
-                outline-color #00d08e
+                outline-color $turquoise-color
 
             &::-webkit-input-placeholder
-                color #9ea9b1
+                color $grey-color
             &::-moz-placeholder
-                color #9ea9b1
+                color $grey-color
             &:-moz-placeholder
-                color #9ea9b1
+                color $grey-color
             &:-ms-input-placeholder
-                color #9ea9b1
+                color $grey-color
 
         &_many-items
             font-size 0
@@ -46,13 +45,13 @@
                     {ibt}
                     font-size-func(12)
                     cursor pointer
-                    border 1px solid #dddddd
+                    border 1px solid $grey-light-color
                     width 45%
                     margin-right 10%
                     padding 12px 0
                     margin-bottom 15px
                     text-align center
-                    color #9ea9b1
+                    color $grey-dark-color
                     transition all .3s ease
                     hyphens()
 
@@ -80,15 +79,15 @@
                         margin-right 0
 
                 &:checked + label
-                    border 1px solid #00d08e
-                    outline 1px solid #00d08e
-                    color #3d5364
+                    border 1px solid $turquoise-color
+                    outline 1px solid $turquoise-color
+                    color $dark-color
 
                 &:focus + label
-                    outline 1px solid #00d08e
+                    outline 1px solid $turquoise-color
 
                 &:hover + label
-                    outline 1px solid #00d08e
+                    outline 1px solid $turquoise-color
 
         &_two-items
             font-size 0
@@ -109,7 +108,7 @@
                     margin-right 3%
 
             .jq-selectbox
-                border 1px solid #dddddd
+                border 1px solid $grey-light-color
                 padding 3px 10px
                 height 39px
                 transition all .1s ease
@@ -124,10 +123,10 @@
                     background-color white
 
                     .jq-selectbox__select
-                        color #3d5364
+                        color $dark-color
 
                     .jq-selectbox__trigger-arrow
-                        border-top-color #3d5364
+                        border-top-color $dark-color
 
                 &.opened
                     background-color white
@@ -135,20 +134,20 @@
                     border-bottom-right-radius 0
 
                     .jq-selectbox__select
-                        color #3d5364
+                        color $dark-color
 
                     .jq-selectbox__trigger-arrow
-                        border-top-color #3d5364
+                        border-top-color $dark-color
 
                 &.focused.opened
                     outline none
 
                 &.focused
-                    outline 1px solid #00d08e
+                    outline 1px solid $turquoise-color
 
                 &__select
                     background transparent
-                    color #3d5364
+                    color $dark-color
                     text-shadow none
                     box-shadow none
                     border none
@@ -172,7 +171,7 @@
                     width 20px
 
                 &__trigger-arrow
-                    border-top-color #3d5364
+                    border-top-color $dark-color
                     border-width 4px
                     top 50%
                     left none
@@ -189,7 +188,7 @@
                     font-size-func(12)
 
                 ul
-                    border 1px solid #dddddd
+                    border 1px solid $grey-light-color
 
                 li
                     padding 7px 0
@@ -200,7 +199,7 @@
                         background-color rgba(0, 208, 142, 0.5)
 
                     &.selected
-                        background-color #00d08e
+                        background-color $turquoise-color
 
                         &:hover
                             background-color rgba(0, 208, 142, 0.5)
@@ -238,7 +237,7 @@
                     padding 5px
                     margin-left 30px
                     hyphens()
-                    color #9ea9b1
+                    color $grey-dark-color
                     font-style italic
 
 
@@ -250,7 +249,7 @@
                         width 17px
                         height 17px
                         border 4px solid white
-                        outline 1px solid #dddddd
+                        outline 1px solid $grey-light-color
                         background-color white
                         position absolute
                         left -24px
@@ -260,11 +259,11 @@
 
                 &:checked + span
                     &:before
-                        background-color #3d5364
+                        background-color $dark-color
 
                 &:focus + span
                     &:before
-                        outline-color #00d08e
+                        outline-color $turquoise-color
 
         &_btn
             margin-bottom 0
@@ -286,6 +285,6 @@
                 white-space normal
 
         &_reg-link
-            color #00d08e
+            color $turquoise-color
             text-decoration none
 

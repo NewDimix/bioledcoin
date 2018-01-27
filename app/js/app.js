@@ -73,7 +73,7 @@ $(window).on('load', function () {
 
 
 
-
+  // START menu nav
   $('.js-menu-btn').click(function (event) {
     $('.js-menu-content').slideToggle();
     event.stopPropagation();
@@ -117,6 +117,7 @@ $(window).on('load', function () {
     $.myfn('.js-menu-content > li');
     $.myfn('.js-menu-content > li > ul > li');
   });
+  // END menu nav
 
 
 
@@ -212,10 +213,11 @@ $(window).on('load', function () {
       }
     ]
   });
-// END slick
+  // END slick
 
 
 
+  // START menu nav left
   var animateTest = function() {
     var left = parseInt($('.js-nav-left').css('left'),10);
 
@@ -280,6 +282,7 @@ $(window).on('load', function () {
     $('.tab').not(tab).css({'display':'none'});
     $(tab).fadeIn(400);
   });
+  // END menu nav left
 
 
 
