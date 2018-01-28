@@ -145,35 +145,58 @@
                 &:before
                     background linear-gradient(180deg, #00b7ba 10%, #00c1b3 90%)
 
-                &:after
-                    content 'Pre-ICO'
-
             &:nth-child(2)
+                background-color #00cccf
+                border 12px solid #00b7ba
+
+                &:before
+                    background linear-gradient(180deg, #00b7ba 10%, #00c1b3 90%)
+
+            &:nth-child(3)
                 background-color #00d5d0
                 border 12px solid #00c1b3
 
                 &:before
                     background linear-gradient(180deg, #00c1b3 10%, #00ceab 90%)
 
-                &:after
-                    content 'ICO'
+            &:nth-child(4)
+                background-color #00d5d0
+                border 12px solid #00c1b3
 
-            &:nth-child(3)
+                &:before
+                    background linear-gradient(180deg, #00c1b3 10%, #00ceab 90%)
+
+            &:nth-child(5)
                 background-color #00e4bf
                 border 12px solid #00ceab
 
                 &:before
                     background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
 
-                &:after
-                    content 'Реализация'
+            &:nth-child(6)
+                background-color #00e4bf
+                border 12px solid #00ceab
 
-            &:last-child
+                &:before
+                    background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
+
+            &:nth-child(7)
                 background-color #00e4bf
                 border 12px solid #00d8a4
 
+                &:before
+                    background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
+
+            &:nth-child(8)
+                background-color #00e4bf
+                border 12px solid #00d8a4
+
+                &:before
+                    background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
+
+            &.title
                 &:after
-                    content 'Девиденты'
+                    content attr(data-name)
 
         button
             position absolute

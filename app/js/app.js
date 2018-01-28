@@ -217,6 +217,18 @@ $(window).on('load', function () {
 
 
 
+  $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
+
+  function roadmapTitle(x) {
+    $(".roadmap__dots li:nth-child(" + x + ")").attr("data-name", $(".roadmap-item:nth-child(" + x + ") .roadmap-item__title h3").html());
+    $(".roadmap__dots li:nth-child(" + x + ")").addClass("title");
+  };
+
+  for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
+    roadmapTitle(i);
+  };
+
+
   // START menu nav left
   var animateTest = function() {
     var left = parseInt($('.js-nav-left').css('left'),10);
