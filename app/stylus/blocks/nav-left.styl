@@ -32,8 +32,16 @@ nav-left__icon()
         &:hover
             cursor pointer
 
+        &:focus
+            outline none
+            box-shadow 0 0 0 2px #f8f9fd, 0 0 0 3px $green-color
+
         &.open
             left 18px
+
+            &:focus
+                outline none
+                box-shadow 0 0 0 2px $green-color, 0 0 0 3px #f8f9fd
 
             .nav-left__icon
                 background-color transparent

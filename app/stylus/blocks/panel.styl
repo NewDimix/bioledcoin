@@ -7,7 +7,9 @@
         position relative
         background none
         border none
+        transition all .1s ease
         font-size-func(14)
+        hyphens()
 
         &:after
             content ''
@@ -31,6 +33,10 @@
 
         &:hover
             cursor pointer
+
+        p
+            max-height 16px
+            overflow-y hidden
 
     &__login
         {ibm}
@@ -102,6 +108,10 @@
         margin-right 18px
         color white
 
+        p
+            max-height 20px
+            overflow-x hidden
+
     &__avatar
         {ibm}
 
@@ -128,14 +138,14 @@
         .panel
             &__language
                 border-radius 5px
-                margin-right 6px
+                margin-right 5px
 
                 @media (min-width 480px)
                     margin-right 10px
 
                 &:after
                     border-top-color white
-                    right 7px
+                    right 5px
 
                     @media (min-width 480px)
                         right 11px
@@ -148,6 +158,9 @@
 
                     .panel__language-btn
                         color $dark-color
+
+                &:focus
+                    box-shadow inset 0 0 0 2px white
 
                 &_open
                     background-color white
@@ -163,17 +176,24 @@
 
             &__language-btn
                 color white
-                padding 14px 15px 13px 5px
+                padding 14px 10px 13px 0px
 
                 @media (min-width 480px)
                     padding 14px 20px 13px 10px
 
             &__user
                 border-radius 5px
-                padding 7px 40px 7px 20px
+                padding 7px 20px 7px 5px
+
+                @media (min-width 480px)
+                    padding 7px 40px 7px 20px
 
                 &:after
+                    right 6px
                     border-top-color rgba(255, 255, 255, 0.6)
+
+                    @media (min-width 480px)
+                        right 16px
 
                 &:hover
                     background-color white
@@ -183,6 +203,9 @@
 
                     .panel__nickname
                         color $dark-color
+
+                &:focus
+                    box-shadow inset 0 0 0 2px white
 
                 &_open
                     background-color white
@@ -195,6 +218,15 @@
 
                     .panel__nickname
                         color $dark-color
+
+            &__nickname
+                margin-right 5px
+
+                @media (min-width 480px)
+                    margin-right 18px
+
+                p
+                    max-width 75px
 
             &__menu
                 background-color white
@@ -219,6 +251,10 @@
                     color $dark-color
                     font-weight 700
 
+                    &:focus
+                        outline none
+                        background-color rgb(237, 244, 231)
+
             &__nickname
                 color white
 
@@ -238,15 +274,18 @@
                     position absolute
                     right -1px
 
-                &:hover
-                    background-color rgba(61, 83, 100, 0.1)
+                &:hover, &:focus
+                    background-color lighten($grey-light-color, 30%)
 
                 &_open
-                    background-color rgba(61, 83, 100, 0.1)
+                    background-color lighten($grey-light-color, 30%)
 
             &__language-btn
                 color $dark-color
                 padding 24px 20px 25px 10px
+
+                p
+                    max-width 40px
 
             &__user
                 padding 17px 40px 17px 20px
@@ -254,14 +293,14 @@
                 &:after
                     border-top-color rgba(61, 83, 100, 0.6)
 
-                &:hover
-                    background-color rgba(61, 83, 100, 0.1)
+                &:hover, &:focus
+                    background-color lighten($grey-light-color, 30%)
 
                     &:after
                         border-top-color rgba(61, 83, 100, 1)
 
                 &_open
-                    background-color rgba(61, 83, 100, 0.1)
+                    background-color lighten($grey-light-color, 30%)
 
                     &:after
                         border-top-color rgba(61, 83, 100, 1)
@@ -272,8 +311,14 @@
             &__nickname
                 color $dark-color
 
+                p
+                    max-width 250px
+
+                    @media (min-width 768px)
+                        max-width 350px
+
             &__menu
-                background-color rgb(227, 233, 239)
+                background-color lighten($grey-light-color, 40%)
                 font-size-func(14)
                 font-weight 700
                 z-index 10
@@ -286,9 +331,13 @@
                     border-bottom-right-radius 5px
 
                     &:hover
-                        background-color rgba(255, 255, 255, 0.3)
+                        background-color lighten($grey-light-color, 60%)
 
                 a
                     padding 10px 0 10px 20px
                     text-decoration none
                     color $dark-color
+
+                    &:focus
+                        outline none
+                        background-color lighten($grey-light-color, 60%)

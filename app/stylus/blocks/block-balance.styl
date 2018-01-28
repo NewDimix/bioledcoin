@@ -5,8 +5,11 @@
 
     &__balance-row
         margin-bottom 28px
+        ellipsis()
 
         & > div
+            max-width 50%
+            ellipsis()
             {ibm}
 
     &__value
@@ -21,6 +24,8 @@
         margin-bottom 35px
 
         li
+            hyphens()
+
             &:not(:last-child)
                 margin-bottom 23px
 
@@ -53,6 +58,7 @@
                 margin-bottom 23px
 
     &__text
+        hyphens()
         font-size-func(12)
 
         &_grey

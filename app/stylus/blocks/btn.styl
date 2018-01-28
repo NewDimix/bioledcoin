@@ -27,11 +27,17 @@
     &_green
         background-color $green-color
 
-        &:hover, &:focus
-            background-color #9dc480
+        &:hover
+            background-color lighten($green-color, 20%)
+
+        &:focus
+            box-shadow 0 0 0px 2px white, 0 0 0px 3px $green-color
 
     &_turquoise
         background-color $turquoise-color
 
-        &:hover, &:focus
-            background-color #51d1a9
+        &:hover
+            background-color lighten($turquoise-color, 5%)
+
+        &:focus
+            box-shadow 0 0 0px 2px white, 0 0 0px 3px $turquoise-color

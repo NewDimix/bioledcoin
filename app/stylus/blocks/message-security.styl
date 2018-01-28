@@ -32,16 +32,23 @@
     &__title
         margin-bottom 10px
         font-size-func(18)
+        hyphens()
+        padding-right 35px
+
+        @media (min-width 550px)
+            padding-right 0px
 
     &__text
         margin-bottom 27px
         font-size-func(12)
+        hyphens()
 
     &__btn
         font-size-func(12)
         width auto
         padding-top 12px
         padding-bottom 12px
+        max-width 100%
 
         @media (min-width 550px)
             min-width 330px

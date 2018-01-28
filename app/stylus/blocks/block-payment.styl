@@ -11,6 +11,7 @@
         font-size-func(18)
         text-align left
         padding-left 35px
+        hyphens()
 
         &:after
             content '01.'
@@ -25,7 +26,8 @@
         margin-bottom 35px
 
         input
-            display none
+            position absolute
+            opacity 0
 
             & + label
                 cursor pointer
@@ -45,7 +47,8 @@
                     background-color $green-color
 
             &:focus + label
-                background-color rgba(118, 187, 67, 0.3)
+                background-color $green-color
+                box-shadow 0 0 0 2px white, 0 0 0 4px $green-color
 
             &:hover + label
                 background-color rgba(118, 187, 67, 0.3)
@@ -105,6 +108,7 @@
         font-size-func(12)
         margin-bottom 5px
         transition all .2s ease
+        ellipsis()
 
     &__crypto-name
         font-size-func(14)
@@ -112,6 +116,7 @@
         color $green-color
         font-weight 700
         transition all .2s ease
+        ellipsis()
 
     &__btn
         text-align center

@@ -37,9 +37,11 @@
         background-position center
         background-repeat no-repeat
         transition all .1s ease
+        border-radius 5px
 
         &:focus
-            outline 1px solid white
+            outline none
+            box-shadow 0 0 0 2px #59dcba, 0 0 0 3px white
 
         &_linkedin
             background-image inline('linkedin.png')
@@ -67,7 +69,8 @@
 
         .social__item
             &:focus
-                outline 1px solid $grey-color
+                outline none
+                box-shadow 0 0 0 2px #ededed, 0 0 0 3px $grey-color
 
             &_linkedin
                 background-image inline('linkedin-grey.png')
@@ -92,7 +95,7 @@
             &:hover
                 .social__item
                     transform translateY(0)
-                    background-color #a7a7a7
+                    background-color darken(#c8ccce, 15%)
 
         .social__item
             border-radius 50%
@@ -104,7 +107,7 @@
 
             &:focus
                 outline none
-                background-color $grey-color
+                box-shadow 0 0 0 1px white, 0 0 0 3px #c8ccce
 
             &_linkedin
                 background-size 50%

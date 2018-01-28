@@ -289,6 +289,13 @@ $(window).on('load', function () {
   // START progress-bar
   var progressValue = 33; // fill percentage
 
+  if (progressValue >= 33) {
+    $('.progress__stage-item:first-child').addClass('progress__stage-item_active');
+  }
+  if (progressValue >= 66) {
+    $('.progress__stage-item:nth-child(2)').addClass('progress__stage-item_active');
+  }
+
   var progress = function() {
     if ($('.js-progress-bar').is(":visible")) {
       var progressBar = $(".js-progress-bar").outerWidth();
