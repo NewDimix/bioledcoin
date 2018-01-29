@@ -288,9 +288,20 @@
             &:hover, &:focus
                 transform rotate(-45deg) scale(1.2)
 
+            &.slick-disabled
+                &:hover, &:focus
+                    transform rotate(-45deg)
+
         &_next
             right 10%
             transform rotate(135deg)
 
             &:hover, &:focus
                 transform rotate(135deg) scale(1.2)
+
+            &.slick-disabled
+                &:hover, &:focus
+                    transform rotate(135deg)
+
+        &.slick-disabled
+            opacity .3
