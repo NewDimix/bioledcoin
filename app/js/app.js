@@ -208,7 +208,6 @@ $(window).on('load', function () {
 
 
   $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
-  alert($(".roadmap__dots").height() + 40);
 
   $(window).resize(function(){
     $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
