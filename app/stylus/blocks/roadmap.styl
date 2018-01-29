@@ -59,7 +59,7 @@
                 left 0
                 bottom 0
                 transform translate(-290px, 220px)
-                z-index 9
+                z-index 0
 
         @media (min-width 768px)
             width 60%
@@ -77,43 +77,54 @@
     &__dots
         position relative
         z-index 9
+        display none !important
 
         @media (min-width 768px)
+            display block !important
             position absolute
             margin-top 0
             top 0
             left -35%
-            transform translate(-50%, -73px) scale(.7)
+            transform translateX(-50%)
             padding-left 0
 
         @media (min-width 880px)
-            transform translate(-50%, -38px) scale(.85)
             left -42.5%
 
         @media (min-width 992px)
-            transform translateX(-50%)
             left -50%
 
         li
-            width 44px
-            height 44px
+            width 30px
+            height 30px
             position relative
             list-style none
             border-radius 50%
             text-align center
 
+            @media (min-width 880px)
+                width 44px
+                height 44px
+
             &:not(:last-child)
-                margin-bottom 110px
+                margin-bottom 70px
+
+                @media (min-width 880px)
+                    margin-bottom 110px
 
                 &:before
                     content ''
                     position absolute
-                    width 14px
-                    height 114px
+                    width 10px
+                    height 82px
                     top 100%
                     left 50%
                     transform translateX(-50%)
                     margin-top 10px
+
+                    @media (min-width 880px)
+                        width 14px
+                        height 114px
 
             &:hover
                 cursor pointer
@@ -122,21 +133,34 @@
                     color #00b7bb
 
             &:after
+                content attr(data-name)
                 position absolute
                 white-space nowrap
                 color $dark-color
                 transition all .5s ease
                 font-weight 300
+                font-size-func(16)
+                top -5px
+
+                @media (min-width 880px)
+                    font-size-func(20)
+                    top 0
 
             &:nth-child(2n)
                 &:after
                     right 100%
-                    margin-right 40px
+                    margin-right 30px
+
+                    @media (min-width 880px)
+                        margin-right 40px
 
             &:nth-child(2n-1)
                 &:after
                     left 100%
-                    margin-left 40px
+                    margin-left 30px
+
+                    @media (min-width 880px)
+                        margin-left 40px
 
             &:first-child
                 background-color #00cccf
@@ -238,6 +262,9 @@
         border-top 1px solid rgba(61, 83, 100, 0.8)
         padding 0
         transition all .5s ease
+
+        @media (min-width 768px)
+            display none !important
 
         &:hover
             cursor pointer

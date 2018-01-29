@@ -147,25 +147,15 @@ $(window).on('load', function () {
   // START slick
   $('.js-roadmap-slider').slick({
     dots: true,
-    infinite: true,
-    fade: true,
+    infinite: false,
+    fade: false,
     speed: 700,
     dotsClass: "roadmap__dots",
-    arrows: false,
+    arrows: true,
     slidesToShow: 1,
     adaptiveHeight: true,
     prevArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_prev"><span>Previous</span></button>',
-    nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          dots: false,
-          arrows: true,
-          fade: false
-        }
-      }
-    ]
+    nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>'
   });
 
   $('.js-news-slider').slick({
@@ -218,6 +208,11 @@ $(window).on('load', function () {
 
 
   $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
+  alert($(".roadmap__dots").height() + 240);
+
+  $(window).resize(function(){
+    $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
+  });
 
   function roadmapTitle(x) {
     $(".roadmap__dots li:nth-child(" + x + ")").attr("data-name", $(".roadmap-item:nth-child(" + x + ") .roadmap-item__title h3").html());
