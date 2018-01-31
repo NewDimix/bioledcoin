@@ -59,6 +59,12 @@ objectFit.polyfill({
   fittype: 'cover',
   disableCrossDomain: 'true'
 });
+
+objectFit.polyfill({
+  selector: '.js-panel-avatar',
+  fittype: 'cover',
+  disableCrossDomain: 'true'
+});
 // END polyfill.object-fit settings
 
 
