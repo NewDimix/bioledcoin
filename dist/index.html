@@ -48,20 +48,20 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Password: <span class="form__text">(<a href="#" class="form__row_reg-link" data-remodal-target="forgot">Забыли пароль?</a>)</span></p>
-                    <input type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
                 </label>
             </div>
 
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="remember">
                     <span>Запомнить меня</span>
                 </label>
             </div>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_turquoise" type="submit" value="Login">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Login" name="submit">
             </div>
         </form>
     </div>
@@ -83,12 +83,12 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </label>
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_turquoise" type="submit" value="Восстановить">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Восстановить" name="submit">
             </div>
         </form>
     </div>
@@ -100,34 +100,34 @@
            <div class="form__row">
                 <label>
                     <p>Nickname:</p>
-                    <input type="text" required>
+                    <input type="text" name="nickname" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Пароль:</p>
-                    <input type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Повторите пароль:</p>
-                    <input type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input type="password" name="repeat-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
                 </label>
             </div>
 
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox" required>
+                    <input type="checkbox" name="agree" required>
                     <span>Я соглашаюсь на обратку персональных данных</span>
                 </label>
             </div>
@@ -146,14 +146,14 @@
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_turquoise" type="submit" value="Registration">
+                <input class="form__btn btn btn_turquoise" type="submit" name="submit" value="Registration">
             </div>
         </form>
     </div>
 
     <button class="panel__user js-user-btn" tabindex="7">
         <div class="panel__nickname">
-            <p>Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444Gleb1244444444444444444444444444444444444444444444444444444444444444444444444</p>
+            <p>Gleb12444444</p>
         </div>
 
         <div class="panel__avatar">
@@ -926,14 +926,14 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" placeholder="info@mail.ru">
+                    <input type="email" name="email" placeholder="info@mail.ru" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Your location:</p>
-                    <input type="text" placeholder="London">
+                    <input type="text" name="location" placeholder="London" required>
                 </label>
             </div>
 
@@ -971,10 +971,10 @@
             <div class="form__row form__row_two-items">
                 <label>
                     <p>Your contact:</p>
-                    <input type="text" placeholder="Username URL">
+                    <input type="url" name="contact" placeholder="Username URL" required>
                 </label>
 
-                <select class="js-modal" data-placeholder="Please Select">
+                <select class="js-modal" data-placeholder="Please Select" required>
                     <option></option>
                     <option value="qweqwe">qweqwe</option>
                     <option value="asdasd">asdasd</option>
@@ -984,26 +984,26 @@
             <div class="form__row">
                 <label>
                     <p>Publication link:</p>
-                    <input type="text" placeholder="URL">
+                    <input type="url" name="publication-link" placeholder="URL" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>ETH address for recelving tokens:</p>
-                    <input type="text" placeholder="URL">
+                    <input type="url" name="eth-address" placeholder="URL" required>
                 </label>
             </div>
 
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="agree">
                     <span>I agree with the BOUNTY program rules</span>
                 </label>
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_turquoise" type="submit" value="Send">
+                <input class="form__btn btn btn_turquoise" type="submit" name="submit" value="Send">
             </div>
         </form>
     </div>

@@ -133,12 +133,12 @@
             <div class="form__row form__row_half-items">
                 <label class="js-send-text dash">
                     <p>You send:</p>
-                    <input class="js-send" type="number" value="1">
+                    <input class="js-send" name="send" type="number" value="1">
                 </label>
 
                 <label>
                     <p>You recelve:</p>
-                    <input class="js-recelve" type="number" value="912.38" readonly>
+                    <input class="js-recelve" name="recelve" type="number" value="912.38" readonly>
                 </label>
             </div>
 
@@ -163,11 +163,11 @@
             </div>
 
             <div class="form__row">
-                <input type="text">
+                <input class="address" type="url" name="address" required>
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_green" type="submit" value="Buy tokens">
+                <input class="form__btn btn btn_green" type="submit" name="submit" value="Buy tokens">
             </div>
         </div>
     </form>

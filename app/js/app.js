@@ -293,7 +293,16 @@ $(window).on('load', function () {
     var tab = $(this).attr('data-href');
     $('.tab').not(tab).css({'display':'none'});
     $(tab).fadeIn(400);
+    localStorage.setItem('activeContent', tab);
   });
+
+  var activeContent = localStorage.getItem('activeContent');
+  if (activeContent) {
+    $('.js-account-menu .active').removeClass('active');
+    $('.js-account-menu button[data-href="' + activeContent + '"]').addClass('active');
+    $('.tab').not(activeContent).css({'display':'none'});
+    $(activeContent).fadeIn(400);
+  }
   // END menu nav left
 
 

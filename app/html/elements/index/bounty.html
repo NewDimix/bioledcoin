@@ -30,14 +30,14 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" placeholder="info@mail.ru">
+                    <input type="email" name="email" placeholder="info@mail.ru" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Your location:</p>
-                    <input type="text" placeholder="London">
+                    <input type="text" name="location" placeholder="London" required>
                 </label>
             </div>
 
@@ -75,10 +75,10 @@
             <div class="form__row form__row_two-items">
                 <label>
                     <p>Your contact:</p>
-                    <input type="text" placeholder="Username URL">
+                    <input type="url" name="contact" placeholder="Username URL" required>
                 </label>
 
-                <select class="js-modal" data-placeholder="Please Select">
+                <select class="js-modal" data-placeholder="Please Select" required>
                     <option></option>
                     <option value="qweqwe">qweqwe</option>
                     <option value="asdasd">asdasd</option>
@@ -88,26 +88,26 @@
             <div class="form__row">
                 <label>
                     <p>Publication link:</p>
-                    <input type="text" placeholder="URL">
+                    <input type="url" name="publication-link" placeholder="URL" required>
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>ETH address for recelving tokens:</p>
-                    <input type="text" placeholder="URL">
+                    <input type="url" name="eth-address" placeholder="URL" required>
                 </label>
             </div>
 
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="agree">
                     <span>I agree with the BOUNTY program rules</span>
                 </label>
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_turquoise" type="submit" value="Send">
+                <input class="form__btn btn btn_turquoise" type="submit" name="submit" value="Send">
             </div>
         </form>
     </div>

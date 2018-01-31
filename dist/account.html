@@ -75,7 +75,7 @@
 
     <button class="panel__user js-user-btn">
         <div class="panel__nickname">
-            <p>Gleb124erwerwerwerwewerwererrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwerwerwerwerwerwerwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+            <p>Gleb124erwerwerwe</p>
         </div>
 
         <div class="panel__avatar">
@@ -225,12 +225,12 @@
             <div class="form__row form__row_half-items">
                 <label class="js-send-text dash">
                     <p>You send:</p>
-                    <input class="js-send" type="number" value="1">
+                    <input class="js-send" name="send" type="number" value="1">
                 </label>
 
                 <label>
                     <p>You recelve:</p>
-                    <input class="js-recelve" type="number" value="912.38" readonly>
+                    <input class="js-recelve" name="recelve" type="number" value="912.38" readonly>
                 </label>
             </div>
 
@@ -255,11 +255,11 @@
             </div>
 
             <div class="form__row">
-                <input type="text">
+                <input class="address" type="url" name="address" required>
             </div>
 
             <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_green" type="submit" value="Buy tokens">
+                <input class="form__btn btn btn_green" type="submit" name="submit" value="Buy tokens">
             </div>
         </div>
     </form>
@@ -308,12 +308,12 @@
                 <label>
                     <p>Provide the address you want to receive your NGCs to:</p>
 
-                    <input type="text">
+                    <input class="address" type="url" name="address" required>
                 </label>
             </div>
 
             <div class="form__row form__row_btn block-balance__btn">
-                <input class="form__button btn btn_green" type="submit" value="Save">
+                <input class="form__button btn btn_green" type="submit" name="submit" value="Save">
             </div>
         </form>
 
@@ -496,13 +496,13 @@
                 <label>
                     <p>Your Authentication Key:</p>
 
-                    <input type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM">
+                    <input class="key" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="key" required>
                 </label>
 
                 <label>
                     <p>Insert Your 6-Digit Authentication Code:</p>
 
-                    <input type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM">
+                    <input class="code" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="code" required>
                 </label>
             </div>
 
@@ -514,11 +514,11 @@
                 <p>Share your personal link with your friends through social media, e-mail or your private messengers. When your friends registers to the NAGA ICO Token sale, our affiliate software tracks the registration in real-time. Once your friends verified their e-mail address and bought at least 15 NGC, we will pay your 5% of their investment amount in NGC as a bonus. Your bonus will be credited instantly to your token balance.</p>
             </div>
 
-            <input class="form__button btn btn_green block-settings__btn" type="submit" value="Enable Two-Factor Authentication">
+            <input class="form__button btn btn_green block-settings__btn" type="submit" name="submit" value="Enable Two-Factor Authentication">
         </form>
     </div>
 
-    <div class="content-right__block block-settings">
+    <div class="content-right__block block-settings block-settings_subscribe">
         <div class="block-settings__title">
             <p>Подписка на новости</p>
         </div>
@@ -526,7 +526,7 @@
         <form action="#" class="block-settings__form form" style="margin-top: 50px">
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox" checked="checked">
+                    <input type="checkbox" checked="checked" name="subscribe">
                     <span style="color: #3d5364; font-style: normal">Я согласен получать регулярные новости на свой электронный адрес</span>
                 </label>
             </div>
