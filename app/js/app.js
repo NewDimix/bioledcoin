@@ -4,7 +4,7 @@ function countdown() {
   if(!element){return;}
 
   var d = new Date();
-  var x = new Date("01 Feb 2018 00:00");
+  var x = new Date("25 Feb 2018 00:00");
 
   d.setTime(Date.parse(x));
 
@@ -418,39 +418,39 @@ $(window).on('load', function () {
   // START buy page
   $("input[name=method]").change(function() {
     var value = $('input[name=method]:checked').val();
-    var url;
+    var currency;
     var classText;
     var allClassText = "dash eth ltc btc bch card";
     var rate = 912.38;
 
     switch (value) {
       case 'dash':
-        url = "url(../img/dash.png)";
+        currency = "dash";
         classText = 'dash';
         rate = 912.38;
         break;
       case 'etherium':
-        url = "url(../img/eth.png)";
+        currency = "eth";
         classText = 'eth';
         rate = 954.38;
         break;
       case 'litecoin':
-        url = "url(../img/ltc.png)";
+        currency = "ltc";
         classText = 'ltc';
         rate = 922.38;
         break;
       case 'bitcoin':
-        url = "url(../img/btc.png)";
+        currency = "btc";
         classText = 'btc';
         rate = 976.38;
         break;
       case 'bitcoinCash':
-        url = "url(../img/bch.png)";
+        currency = "bch";
         classText = 'bch';
         rate = 923.38;
         break;
       case 'card':
-        url = "url(../img/card.png)";
+        currency = "card";
         classText = 'card';
         rate = 965.38;
         break;
@@ -458,7 +458,8 @@ $(window).on('load', function () {
         alert( 'ничего не выбрано' );
     }
 
-    $(".js-send-img").css("background-image", url);
+    $(".js-send-img div").attr("class", "");
+    $(".js-send-img div").addClass('block-calculate__exchange-img block-calculate__exchange-img_' + currency);
     $(".js-send-text").removeClass(allClassText);
     $(".js-send-text").addClass(classText);
 
@@ -516,4 +517,8 @@ $(window).on('load', function () {
     $('.js-recelve').val(recelveValue);
   });
   // END buy page
+
+
+
+  $('.js-nav-left').mCustomScrollbar();
 });

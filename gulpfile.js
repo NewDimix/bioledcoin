@@ -79,7 +79,8 @@ gulp.task('css-vendors', function () {
     'node_modules/slick-carousel/slick/slick-theme.css',
     'node_modules/object-fit/dist/polyfill.object-fit.css',
     'node_modules/remodal/dist/remodal.css',
-    'node_modules/remodal/dist/remodal-default-theme.css'
+    'node_modules/remodal/dist/remodal-default-theme.css',
+    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
   ])
     .pipe(postcss(plugins))
     .pipe(concat('vendor.min.css'))
@@ -126,7 +127,8 @@ gulp.task('js-vendors', function () {
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/object-fit/dist/polyfill.object-fit.js',
     'node_modules/remodal/dist/remodal.min.js',
-    'node_modules/clipboard/dist/clipboard.min.js'
+    'node_modules/clipboard/dist/clipboard.min.js',
+    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())

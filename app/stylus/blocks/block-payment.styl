@@ -56,14 +56,11 @@
     &__crypto-item
         {ibt}
         width 31.36%
-        height 164px
         margin-right 2.96%
         margin-bottom 20px
-        padding-top 110px
         border 1px solid $grey-light-color
         text-align center
-        background-position center 18px
-        background-repeat no-repeat
+        padding-bottom 17px
 
         @media (min-width 1050px)
             width 15.83%
@@ -86,23 +83,49 @@
         &:last-of-type
             margin-right 0
 
-        &_dash
-            background-image url(../img/dash.png)
-
-        &_eth
-            background-image url(../img/eth.png)
-
         &_ltc
             background-image url(../img/ltc.png)
 
-        &_btc
-            background-image url(../img/btc.png)
+    &__img-wrap
+        position relative
+        height 110px
 
-        &_bch
-            background-image url(../img/bch.png)
+    &__img
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        background-image url(../img/sprite-crypt.png)
+
+        &_dash
+            background-position -208px 0px
+            width 72px
+            height 73px
 
         &_card
-            background-image url(../img/card.png)
+            background-position -115px -93px
+            width 73px
+            height 73px
+
+        &_btc
+            background-position -115px 0px
+            width 73px
+            height 73px
+
+        &_bch
+            background-position 0px 0px
+            width 95px
+            height 72px
+
+        &_eth
+            background-position 0px -188px
+            width 49px
+            height 77px
+
+        &_ltc
+            background-position 0px -92px
+            width 76px
+            height 76px
 
     &__crypto-text
         font-size-func(12)

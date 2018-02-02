@@ -1,12 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Account</title>
         <meta name="description" content="">
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/vendor.min.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
@@ -14,7 +15,7 @@
     <body class="body_account">
 
 <div class="loader js-loader">
-    <img class="loader__img" src="/img/loader.gif" alt="Loading...">
+    <img class="loader__img" src="img/loader.gif" alt="Loading...">
 </div>
 
 
@@ -79,7 +80,7 @@
         </div>
 
         <div class="panel__avatar">
-            <img class="js-panel-avatar" src="/img/team-photo2.jpg" alt="Avatar">
+            <img class="js-panel-avatar" src="img/team-photo2.jpg" alt="Avatar">
         </div>
 
         <ul class="panel__menu js-user-menu">
@@ -139,7 +140,11 @@
 
             <div class="block-payment__crypto-wrap">
                 <input type="radio" id="dash" name="method" value="dash" checked="checked">
-                <label class="block-payment__crypto-item block-payment__crypto-item_dash" for="dash">
+                <label class="block-payment__crypto-item" for="dash">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_dash"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -149,7 +154,11 @@
                 </label>
 
                 <input type="radio" id="etherium" name="method" value="etherium">
-                <label class="block-payment__crypto-item block-payment__crypto-item_eth" for="etherium">
+                <label class="block-payment__crypto-item" for="etherium">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_eth"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -159,7 +168,11 @@
                 </label>
 
                 <input type="radio" id="litecoin" name="method" value="litecoin">
-                <label class="block-payment__crypto-item block-payment__crypto-item_ltc" for="litecoin">
+                <label class="block-payment__crypto-item" for="litecoin">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_ltc"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -169,7 +182,11 @@
                 </label>
 
                 <input type="radio" id="bitcoin" name="method" value="bitcoin">
-                <label class="block-payment__crypto-item block-payment__crypto-item_btc" for="bitcoin">
+                <label class="block-payment__crypto-item" for="bitcoin">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_btc"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -179,7 +196,11 @@
                 </label>
 
                 <input type="radio" id="bitcoinCash" name="method" value="bitcoinCash">
-                <label class="block-payment__crypto-item block-payment__crypto-item_bch" for="bitcoinCash">
+                <label class="block-payment__crypto-item" for="bitcoinCash">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_bch"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -189,7 +210,11 @@
                 </label>
 
                 <input type="radio" id="card" name="method" value="card">
-                <label class="block-payment__crypto-item block-payment__crypto-item_card" for="card">
+                <label class="block-payment__crypto-item" for="card">
+                    <div class="block-payment__img-wrap">
+                        <div class="block-payment__img block-payment__img_card"></div>
+                    </div>
+
                     <div class="block-payment__crypto-text">
                         <p>Buy with</p>
                     </div>
@@ -213,8 +238,11 @@
                 <p>Buy LBC Tokens with BTC, BCH, ETH, LiteCoin or DASH</p>
             </div>
 
-            <div class="block-calculate__exchange-img">
-                <div class="block-calculate__exchange-item js-send-img"></div>
+            <div class="block-calculate__exchange-img-block">
+                <div class="block-calculate__exchange-item block-calculate__exchange-img-wrap js-send-img">
+                    <div class="block-calculate__exchange-img block-calculate__exchange-img_dash"></div>
+                </div>
+
                 <div class="block-calculate__exchange-item"></div>
             </div>
 
@@ -469,7 +497,7 @@
 
         <div class="block-settings__print-wrap">
             <div class="block-settings__qr">
-                <img src="/img/qr.jpg" alt="QR code">
+                <img src="img/qr.jpg" alt="QR code">
             </div>
 
             <div class="block-settings__info-wrap">
