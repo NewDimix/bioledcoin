@@ -1,26 +1,25 @@
 .bottom-line
     background-color #ededed
     padding-top 20px
-    padding-bottom 20px
+    padding-bottom 10px
     font-size 0
 
     @media (min-width 768px)
         padding-top 30px
-        padding-bottom 30px
+        padding-bottom 15px
 
     @media (min-width 992px)
         padding-top 37px
-        padding-bottom 37px
+        padding-bottom 17px
 
     @media (min-width 1265px)
         padding-top 45px
-        padding-bottom 45px
+        padding-bottom 25px
 
     &__logo
         display none
 
         @media (min-width 624px)
-            width 68px
             height 69.3px
             margin-left auto
             margin-right auto
@@ -31,7 +30,7 @@
             width 102px
             height 104px
             {ibm}
-            width 30%
+            width 20%
 
     &__social
         text-align center
@@ -39,13 +38,12 @@
 
         @media (min-width 480px)
             {ibm}
-            width 70%
-            text-align right
+            width 100%
+            text-align center
 
         @media (min-width 624px)
-            width 40%
+            width 60%
             margin-bottom 0
-            text-align center
 
     &__copyright
         font-size-func(12)
@@ -55,5 +53,36 @@
 
         @media (min-width 624px)
             {ibm}
-            width 30%
+            width 20%
             text-align right
+
+    &__info
+        font-size-func(12)
+        color $grey-color
+        text-align center
+        margin-top 20px
+        hyphens()
+
+    &__links
+        padding-left 0
+        list-style none
+        font-size-func(12)
+        text-align center
+        margin-top 20px
+        margin-bottom 0
+
+        @media (min-width 480px)
+            column-count 2
+
+        @media (min-width 768px)
+            column-count 3
+
+        @media (min-width 992px)
+            column-count 4
+
+        li
+            margin-bottom 5px
+            hyphens()
+
+        a
+            color $grey-color
