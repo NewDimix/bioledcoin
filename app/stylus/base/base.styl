@@ -16,10 +16,18 @@ body
     color $dark-color
     display flex
     flex-direction column
+    height 100%
 
     &.body_account
         background-color #f8f9fd
         min-width 480px
+
+    &.body_bounty
+        .header
+            flex 1 0 auto
+
+        .footer
+            flex 0 0 auto
 
 .container
     position relative

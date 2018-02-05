@@ -65,6 +65,12 @@ objectFit.polyfill({
   fittype: 'cover',
   disableCrossDomain: 'true'
 });
+
+objectFit.polyfill({
+  selector: '.js-news-block-img',
+  fittype: 'cover',
+  disableCrossDomain: 'true'
+});
 // END polyfill.object-fit settings
 
 
