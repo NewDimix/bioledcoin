@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>BioLedCoin</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/vendor.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+
+    <body>
+
+<div class="loader js-loader">
+    <img class="loader__img" src="img/loader.gif" alt="Loading...">
+</div>
+
+<header class="header header_news">
+    <div class="container">
+        <div class="header__logo">
+<div class="logo">
+    <a href="index.html" tabindex="1"><img src="img/logo.png" alt="BioLedCoin"></a>
+</div>
+
+        </div>
+
+        <div class="header__panel">
+<div class="panel panel_light">
+    <button class="panel__language js-language-btn" tabindex="6">
+        <div class="panel__language-btn">
+            <p>ENG</p>
+        </div>
+
+        <ul class="panel__menu js-language-menu">
+            <li><a href="#">RUS</a></li>
+            <li><a href="#">ENG</a></li>
+        </ul>
+    </button>
+
+<!--    <button class="panel__login" title="Авторизация" data-remodal-target="login" tabindex="7">Login</button>-->
+
+    <div class="remodal panel__modal-login modal-login js-modal-login" data-remodal-id="login">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <form class="modal-login__form form js-login-form" action="#" method="post">
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="email" name="email" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Password: <span class="form__text">(<a href="#" class="form__row_reg-link" data-remodal-target="forgot">Забыли пароль?</a>)</span></p>
+                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                </label>
+            </div>
+
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox" name="remember">
+                    <span>Запомнить меня</span>
+                </label>
+            </div>
+
+            <div class="form__row form__row_reg">
+                <p>Если у вас нет учетной записи, то вам необходимо <b><a href="#" class="form__row_reg-link" data-remodal-target="registration">зарегистрироваться</a></b>.</p>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Login" name="submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="remodal panel__modal-forgot modal-forgot js-modal-forgot" data-remodal-id="forgot">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <form class="modal-register__form form js-forgot-form" action="#" method="post">
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="email" name="email" required>
+                </label>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_turquoise" type="submit" value="Восстановить" name="submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="remodal panel__modal-register modal-register js-modal-register" data-remodal-id="registration">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <form class="modal-register__form form js-registration-form" action="#" method="post">
+           <div class="form__row">
+                <label>
+                    <p>Nickname:</p>
+                    <input type="text" name="nickname" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="email" name="email" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Пароль:</p>
+                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Повторите пароль:</p>
+                    <input type="password" name="repeat-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                </label>
+            </div>
+
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox" name="agree" required>
+                    <span>Я соглашаюсь на обратку персональных данных</span>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Или с помощью соц. сетей:</p>
+
+                    <ul class="form__social social social_circle">
+                        <li><a class="social__item social__item_linkedin" href="#" title="Linkedin"></a></li>
+                        <li><a class="social__item social__item_facebook" href="#" title="Facebook"></a></li>
+                        <li><a class="social__item social__item_vkontakte" href="#" title="Vkontakte"></a></li>
+                        <li><a class="social__item social__item_google" href="#" title="Google+"></a></li>
+                    </ul>
+                </label>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_turquoise" type="submit" name="submit" value="Registration">
+            </div>
+        </form>
+    </div>
+
+    <button class="panel__user js-user-btn" tabindex="7">
+        <div class="panel__nickname">
+            <p>Gleb12444444</p>
+        </div>
+
+        <div class="panel__avatar">
+            <img class="js-panel-avatar" src="img/team-photo2.jpg" alt="Avatar">
+        </div>
+
+        <ul class="panel__menu js-user-menu">
+            <li><a href="account.html">Account</a></li>
+            <li><a href="index.html">Выход</a></li>
+        </ul>
+    </button>
+</div>
+
+        </div>
+    </div>
+</header>
+
+<main class="main main_news">
+    <div class="main__conditions conditions" id="conditions">
+        <div class="conditions__title">
+            <h1>Пользовательское соглашение</h1>
+        </div>
+
+        <div class="container">
+            <div class="conditions__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda amet magni neque quia ad ea aliquam deleniti delectus. Debitis eum autem, voluptates sed dicta similique velit inventore eveniet esse animi laboriosam corporis cum dolorem voluptatem perferendis quod aliquam et ab, veritatis error expedita quibusdam? Laudantium blanditiis necessitatibus soluta qui mollitia sunt provident architecto non, ullam nihil, ratione laboriosam porro. Aliquam eveniet, maiores quisquam quasi nisi cupiditate totam. Eum esse aliquam ex iusto laudantium, est qui. Earum, minima iure ducimus dolor asperiores quae odit autem sapiente voluptatibus, atque corporis veniam est quis quod dignissimos cupiditate voluptas quidem id ipsam! Asperiores natus at accusantium nulla amet deleniti cum, officia, itaque, veritatis minima vero sit eaque consequatur, qui? Rerum reiciendis molestiae ducimus itaque voluptatem. Nostrum tempora vitae eveniet, consectetur adipisci reprehenderit voluptatem, nam rerum ut dolores cum ad placeat dignissimos labore modi aliquam, maiores eligendi quidem, doloremque laborum deserunt id repellendus nisi odit. Necessitatibus obcaecati consequuntur ratione voluptates numquam deserunt similique accusantium animi nemo voluptatibus quaerat ipsam, quasi maiores perspiciatis, eveniet eos enim reiciendis architecto? Iste harum voluptate impedit officia laudantium ipsam consequuntur commodi magni rerum placeat, doloremque sit omnis quis similique, porro maxime, facilis maiores deserunt labore, pariatur beatae molestiae. Quo quos, sapiente molestiae odio excepturi iste velit minima vitae repudiandae alias natus dicta sit consequuntur autem. Laborum culpa iure nobis asperiores voluptatibus quisquam quod, modi quia ab dignissimos eveniet voluptas sapiente beatae doloribus eum laudantium dolor dolorum ea. Molestias iusto veniam maxime magni, porro labore tempore temporibus, sit harum id ratione rerum vel praesentium facilis molestiae eos adipisci eveniet omnis! Aut possimus officia veniam odio ipsam facilis cumque totam deleniti odit similique maiores hic, neque quidem id corrupti officiis iste sequi omnis nihil ex cupiditate, esse magnam! Molestias libero nulla autem praesentium dolorum omnis laborum in ut nemo voluptas sequi error enim nisi ipsam, ullam quas consectetur, obcaecati temporibus veniam provident rerum ab? Voluptatem voluptate hic aliquam quos enim, ducimus minus dignissimos velit ullam blanditiis sit id harum consequuntur cumque laborum itaque quas. Eius iure modi doloribus in molestias inventore commodi voluptatem nam vitae reprehenderit, quidem dolor, laudantium possimus perspiciatis fugit culpa non, quod repellat rem magni laborum earum. Aperiam odio, ipsa, eaque blanditiis debitis quis. Illum laborum in cum alias inventore neque suscipit itaque veritatis libero voluptatibus, omnis distinctio optio consequuntur autem expedita debitis commodi. Earum voluptatibus, eaque est perferendis nihil odit reiciendis accusamus dignissimos aperiam officia suscipit, ullam aliquam asperiores iusto illo labore unde, rerum nobis facilis consequuntur vel incidunt! Consectetur nihil maxime deserunt ullam, sint fugiat placeat, nostrum magnam. Quo accusantium obcaecati harum incidunt est unde labore atque ex perspiciatis distinctio architecto voluptas perferendis recusandae, quia nam sed sunt, et dolor at itaque debitis. Pariatur fugit saepe a corrupti iste sunt voluptate? Pariatur obcaecati sapiente mollitia totam unde? Ipsam explicabo similique earum distinctio, est, neque cupiditate inventore provident, officia voluptas rerum ipsum mollitia. Similique a, dicta unde sint ratione autem, quis iure reiciendis nulla maxime possimus aspernatur rerum accusamus deleniti in minus id illum repudiandae qui pariatur placeat et alias vitae amet! Aperiam quasi doloribus magni, illo alias quam at repellendus. Blanditiis eius est, iure impedit veritatis magnam numquam optio ducimus natus eaque praesentium quidem repudiandae magni repellendus vitae ratione nihil esse ipsum quisquam neque. Praesentium vel, placeat temporibus distinctio porro, deleniti quam, doloremque vero veniam, neque mollitia quae! Dolorum numquam eius earum debitis doloremque cumque consectetur vitae. Soluta rem non, autem velit facere voluptatibus molestiae, facilis placeat possimus atque veritatis cupiditate saepe sint deserunt odit eius culpa quam, similique nemo, ut quod omnis earum. Mollitia voluptas aut quasi natus fuga reprehenderit error hic tempora dolore, numquam incidunt, obcaecati consectetur qui magni odio nobis ducimus neque. Corrupti sed alias porro iure facere totam quam dolor odio, sequi, quo mollitia aliquid at eius debitis. Mollitia, ex, provident et perspiciatis reiciendis esse delectus vitae quam molestiae deleniti placeat ut, aspernatur ipsam temporibus illum ab, odit fugiat pariatur eveniet atque consequuntur! Id quos ratione pariatur modi, dolorum culpa veritatis quod autem incidunt sint mollitia ex quae accusantium perferendis at nostrum harum similique non. Omnis, quos labore, eveniet consequatur exercitationem iure deleniti architecto laudantium magni numquam fugit quaerat! Asperiores commodi ducimus aliquam accusantium. Voluptatum ipsum aliquam nulla officiis ipsam vel ex harum.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+<div class="bottom-line">
+    <div class="container">
+        <div class="bottom-line__logo"></div>
+
+        <ul class="bottom-line__social social social_grey">
+            <li><a class="social__item social__item_linkedin" href="#" title="Linkedin">BioLedCoin Linkedin</a></li>
+            <li><a class="social__item social__item_facebook" href="#" title="Facebook">BioLedCoin Facebook</a></li>
+            <li><a class="social__item social__item_instagram" href="#" title="Instagram">BioLedCoin Instagram</a></li>
+            <li><a class="social__item social__item_vkontakte" href="#" title="Vkontakte">BioLedCoin Vkontakte</a></li>
+            <li><a class="social__item social__item_youtube" href="#" title="Youtube">BioLedCoin Youtube</a></li>
+            <li><a class="social__item social__item_telegram" href="#" title="Telegram">BioLedCoin Telegram</a></li>
+        </ul>
+
+        <div class="bottom-line__copyright">
+            <p>(c) ledbiocoin</p>
+        </div>
+
+        <div class="bottom-line__info">
+            <p>Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация. Юридическая информация.</p>
+        </div>
+
+        <ul class="bottom-line__links">
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+            <li><a href="#">Ссылка на документацию</a></li>
+        </ul>
+    </div>
+</div>
+
+</footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.js"></script>
+
+    </body>
+</html>
+
