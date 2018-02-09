@@ -58,9 +58,6 @@
         &_youtube
             background-image inline('youtube.png')
 
-        &_google
-            background-image inline('google.png')
-
         &_telegram
             background-image inline('telegram.png')
 
@@ -120,3 +117,70 @@
 
             &_facebook
                 background-size 35%
+
+    &_colored
+        li
+            &:not(:last-child)
+                margin-right 5px
+
+            &:hover
+                .social__item
+                    transform none
+
+            &:focus
+                outline none
+                box-shadow 0 0 0 5px white, 0 0 0 7px red
+
+        .social__item
+            border-radius 5px
+            width 35px
+            height 35px
+            transition all .15s ease
+            background-color red
+
+            &:focus
+                outline none
+
+            &_linkedin
+                background-image inline('linkedin.png')
+                background-color #0577b4
+
+                &:hover
+                    background-color darken(#0577b4, 15%)
+
+
+            &_facebook
+                background-image inline('facebook.png')
+                background-color #33539d
+
+                &:hover
+                    background-color darken(#33539d, 15%)
+
+            &_instagram
+                background-image inline('instagram.png')
+                background-color #ec2048
+
+                &:hover
+                    background-color darken(#ec2048, 15%)
+
+            &_vkontakte
+                background-image inline('vkontakte.png')
+                background-color #3d6ea3
+
+                &:hover
+                    background-color darken(#3d6ea3, 15%)
+
+            &_youtube
+                background-image inline('youtube.png')
+                background-color #fe0301
+
+                &:hover
+                    background-color darken(#fe0301, 15%)
+
+
+            &_telegram
+                background-image inline('telegram.png')
+                background-color #2ea9dc
+
+                &:hover
+                    background-color darken(#2ea9dc, 15%)

@@ -1,0 +1,91 @@
+.full-news
+    padding-top 55px
+    padding-bottom 45px
+
+    &__title
+        text-align center
+        hyphens()
+
+        @media (min-width 992px)
+            margin-bottom 40px
+
+        @media (min-width 1260px)
+            margin-bottom 50px
+
+        h1
+            text-align center
+            font-weight 300
+            font-size-func(35)
+            margin-top 0
+            margin-bottom 25px
+
+            @media (min-width 480px)
+                font-size-func(38)
+                margin-bottom 35px
+
+            @media (min-width 768px)
+                font-size-func(41)
+                margin-bottom 45px
+
+            @media (min-width 992px)
+                font-size-func(44)
+                margin-bottom 55px
+
+            @media (min-width 1265px)
+                font-size-func(48)
+                margin-bottom 65px
+
+    &__row
+        margin-bottom 20px
+        text-align right
+
+        @media (min-width 480px)
+            text-align left
+
+    &__date
+        {ibt}
+        color white
+        background-color $green-color
+        padding 15px
+        border-radius 5px
+        font-size-func(18)
+
+    &__text
+        font-size-func(16)
+        text-align justify
+        margin-bottom 40px
+        hyphens()
+
+        p
+            text-indent 30px
+            margin-top 0
+            margin-bottom 0
+
+            &:last-child
+                margin-bottom 0
+
+        img
+            margin-top 25px
+            margin-bottom 25px
+            width 100%
+
+    &__hr
+        margin-top 0
+        margin-bottom 25px
+
+    &__share
+        font-size-func(18)
+        font-family HeliosCond
+
+        span
+            {ibm}
+            margin-right 15px
+            margin-bottom 10px
+
+    &__social
+        {ibm}
+        margin-bottom 10px
+
+    br
+        @media (min-width 480px)
+            display none
