@@ -81,6 +81,10 @@ gulp.task('css-vendors', function () {
     'node_modules/remodal/dist/remodal.css',
     'node_modules/remodal/dist/remodal-default-theme.css',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
+    'angular-material.css',
+    'patch.css',
+    'site.css',
+    'style.css'
   ])
     .pipe(postcss(plugins))
     .pipe(concat('vendor.min.css'))

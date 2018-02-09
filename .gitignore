@@ -1,2 +1,6 @@
 node_modules/
 files/
+angular-material.css
+site.css
+patch.css
+style.css
