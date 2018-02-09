@@ -26,6 +26,9 @@
             border-bottom-left-radius 0
             border-bottom-right-radius 0
 
+        .panel__menu
+            text-transform uppercase
+
     &__language-btn
         font-size-func(14)
         text-transform uppercase
@@ -34,10 +37,6 @@
 
         &:hover
             cursor pointer
-
-        p
-            max-height 16px
-            overflow-y hidden
 
     &__login
         {ibm}
@@ -111,10 +110,8 @@
         margin-right 18px
         color white
         transition all .1s ease
-
-        p
-            max-height 20px
-            overflow-x hidden
+        overflow hidden
+        ellipsis()
 
     &__avatar
         {ibm}
