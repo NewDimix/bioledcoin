@@ -19,6 +19,8 @@
         padding 15px
         border-radius 5px
         font-size-func(18)
+        ellipsis()
+        max-width 100%
 
     &__img
         img
@@ -53,6 +55,7 @@
             text-transform uppercase
             margin-top 0
             margin-bottom 0
+            hyphens()
 
     &__text
         font-size-func(16)
@@ -65,6 +68,10 @@
 
     &__btn
         text-align center
+        ellipsis()
 
         @media (min-width 768px)
             text-align right
+
+        .btn
+            max-width 80%
