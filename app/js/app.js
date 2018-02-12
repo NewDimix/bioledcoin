@@ -526,5 +526,111 @@ $(window).on('load', function () {
 
 
 
+// START jquery.validate
+$(".js-registration-form").validate({
+  errorPlacement: function(error, element) {
+    element.parent().append(error);
+  },
+  rules: {
+    nickname: {
+      required: true,
+      regexp: /^[a-zA-Z0-9]+$/
+    },
+    email: {
+      required: true,
+      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+    },
+    password: {
+      required: true,
+      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+    },
+    repeatpassword: {
+      required: true,
+      equalTo: '#password',
+      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+    }
+  },
+  messages: {
+    nickname: {
+      regexp: "Nickname может содержать только латинские буквы или цифры и быть не более двадцати символов в длину"
+    },
+    email: {
+      regexp: "E-MAIL должен быть в формате name@domain.com"
+    },
+    password: {
+      regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
+    },
+    repeatpassword: {
+      equalTo: "Пароли должны совпадать, повторите ввод",
+      regexp: "Пароли должны совпадать, повторите ввод"
+    }
+  }
+});
+
+$(".js-login-form").validate({
+  rules: {
+    email: {
+      required: true,
+      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+    },
+    password: {
+      required: true,
+      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+    }
+  },
+  messages: {
+    email: {
+      regexp: "E-MAIL должен быть в формате name@domain.com"
+    },
+    password: {
+      regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
+    }
+  }
+});
+
+$(".js-forgot-form").validate({
+  rules: {
+    email: {
+      required: true,
+      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+    }
+  },
+  messages: {
+    email: {
+      regexp: "E-MAIL должен быть в формате name@domain.com"
+    }
+  }
+});
+
+$.validator.addMethod('regexp', function(value, element, params) {
+  var expression = new RegExp(params);
+  return this.optional(element) || expression.test(value);
+});
+
+jQuery.extend(jQuery.validator.messages, {
+  required: "Это поле является обязательным для заполнения",
+  remote: "Please fix this field.",
+  email: "E-MAIL должен быть в формате name@domain.com",
+  url: "Please enter a valid URL.",
+  date: "Please enter a valid date.",
+  dateISO: "Please enter a valid date (ISO).",
+  number: "Please enter a valid number.",
+  digits: "Please enter only digits.",
+  creditcard: "Please enter a valid credit card number.",
+  equalTo: "Please enter the same value again.",
+  accept: "Please enter a value with a valid extension.",
+  maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+  minlength: jQuery.validator.format("Please enter at least {0} characters."),
+  rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+  range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+  max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+  min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+});
+// START jquery.validate
+
+
+
+// START mCustomScrollbar
   $('.js-nav-left').mCustomScrollbar();
+// START mCustomScrollbar
 });

@@ -133,6 +133,7 @@ gulp.task('js-vendors', function () {
     'node_modules/remodal/dist/remodal.min.js',
     'node_modules/clipboard/dist/clipboard.min.js',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+    'node_modules/jquery-validation/dist/jquery.validate.min.js'
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())

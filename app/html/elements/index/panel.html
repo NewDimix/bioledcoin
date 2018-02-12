@@ -19,14 +19,14 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" name="email" required>
+                    <input class="required" type="email" name="email">
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Password: <span class="form__text">(<a href="#" class="form__row_reg-link" data-remodal-target="forgot">Забыли пароль?</a>)</span></p>
-                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input class="required" type="password" name="password">
                 </label>
             </div>
 
@@ -54,7 +54,7 @@
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" name="email" required>
+                    <input class="required" type="email" name="email">
                 </label>
             </div>
 
@@ -71,34 +71,34 @@
            <div class="form__row">
                 <label>
                     <p>Nickname:</p>
-                    <input type="text" name="nickname" required>
+                    <input class="required" type="text" name="nickname" maxlength="20">
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Email:</p>
-                    <input type="email" name="email" required>
+                    <input class="required" type="email" name="email">
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Пароль:</p>
-                    <input type="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input class="required" id="password" type="password" name="password">
                 </label>
             </div>
 
             <div class="form__row">
                 <label>
                     <p>Повторите пароль:</p>
-                    <input type="password" name="repeat-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                    <input class="required" type="password" name="repeatpassword">
                 </label>
             </div>
 
             <div class="form__row form__row_check">
                 <label>
-                    <input type="checkbox" name="agree" required>
+                    <input class="required" type="checkbox" name="agree">
                     <span>Я соглашаюсь на обратку персональных данных</span>
                 </label>
             </div>
