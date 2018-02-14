@@ -533,19 +533,15 @@ $(".js-registration-form").validate({
   },
   rules: {
     nickname: {
-      required: true,
       regexp: /^[a-zA-Z0-9]+$/
     },
     email: {
-      required: true,
       regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
     },
     password: {
-      required: true,
       regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
     },
     repeatpassword: {
-      required: true,
       equalTo: '#password',
       regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
     }
@@ -570,11 +566,9 @@ $(".js-registration-form").validate({
 $(".js-login-form").validate({
   rules: {
     email: {
-      required: true,
       regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
     },
     password: {
-      required: true,
       regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
     }
   },
@@ -591,7 +585,6 @@ $(".js-login-form").validate({
 $(".js-forgot-form").validate({
   rules: {
     email: {
-      required: true,
       regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
     }
   },
