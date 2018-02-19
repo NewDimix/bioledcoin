@@ -202,8 +202,8 @@ $(window).on('load', function () {
     centerMode: false,
     variableWidth: true,
     slidesToShow: 3,
-    prevArrow: '<button id="js-youtube-stop" type="button" class="videos__arrows videos__arrows_prev"><span>Previous</span></button>',
-    nextArrow: '<button id="js-youtube-stop" type="button" class="videos__arrows videos__arrows_next"><span>Next</span></button>',
+    prevArrow: '<button type="button" class="videos__arrows videos__arrows_prev js-youtube-stop"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="videos__arrows videos__arrows_next js-youtube-stop"><span>Next</span></button>',
     responsive: [
       {
         breakpoint: 1285,
@@ -648,7 +648,7 @@ $(window).on('load', function () {
 
 
   // START stop youtube video
-  $(document).on('click', '#js-youtube-stop', function(){
+  $(document).on('click', '.js-youtube-stop', function(){
     jQuery("iframe").each(function() {
       jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
     });
