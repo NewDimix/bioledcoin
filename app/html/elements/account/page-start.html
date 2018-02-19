@@ -6,7 +6,23 @@
         <title>Account</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="viewport" content="width=480px, initial-scale=1">
+        <meta id="m480" name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+          if (screen.width < 480) {
+            var mvp = document.getElementById('m480');
+            mvp.setAttribute('content','width=480, user-scalable=0');
+          };
+
+          window.addEventListener("resize", function() {
+            var mvp = document.getElementById('m480');
+            mvp.setAttribute('content','width=device-width, user-scalable=0');
+
+            if (screen.width < 480) {
+              var mvp = document.getElementById('m480');
+              mvp.setAttribute('content','width=480, user-scalable=0');
+            }
+          }, false);
+        </script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/vendor.min.css">
         <link rel="stylesheet" href="css/app.css">

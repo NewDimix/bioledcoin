@@ -201,10 +201,9 @@ $(window).on('load', function () {
     infinite: false,
     centerMode: false,
     variableWidth: true,
-    touchMove: false,
     slidesToShow: 3,
-    prevArrow: '<button type="button" class="videos__arrows videos__arrows_prev"><span>Previous</span></button>',
-    nextArrow: '<button type="button" class="videos__arrows videos__arrows_next"><span>Next</span></button>',
+    prevArrow: '<button id="js-youtube-stop" type="button" class="videos__arrows videos__arrows_prev"><span>Previous</span></button>',
+    nextArrow: '<button id="js-youtube-stop" type="button" class="videos__arrows videos__arrows_next"><span>Next</span></button>',
     responsive: [
       {
         breakpoint: 1285,
@@ -438,7 +437,7 @@ $(window).on('load', function () {
       case 'etherium':
         currency = "eth";
         classText = 'eth';
-        rate = 954.38;
+        rate = $('.js-eth-value').attr("value");
         break;
       case 'litecoin':
         currency = "ltc";
@@ -448,7 +447,7 @@ $(window).on('load', function () {
       case 'bitcoin':
         currency = "btc";
         classText = 'btc';
-        rate = 976.38;
+        rate = $('.js-btc-value').attr("value");
         break;
       case 'bitcoinCash':
         currency = "bch";
@@ -458,7 +457,7 @@ $(window).on('load', function () {
       case 'card':
         currency = "card";
         classText = 'card';
-        rate = 965.38;
+        rate = $('.js-waves-value').attr("value");
         break;
       default:
         alert( 'ничего не выбрано' );
@@ -526,104 +525,145 @@ $(window).on('load', function () {
 
 
 
-// START jquery.validate
-$(".js-registration-form").validate({
-  errorPlacement: function(error, element) {
-    element.parent().append(error);
-  },
-  rules: {
-    nickname: {
-      regexp: /^[a-zA-Z0-9]+$/
+  // START jquery.validate
+  $(".js-registration-form").validate({
+    errorPlacement: function(error, element) {
+      element.parent().append(error);
     },
-    email: {
-      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+    rules: {
+      nickname: {
+        regexp: /^[a-zA-Z0-9]+$/
+      },
+      email: {
+        regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+      },
+      password: {
+        regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+      },
+      repeatpassword: {
+        equalTo: '#password',
+        regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+      }
     },
-    password: {
-      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
-    },
-    repeatpassword: {
-      equalTo: '#password',
-      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+    messages: {
+      nickname: {
+        regexp: "Nickname может содержать только латинские буквы или цифры и быть не более двадцати символов в длину"
+      },
+      email: {
+        regexp: "E-MAIL должен быть в формате name@domain.com"
+      },
+      password: {
+        regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
+      },
+      repeatpassword: {
+        equalTo: "Пароли должны совпадать, повторите ввод",
+        regexp: "Пароли должны совпадать, повторите ввод"
+      }
     }
-  },
-  messages: {
-    nickname: {
-      regexp: "Nickname может содержать только латинские буквы или цифры и быть не более двадцати символов в длину"
+  });
+
+  $(".js-login-form").validate({
+    rules: {
+      email: {
+        regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+      },
+      password: {
+        regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
+      }
     },
-    email: {
-      regexp: "E-MAIL должен быть в формате name@domain.com"
+    messages: {
+      email: {
+        regexp: "E-MAIL должен быть в формате name@domain.com"
+      },
+      password: {
+        regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
+      }
+    }
+  });
+
+  $(".js-forgot-form").validate({
+    rules: {
+      email: {
+        regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
+      }
     },
-    password: {
-      regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
-    },
-    repeatpassword: {
-      equalTo: "Пароли должны совпадать, повторите ввод",
-      regexp: "Пароли должны совпадать, повторите ввод"
+    messages: {
+      email: {
+        regexp: "E-MAIL должен быть в формате name@domain.com"
+      }
     }
-  }
-});
+  });
 
-$(".js-login-form").validate({
-  rules: {
-    email: {
-      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
-    },
-    password: {
-      regexp: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*/
-    }
-  },
-  messages: {
-    email: {
-      regexp: "E-MAIL должен быть в формате name@domain.com"
-    },
-    password: {
-      regexp: "Пароль должен содержать минимум: 8 символов, одну цифру, одну букву в верхнем регистре и одну в нижнем"
-    }
-  }
-});
+  $.validator.addMethod('regexp', function(value, element, params) {
+    var expression = new RegExp(params);
+    return this.optional(element) || expression.test(value);
+  });
 
-$(".js-forgot-form").validate({
-  rules: {
-    email: {
-      regexp: /^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.+@.+\..+)$/
-    }
-  },
-  messages: {
-    email: {
-      regexp: "E-MAIL должен быть в формате name@domain.com"
-    }
-  }
-});
-
-$.validator.addMethod('regexp', function(value, element, params) {
-  var expression = new RegExp(params);
-  return this.optional(element) || expression.test(value);
-});
-
-jQuery.extend(jQuery.validator.messages, {
-  required: "Это поле является обязательным для заполнения",
-  remote: "Please fix this field.",
-  email: "E-MAIL должен быть в формате name@domain.com",
-  url: "Please enter a valid URL.",
-  date: "Please enter a valid date.",
-  dateISO: "Please enter a valid date (ISO).",
-  number: "Please enter a valid number.",
-  digits: "Please enter only digits.",
-  creditcard: "Please enter a valid credit card number.",
-  equalTo: "Please enter the same value again.",
-  accept: "Please enter a value with a valid extension.",
-  maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
-  minlength: jQuery.validator.format("Please enter at least {0} characters."),
-  rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
-  range: jQuery.validator.format("Please enter a value between {0} and {1}."),
-  max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
-  min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
-});
-// START jquery.validate
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Это поле является обязательным для заполнения",
+    remote: "Please fix this field.",
+    email: "E-MAIL должен быть в формате name@domain.com",
+    url: "Please enter a valid URL.",
+    date: "Please enter a valid date.",
+    dateISO: "Please enter a valid date (ISO).",
+    number: "Please enter a valid number.",
+    digits: "Please enter only digits.",
+    creditcard: "Please enter a valid credit card number.",
+    equalTo: "Please enter the same value again.",
+    accept: "Please enter a value with a valid extension.",
+    maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+    minlength: jQuery.validator.format("Please enter at least {0} characters."),
+    rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+    range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+    max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+    min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+  });
+  // END jquery.validate
 
 
 
-// START mCustomScrollbar
+  // START youtube-load
+  $(function() {
+    $(".js-youtube").each(function() {
+      $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+      $(this).append($('<div/>', {'class': 'slider-videos__play'}));
+
+      $(document).delegate('#'+this.id, 'click', function() {
+        var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&enablejsapi=1";
+        if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+        var iframe = $('<iframe/>', {'frameborder': '0', 'allowfullscreen': 'allowfullscreen', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+        $(this).replaceWith(iframe);
+      });
+    });
+  });
+
+  window.addEventListener("resize", function() {
+    var height = $('.js-youtube-wrap').height();
+    var width = $('.js-youtube-wrap').width();
+    $('iframe').css('height', height);
+    $('iframe').css('width', width);
+  }, false);
+  // END youtube-load
+
+
+
+  // START stop youtube video
+  $(document).on('click', '#js-youtube-stop', function(){
+    jQuery("iframe").each(function() {
+      jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+    });
+  });
+
+  $('.js-videos-slider').on('swipe', function(event, slick, direction){
+    jQuery("iframe").each(function() {
+      jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+    });
+  });
+  // END stop youtube video
+
+
+
+  // START mCustomScrollbar
   $('.js-nav-left').mCustomScrollbar();
-// START mCustomScrollbar
+  // END mCustomScrollbar
 });
