@@ -47,6 +47,193 @@ countdown();
 
 
 
+
+
+
+
+(function($) {
+
+var $event = $.event,
+    $special,
+    dummy = {_:0},
+    frame = 0,
+    wasResized, animRunning;
+
+$special = $event.special.throttledresize = {
+    setup: function() {
+        $( this ).on( "resize", $special.handler );
+    },
+    teardown: function() {
+        $( this ).off( "resize", $special.handler );
+    },
+    handler: function( event, execAsap ) {
+        // Save the context
+        var context = this,
+            args = arguments;
+
+        wasResized = true;
+
+        if ( !animRunning ) {
+            setInterval(function(){
+                frame++;
+
+                if ( frame > $special.threshold && wasResized || execAsap ) {
+                    // set correct event type
+                    event.type = "throttledresize";
+                    $event.dispatch.apply( context, args );
+                    wasResized = false;
+                    frame = 0;
+                }
+                if ( frame > 9 ) {
+                    $(dummy).stop();
+                    animRunning = false;
+                    frame = 0;
+                }
+            }, 30);
+            animRunning = true;
+        }
+    },
+    threshold: 0
+};
+
+})(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
+    ['США', 1000],
+    ['Европа', 500],
+    ['Австралия', 500],
+    ['Азия', 500],
+    ['Япония', 500],
+    ['Китай', 500],
+    ['Индия', 500],
+  ]);
+
+  var options = {
+    width: '100%',
+    height: '100%',
+    fontSize: 14,
+    fontName: 'GothamPro',
+    legend: {position: 'left', textStyle: {color: '#3d5364'}},
+    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
+    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
+    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
+  };
+
+  if ($(window).width() <= '992'){
+    options.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '768'){
+    options.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '480'){
+    options.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('potential-pie-chart'));
+  chart.draw(data, options);
+
+
+
+
+  var data2 = google.visualization.arrayToDataTable([
+    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
+    ['Баунти программа', 1000],
+    ['Pre ICO', 500],
+    ['На ICO', 500],
+    ['На биржу', 500],
+    ['Pre ICO', 500],
+    ['На ICO', 500],
+    ['На биржу', 500],
+  ]);
+
+  var options2 = {
+    width: '100%',
+    height: '100%',
+    fontSize: 14,
+    fontName: 'GothamPro',
+    legend: {position: 'left', textStyle: {color: '#3d5364'}},
+    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
+    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
+    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
+  };
+
+  if ($(window).width() <= '992'){
+    options2.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '768'){
+    options2.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '480'){
+    options2.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
+  };
+
+  var chart2 = new google.visualization.PieChart(document.getElementById('conditions-pie-chart'));
+  chart2.draw(data2, options2);
+
+
+
+
+  var data3 = google.visualization.arrayToDataTable([
+    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
+    ['Баунти программа', 1000],
+    ['Pre ICO', 500],
+    ['На ICO', 500],
+    ['На биржу', 500],
+    ['Pre ICO', 500],
+    ['На ICO', 500],
+    ['На биржу', 500],
+  ]);
+
+  var options3 = {
+    width: '100%',
+    height: '100%',
+    fontSize: 14,
+    fontName: 'GothamPro',
+    legend: {position: 'right', textStyle: {color: '#3d5364'}},
+    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
+    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
+    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
+  };
+
+  if ($(window).width() <= '992'){
+    options3.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '768'){
+    options3.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
+  };
+
+  if ($(window).width() <= '480'){
+    options3.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
+  };
+
+  var chart3 = new google.visualization.PieChart(document.getElementById('profit-pie-chart'));
+  chart3.draw(data3, options3);
+}
+
+
+
 // START polyfill.object-fit settings
 objectFit.polyfill({
   selector: '.js-news-img',
@@ -666,4 +853,59 @@ $(window).on('load', function () {
   // START mCustomScrollbar
   $('.js-nav-left').mCustomScrollbar();
   // END mCustomScrollbar
+
+
+  $(window).on("throttledresize", function (event) {
+    var options = {
+      width: '100%',
+      height: '100%',
+      fontSize: 14,
+      fontName: 'GothamPro',
+      legend: {position: 'left', textStyle: {color: '#3d5364'}},
+      colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
+      chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
+      slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
+    };
+
+    if ($(window).width() <= '992'){
+      options.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+    };
+
+    if ($(window).width() <= '768'){
+      options.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
+    };
+
+    if ($(window).width() <= '480'){
+      options.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
+    };
+
+    var data = new google.visualization.PieChart(document.getElementById('potential-pie-chart'));
+    drawChart(data, options);
+
+//    var options2 = {
+//      width: '100%',
+//      height: '100%',
+//      fontSize: 14,
+//      fontName: 'GothamPro',
+//      legend: {position: 'left', textStyle: {color: '#3d5364'}},
+//      colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
+//      chartArea:{left:20,top:60,right:40,bottom:60,width:'100%',height:'100%'},
+//      slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
+//    };
+//
+//    if ($(window).width() <= '992'){
+//      options2.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+//    };
+//
+//    if ($(window).width() <= '768'){
+//      options2.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
+//    };
+//
+//    if ($(window).width() <= '480'){
+//      options2.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
+//    };
+//
+//    var data2 = new google.visualization.PieChart(document.getElementById('conditions-pie-chart'));
+//    drawChart(data2, options2);
+  });
 });

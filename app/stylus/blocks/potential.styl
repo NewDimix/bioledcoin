@@ -1,0 +1,163 @@
+.potential
+    padding-top 15px
+    padding-bottom 18px
+    font-size 0
+
+    @media (min-width 480px)
+        padding-top 19px
+        padding-bottom 22px
+
+    @media (min-width 768px)
+        padding-top 22px
+        padding-bottom 32px
+
+    @media (min-width 992px)
+        padding-top 27px
+        padding-bottom 42px
+
+    @media (min-width 1265px)
+        padding-top 32px
+        padding-bottom 77px
+
+    &__text
+        font-size 14px
+        line-height 24px
+        line-height 2.4rem
+
+        p
+            margin-bottom 0
+
+    &__title
+        hyphens()
+
+        h2
+            text-align center
+            font-weight 300
+            font-size-func(35)
+            margin-top 0
+            margin-bottom 25px
+
+            @media (min-width 480px)
+                font-size-func(38)
+                margin-bottom 40px
+
+            @media (min-width 768px)
+                font-size-func(41)
+                margin-bottom 50px
+
+            @media (min-width 992px)
+                font-size-func(44)
+                margin-bottom 60px
+
+            @media (min-width 1265px)
+                font-size-func(48)
+                margin-bottom 78px
+
+    &__chart
+        @media (min-width 992px)
+            {ibt}
+            width 50%
+
+    &__chart-wrap
+        position relative
+        padding-bottom 330px
+        height 0
+        overflow hidden
+
+        @media (min-width 480px)
+            padding-bottom 360px
+
+        @media (min-width 768px)
+            padding-bottom 390px
+
+        @media (min-width 992px)
+            padding-bottom 420px
+
+        @media (min-width 1265px)
+            padding-bottom 450px
+
+    #potential-pie-chart
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+
+    &__table
+        border-collapse collapse
+        border 2px solid #00ddb6
+
+        @media (min-width 992px)
+            {ibt}
+            width 48%
+            margin-left 2%
+
+        thead
+            background-color #00ddb6
+            color white
+            text-align center
+
+            td
+                font-size 20px
+                padding 12px
+                font-weight 300
+
+                @media (min-width 480px)
+                    font-size 21px
+                    padding 25px
+
+                @media (min-width 768px)
+                    font-size 22px
+                    padding 30px
+
+                @media (min-width 992px)
+                    font-size 23px
+                    padding 35px
+
+                @media (min-width 1265px)
+                    font-size 24px
+                    padding 40px
+
+        tbody
+            tr
+                border-bottom 2px solid #00ddb6
+                transition all .2s ease
+
+                &:nth-child(2n-1)
+                    background-color #bff6ed
+
+                &:nth-child(2n)
+                    background-color #9ef2e3
+
+                &:last-child
+                    border-bottom none
+
+                &:hover
+                    background-color #9ef2e3 !important
+
+            &:hover
+                tr
+                    background-color #bff6ed
+
+            td
+                font-size 16px
+                padding 8px 16px
+
+                &:last-child
+                    text-align right
+
+                @media (min-width 480px)
+                    font-size 18px
+                    padding 9px 18px
+
+                @media (min-width 768px)
+                    font-size 23px
+                    padding 10px 20px
+
+                @media (min-width 992px)
+                    font-size 26px
+                    padding 11px 22px
+
+                @media (min-width 1265px)
+                    font-size 30px
+                    padding 13px 25px
