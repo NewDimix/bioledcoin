@@ -684,19 +684,19 @@ $(window).on('load', function () {
         rate = 912.38;
         break;
       case 'etherium':
-        rate = 954.38;
+        rate = $('.js-eth-value').attr("value");
         break;
       case 'litecoin':
         rate = 922.38;
         break;
       case 'bitcoin':
-        rate = 976.38;
+        rate = $('.js-btc-value').attr("value");
         break;
       case 'bitcoinCash':
         rate = 923.38;
         break;
       case 'card':
-        rate = 965.38;
+        rate = $('.js-waves-value').attr("value");
         break;
       default:
         alert( 'ничего не выбрано' );
