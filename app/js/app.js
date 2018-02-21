@@ -52,50 +52,46 @@ countdown();
 
 
 (function($) {
+  var $event = $.event,
+  $special,
+  dummy = {_:0},
+  frame = 0,
+  wasResized, animRunning;
 
-var $event = $.event,
-    $special,
-    dummy = {_:0},
-    frame = 0,
-    wasResized, animRunning;
-
-$special = $event.special.throttledresize = {
+  $special = $event.special.throttledresize = {
     setup: function() {
-        $( this ).on( "resize", $special.handler );
+      $( this ).on( "resize", $special.handler );
     },
     teardown: function() {
-        $( this ).off( "resize", $special.handler );
+      $( this ).off( "resize", $special.handler );
     },
     handler: function( event, execAsap ) {
-        // Save the context
-        var context = this,
-            args = arguments;
+      var context = this,
+      args = arguments;
 
-        wasResized = true;
+      wasResized = true;
 
-        if ( !animRunning ) {
-            setInterval(function(){
-                frame++;
+      if ( !animRunning ) {
+        setInterval(function(){
+          frame++;
 
-                if ( frame > $special.threshold && wasResized || execAsap ) {
-                    // set correct event type
-                    event.type = "throttledresize";
-                    $event.dispatch.apply( context, args );
-                    wasResized = false;
-                    frame = 0;
-                }
-                if ( frame > 9 ) {
-                    $(dummy).stop();
-                    animRunning = false;
-                    frame = 0;
-                }
-            }, 30);
-            animRunning = true;
-        }
+          if ( frame > $special.threshold && wasResized || execAsap ) {
+            event.type = "throttledresize";
+            $event.dispatch.apply( context, args );
+            wasResized = false;
+            frame = 0;
+          }
+          if ( frame > 9 ) {
+            $(dummy).stop();
+            animRunning = false;
+            frame = 0;
+          }
+        }, 30);
+        animRunning = true;
+      }
     },
     threshold: 0
-};
-
+  };
 })(jQuery);
 
 
@@ -108,9 +104,10 @@ $special = $event.special.throttledresize = {
 
 
 
-
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+if ($("div").is("#potential-pie-chart")) {
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+}
 
 function drawChart() {
 
