@@ -134,7 +134,7 @@ function drawChart() {
   };
 
   if ($(window).width() <= '992'){
-    options.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+    options.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
   };
 
   if ($(window).width() <= '768'){
@@ -174,7 +174,7 @@ function drawChart() {
   };
 
   if ($(window).width() <= '992'){
-    options2.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+    options2.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
   };
 
   if ($(window).width() <= '768'){
@@ -214,7 +214,7 @@ function drawChart() {
   };
 
   if ($(window).width() <= '992'){
-    options3.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+    options3.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
   };
 
   if ($(window).width() <= '768'){
@@ -344,7 +344,7 @@ $(window).on('load', function () {
   $('.js-roadmap-slider').slick({
     dots: true,
     infinite: false,
-    fade: false,
+    fade: true,
     speed: 700,
     dotsClass: "roadmap__dots",
     arrows: true,
@@ -353,6 +353,57 @@ $(window).on('load', function () {
     prevArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_prev"><span>Previous</span></button>',
     nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>'
   });
+
+  $('.js-roadmap-slider').on('swipe', function(event, slick, currentSlide, nextSlide){
+    var px = 1090;
+
+    if ($(window).width() < '880') {
+      px = 700;
+    }
+
+    if ($(window).width() < '768') {
+      px = 0;
+    }
+
+    if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', '10px');
+    }
+    if ($(window).width() < '880') {
+      if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
+        $('.js-roadmap-slider').css('padding-top', '0');
+      }
+    }
+    if ($('.roadmap__dots li:nth-child(2)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*1+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(3)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*2+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(4)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*3+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(5)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*4+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(6)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*5+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(7)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px/7*6+'px');
+    }
+    if ($('.roadmap__dots li:nth-child(8)').hasClass("slick-active")) {
+      $('.js-roadmap-slider').css('padding-top', px+'px');
+    }
+  });
+
+  $('.roadmap__dots li').click(function(){
+    $(".js-roadmap-slider").trigger("swipe", []);
+  });
+
+  $(window).resize(function() {
+    $(".js-roadmap-slider").trigger("swipe", []);
+  });
+
 
   $('.js-news-slider').slick({
     dots: false,
@@ -883,7 +934,7 @@ $(window).on('load', function () {
     };
 
     if ($(window).width() <= '992'){
-      options.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
+      options.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
     };
 
     if ($(window).width() <= '768'){

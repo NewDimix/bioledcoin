@@ -62,7 +62,10 @@
                 <button class="menu__link menu__link_transactions" data-href="#tab4" tabindex="5" title="Transactions">Transactions</button>
             </li>
             <li>
-                <button class="menu__link menu__link_settings" data-href="#tab5" tabindex="6" title="Settings">Settings</button>
+                <button class="menu__link menu__link_bounty" data-href="#tab5" tabindex="6" title="Bounty">Bounty</button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_settings" data-href="#tab6" tabindex="7" title="Settings">Settings</button>
             </li>
         </ul>
     </nav>
@@ -506,7 +509,7 @@
     </div>
 </div>
 
-<div class="content-right__settings tab" id="tab5">
+<div class="content-right__settings tab" id="tab6">
     <div class="content-right__title">
         <h2>Settings</h2>
     </div>
@@ -578,6 +581,122 @@
                     <input type="checkbox" checked="checked" name="subscribe">
                     <span style="color: #3d5364; font-style: normal">Я согласен получать регулярные новости на свой электронный адрес</span>
                 </label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="content-right__bounty tab" id="tab5">
+    <div class="content-right__title">
+        <h2>Bounty</h2>
+    </div>
+
+    <div class="content-right__block bounty">
+        <div class="bounty__img">
+        <img src="img/bounty.jpg" alt="">
+    </div>
+
+    <div class="bounty__content">
+        <div class="bounty__subtitle">
+            <h3>Bounty</h3>
+        </div>
+
+        <div class="bounty__text">
+            <p>Равным образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке новых предложений. Равным образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия. Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Товарищи! рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>
+        </div>
+
+        <button class="bounty__link btn btn_green" data-remodal-target="modal" title="Участвовать">Участвовать</button>
+    </div>
+
+    <div class="remodal bounty__modal modal" data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <div class="modal__title">
+            <h3>Social Media Bounty Campaign</h3>
+        </div>
+
+        <form class="modal__form form js-modal-form" action="#" method="post">
+            <div class="form__row">
+                <label>
+                    <p>Email:</p>
+                    <input type="email" name="email" placeholder="info@mail.ru" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Your location:</p>
+                    <input type="text" name="location" placeholder="London" required>
+                </label>
+            </div>
+
+            <div class="form__row form__row_many-items">
+                <p>Action in:</p>
+
+                <input type="radio" id="facebook" name="action" value="facebook" checked="checked">
+                <label for="facebook">Facebook</label>
+
+                <input type="radio" id="twitter" name="action" value="twitter">
+                <label for="twitter">Twitter</label>
+
+                <input type="radio" id="medium" name="action" value="medium">
+                <label for="medium">Medium</label>
+
+                <input type="radio" id="reddit" name="action" value="reddit">
+                <label for="reddit">Reddit</label>
+
+                <input type="radio" id="youtube" name="action" value="youtube">
+                <label for="youtube">Youtube</label>
+
+                <input type="radio" id="gitHub" name="action" value="gitHub">
+                <label for="gitHub">GitHub</label>
+
+                <input type="radio" id="instagram" name="action" value="instagram">
+                <label for="instagram">Instagram</label>
+
+                <input type="radio" id="telegram" name="action" value="telegram">
+                <label for="telegram">Telegram</label>
+
+                <input type="radio" id="vlog" name="action" value="vlog">
+                <label for="vlog">Vlog/Blog</label>
+            </div>
+
+            <div class="form__row form__row_two-items">
+                <label>
+                    <p>Your contact:</p>
+                    <input type="url" name="contact" placeholder="Username URL" required>
+                </label>
+
+                <select class="js-modal" data-placeholder="Please Select" required>
+                    <option></option>
+                    <option value="qweqwe">qweqwe</option>
+                    <option value="asdasd">asdasd</option>
+                </select>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>Publication link:</p>
+                    <input type="url" name="publication-link" placeholder="URL" required>
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>
+                    <p>ETH address for recelving tokens:</p>
+                    <input type="url" name="eth-address" placeholder="URL" required>
+                </label>
+            </div>
+
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox" name="agree">
+                    <span onclick="window.open('conditions.html','_blank')">I agree with the BOUNTY program rules</span>
+                </label>
+            </div>
+
+            <div class="form__row form__row_btn">
+                <input class="form__btn btn btn_green" type="submit" name="submit" value="Send">
             </div>
         </form>
     </div>
