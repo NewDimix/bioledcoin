@@ -4,7 +4,7 @@ function countdown() {
   if(!element){return;}
 
   var d = new Date();
-  var x = new Date("25 Feb 2018 00:00");
+  var x = new Date("26 Feb 2018 00:00");
 
   d.setTime(Date.parse(x));
 
@@ -48,51 +48,15 @@ countdown();
 
 
 
+  $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu").outerHeight(true)+parseInt($(".js-header").css("padding-top")));
+  $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top")));
+  $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
 
-
-
-(function($) {
-  var $event = $.event,
-  $special,
-  dummy = {_:0},
-  frame = 0,
-  wasResized, animRunning;
-
-  $special = $event.special.throttledresize = {
-    setup: function() {
-      $( this ).on( "resize", $special.handler );
-    },
-    teardown: function() {
-      $( this ).off( "resize", $special.handler );
-    },
-    handler: function( event, execAsap ) {
-      var context = this,
-      args = arguments;
-
-      wasResized = true;
-
-      if ( !animRunning ) {
-        setInterval(function(){
-          frame++;
-
-          if ( frame > $special.threshold && wasResized || execAsap ) {
-            event.type = "throttledresize";
-            $event.dispatch.apply( context, args );
-            wasResized = false;
-            frame = 0;
-          }
-          if ( frame > 9 ) {
-            $(dummy).stop();
-            animRunning = false;
-            frame = 0;
-          }
-        }, 30);
-        animRunning = true;
-      }
-    },
-    threshold: 0
-  };
-})(jQuery);
+  $(window).resize(function() {
+    $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu").outerHeight(true)+parseInt($(".js-header").css("padding-top")));
+    $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top")));
+    $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
+  });
 
 
 
@@ -104,130 +68,8 @@ countdown();
 
 
 
-if ($("div").is("#potential-pie-chart")) {
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-}
-
-function drawChart() {
-
-  var data = google.visualization.arrayToDataTable([
-    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
-    ['США', 1000],
-    ['Европа', 500],
-    ['Австралия', 500],
-    ['Азия', 500],
-    ['Япония', 500],
-    ['Китай', 500],
-    ['Индия', 500],
-  ]);
-
-  var options = {
-    width: '100%',
-    height: '100%',
-    fontSize: 14,
-    fontName: 'GothamPro',
-    legend: {position: 'left', textStyle: {color: '#3d5364'}},
-    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
-    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
-    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
-  };
-
-  if ($(window).width() <= '992'){
-    options.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '768'){
-    options.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '480'){
-    options.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
-  };
-
-  var chart = new google.visualization.PieChart(document.getElementById('potential-pie-chart'));
-  chart.draw(data, options);
 
 
-
-
-  var data2 = google.visualization.arrayToDataTable([
-    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
-    ['Баунти программа', 1000],
-    ['Pre ICO', 500],
-    ['На ICO', 500],
-    ['На биржу', 500],
-    ['Pre ICO', 500],
-    ['На ICO', 500],
-    ['На биржу', 500],
-  ]);
-
-  var options2 = {
-    width: '100%',
-    height: '100%',
-    fontSize: 14,
-    fontName: 'GothamPro',
-    legend: {position: 'left', textStyle: {color: '#3d5364'}},
-    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
-    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
-    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
-  };
-
-  if ($(window).width() <= '992'){
-    options2.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '768'){
-    options2.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '480'){
-    options2.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
-  };
-
-  var chart2 = new google.visualization.PieChart(document.getElementById('conditions-pie-chart'));
-  chart2.draw(data2, options2);
-
-
-
-
-  var data3 = google.visualization.arrayToDataTable([
-    ['Территория', 'Потенциал строительства новых теплиц (в Га)'],
-    ['Баунти программа', 1000],
-    ['Pre ICO', 500],
-    ['На ICO', 500],
-    ['На биржу', 500],
-    ['Pre ICO', 500],
-    ['На ICO', 500],
-    ['На биржу', 500],
-  ]);
-
-  var options3 = {
-    width: '100%',
-    height: '100%',
-    fontSize: 14,
-    fontName: 'GothamPro',
-    legend: {position: 'right', textStyle: {color: '#3d5364'}},
-    colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
-    chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
-    slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
-  };
-
-  if ($(window).width() <= '992'){
-    options3.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '768'){
-    options3.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
-  };
-
-  if ($(window).width() <= '480'){
-    options3.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
-  };
-
-  var chart3 = new google.visualization.PieChart(document.getElementById('profit-pie-chart'));
-  chart3.draw(data3, options3);
-}
 
 
 
@@ -660,7 +502,7 @@ $(window).on('load', function () {
     var value = $('input[name=method]:checked').val();
     var currency;
     var classText;
-    var allClassText = "dash eth ltc btc bch card";
+    var allClassText = "dash eth ltc btc bch waves";
     var rate = 912.38;
 
     switch (value) {
@@ -689,9 +531,9 @@ $(window).on('load', function () {
         classText = 'bch';
         rate = 923.38;
         break;
-      case 'card':
-        currency = "card";
-        classText = 'card';
+      case 'waves':
+        currency = "waves";
+        classText = 'waves';
         rate = $('.js-waves-value').attr("value");
         break;
       default:
@@ -746,7 +588,7 @@ $(window).on('load', function () {
       case 'bitcoinCash':
         rate = 923.38;
         break;
-      case 'card':
+      case 'waves':
         rate = $('.js-waves-value').attr("value");
         break;
       default:
@@ -921,57 +763,17 @@ $(window).on('load', function () {
 
 
 
-  $(window).on("throttledresize", function (event) {
-    var options = {
-      width: '100%',
-      height: '100%',
-      fontSize: 14,
-      fontName: 'GothamPro',
-      legend: {position: 'left', textStyle: {color: '#3d5364'}},
-      colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
-      chartArea:{left:20,top:60,right:20,bottom:60,width:'100%',height:'100%'},
-      slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
-    };
 
-    if ($(window).width() <= '992'){
-      options.chartArea = {left:200,top:50,right:200,bottom:50,width:'100%',height:'100%'};
-    };
 
-    if ($(window).width() <= '768'){
-      options.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
-    };
 
-    if ($(window).width() <= '480'){
-      options.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
-    };
 
-    var data = new google.visualization.PieChart(document.getElementById('potential-pie-chart'));
-    drawChart(data, options);
+  setTimeout(function () {
+    $(".js-overflow").dotdotdot({});
+  }, 1000);
 
-//    var options2 = {
-//      width: '100%',
-//      height: '100%',
-//      fontSize: 14,
-//      fontName: 'GothamPro',
-//      legend: {position: 'left', textStyle: {color: '#3d5364'}},
-//      colors:['#52a2cb','#df8731','#9eb0a3','#ebcd00','#407abd','#67b749','#1f648d'],
-//      chartArea:{left:20,top:60,right:40,bottom:60,width:'100%',height:'100%'},
-//      slices: {0: {offset: '.02'}, 1: {offset: '.02'}, 2: {offset: '.02'}, 3: {offset: '.02'}, 4: {offset: '.02'}, 5: {offset: '.02'}, 6: {offset: '.02'}}
-//    };
-//
-//    if ($(window).width() <= '992'){
-//      options2.chartArea = {left:200,top:80,right:200,bottom:80,width:'100%',height:'100%'};
-//    };
-//
-//    if ($(window).width() <= '768'){
-//      options2.chartArea = {left:50,top:70,right:50,bottom:70,width:'100%',height:'100%'};
-//    };
-//
-//    if ($(window).width() <= '480'){
-//      options2.chartArea = {left:0,top:70,right:0,bottom:70,width:'100%',height:'100%'};
-//    };
-//
-//    var data2 = new google.visualization.PieChart(document.getElementById('conditions-pie-chart'));
-//    drawChart(data2, options2);
+  $(window).resize(function() {
+    setTimeout(function () {
+      $(".js-overflow").dotdotdot({});
+    }, 1000);
   });
 });

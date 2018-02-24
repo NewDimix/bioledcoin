@@ -1,4 +1,4 @@
-.conditions
+.text-page
     padding-top 30px
     padding-bottom 30px
 
@@ -24,27 +24,53 @@
         h1
             text-align center
             font-weight 300
-            font-size-func(35)
+            font-size-func(30)
             margin-top 0
             margin-bottom 24px
 
             @media (min-width 480px)
-                font-size-func(38)
+                font-size-func(34)
                 margin-bottom 28px
 
             @media (min-width 768px)
-                font-size-func(41)
+                font-size-func(38)
                 margin-bottom 32px
 
             @media (min-width 992px)
-                font-size-func(44)
+                font-size-func(42)
                 margin-bottom 36px
 
             @media (min-width 1265px)
-                font-size-func(48)
+                font-size-func(46)
                 margin-bottom 40px
 
     &__text
         font-size-func(14)
         line-height 2em
         hyphens()
+
+        p
+            margin-bottom 10px
+
+        p+h2
+            margin-top 30px
+
+        h2
+            font-weight 400
+            font-size-func(25)
+            margin-bottom 15px
+            margin-top 0
+            text-align center
+
+        ol, ul
+            padding-left 15px
+            margin-top 0
+            margin-bottom 20px
+
+        a
+            color $turquoise-color
+
+    &__date
+        margin-top 30px
+        text-align right
+        font-style italic

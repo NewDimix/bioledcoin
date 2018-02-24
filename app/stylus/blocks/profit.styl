@@ -2,6 +2,7 @@
     padding-top 15px
     padding-bottom 18px
     font-size 0
+    background-color #f8fcfb
 
     @media (min-width 480px)
         padding-top 19px
@@ -18,26 +19,6 @@
     @media (min-width 1265px)
         padding-top 32px
         padding-bottom 77px
-
-    &__text
-        font-size 14px
-        line-height 24px
-        line-height 2.4rem
-        text-align center
-
-        @media (min-width 768px)
-            text-align left
-
-        @media (min-width 992px)
-            {ibt}
-            width 50%
-
-        p
-            margin-bottom 25px
-
-        ul
-            padding-left 15px
-            text-align left
 
     &__title
         hyphens()
@@ -65,30 +46,41 @@
                 font-size-func(48)
                 margin-bottom 78px
 
-    &__chart-wrap
-        position relative
-        padding-bottom 330px
-        height 0
-        overflow hidden
-
-        @media (min-width 480px)
-            padding-bottom 360px
+    &__text
+        font-size 14px
+        line-height 24px
+        line-height 2.4rem
+        text-align center
 
         @media (min-width 768px)
-            padding-bottom 390px
+            text-align left
 
         @media (min-width 992px)
             {ibt}
-            width 48%
+            width 49%
+
+        p
+            margin-bottom 25px
+
+        ul
+            padding-left 15px
+            text-align left
+
+    &__chart-wrap
+        text-align center
+
+        @media (min-width 992px)
+            {ibt}
+            width 49%
+            margin-right 0
             margin-left 2%
-            padding-bottom 420px
 
-        @media (min-width 1265px)
-            padding-bottom 450px
+        img
+            {ibt}
+            width auto
+            max-width 100%
+            margin-bottom 20px
 
-    #profit-pie-chart
-        position absolute
-        top 0
-        left 0
-        width 100%
-        height 100%
+    &__chart-desc
+        font-size-func(16)
+        font-weight 700
