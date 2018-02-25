@@ -25,15 +25,18 @@
     "postcss-csso": "^3.0.0"
   },
   "dependencies": {
+    "animate.css": "^3.6.1",
     "bootstrap": "^3.3.7",
     "clipboard": "^1.7.1",
     "jquery": "^3.2.1",
     "jquery-form-styler": "^2.0.1",
+    "jquery-plugin-viewport-checker": "^1.8.3",
     "jquery-validation": "^1.17.0",
     "jquery.dotdotdot": "^3.2.2",
     "normalize.css": "^7.0.0",
     "object-fit": "^0.4.3",
     "remodal": "^1.1.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
   }
 }

@@ -762,9 +762,23 @@ $(window).on('load', function () {
   // END mCustomScrollbar
 
 
+new WOW().init();
+    $('.game-img').hide();
+
+var $win = $(window);
+var $marker = $('.news__title');
+$win.scroll(function() {
+    if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+        $win.unbind('scroll');
+        $('.game-img').show();
+        $('.game-img').addClass('animated fadeInLeft');
+    }
+});
 
 
-
+    $('.js-game-img-close').click(function(){
+  $('.game-img').addClass('animated fadeOutLeft');
+});
 
 
   setTimeout(function () {
