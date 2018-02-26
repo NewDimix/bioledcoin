@@ -160,7 +160,7 @@ $(window).on('load', function () {
 
 
   // START smooth scrolling
-  $(".js-menu").on("click","a", function (event) {
+  $(".js-menu").on("click",".js-menu-scroll", function (event) {
     event.preventDefault();
 
     var id  = $(this).attr('href'),
