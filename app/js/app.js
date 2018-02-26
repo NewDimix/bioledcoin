@@ -312,61 +312,20 @@ $(window).on('load', function () {
 
 
   // START menu nav left
-  var animateTest = function() {
-    var left = parseInt($('.js-nav-left').css('left'),10);
-
-    $(this).unbind('click');
-
-    $('.js-nav-left').animate(
-      {
-        left: (left == 0) ? -$('.js-nav-left').outerWidth() : 0
-      },
-      400,
-      (function(){
-        $('.js-nav-left-btn').bind('click', animateTest);
-      })
-    );
-
+  $('.js-nav-left-btn').click(function() {
     $('.js-nav-left-btn').toggleClass('open');
-    $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0.4)");
-  };
-
-  $.hideNav = function () {
-    var left = parseInt($('.js-nav-left').css('left'),10);
-
-    $('.js-nav-left-btn').unbind('click');
-
-    $('.js-nav-left').animate({
-        left: -$('.js-nav-left').outerWidth()
-      },
-      400,
-      (function () {
-        $('.js-nav-left-btn').bind('click', animateTest);
-      })
-    );
-
-    $('.js-nav-left-btn').toggleClass('open');
-  };
-
-  jQuery(function ($) {
-    $(document).mouseup(function (e) {
-      var block = $(".js-nav-left");
-      var left = parseInt($('.js-nav-left').css('left'), 10);
-      var container = $('.js-account-menu');
-
-      if ((!block.is(e.target) && block.has(e.target).length === 0) || (container.has(e.target).length != 0)) {
-        if ($(window).width() < '768') {
-          if (left === 0) {
-            $.hideNav();
-            $(".main__nav-left").css("box-shadow", "0 0 50px 0px rgba(0, 0, 0, 0)");
-          }
-        }
-      }
-      e.stopPropagation();
-    });
+    $(".js-nav-left").toggleClass('open');
   });
 
-  $('.js-nav-left-btn').bind('click', animateTest);
+  $(document).mouseup(function(e) {
+    var $target = $(e.target);
+    if ($target.closest(".js-nav-left").length == 0 && $target.closest(".js-nav-left-btn").length == 0) {
+      if ($(".js-nav-left").hasClass("open")) {
+        $('.js-nav-left-btn').toggleClass('open');
+        $(".js-nav-left").toggleClass('open');
+      }
+    }
+  });
 
   $('.js-account-menu button').click(function(e) {
     e.preventDefault();
@@ -376,6 +335,8 @@ $(window).on('load', function () {
     $('.tab').not(tab).css({'display':'none'});
     $(tab).fadeIn(400);
     localStorage.setItem('activeContent', tab);
+    $('.js-nav-left-btn').toggleClass('open');
+    $(".js-nav-left").toggleClass('open');
   });
 
   var activeContent = localStorage.getItem('activeContent');
