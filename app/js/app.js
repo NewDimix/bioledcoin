@@ -498,6 +498,56 @@ $(window).on('load', function () {
 
 
   // START buy page
+  var value = $('input[name=method]:checked').val();
+  var currency;
+  var classText;
+  var allClassText = "dash eth ltc btc bch waves";
+  var rate = 912.38;
+
+  switch (value) {
+    case 'dash':
+      currency = "dash";
+      classText = 'dash';
+      rate = 912.38;
+      break;
+    case 'etherium':
+      currency = "eth";
+      classText = 'eth';
+      rate = $('.js-eth-value').attr("value");
+      break;
+    case 'litecoin':
+      currency = "ltc";
+      classText = 'ltc';
+      rate = 922.38;
+      break;
+    case 'bitcoin':
+      currency = "btc";
+      classText = 'btc';
+      rate = $('.js-btc-value').attr("value");
+      break;
+    case 'bitcoinCash':
+      currency = "bch";
+      classText = 'bch';
+      rate = 923.38;
+      break;
+    case 'waves':
+      currency = "waves";
+      classText = 'waves';
+      rate = $('.js-waves-value').attr("value");
+      break;
+  }
+
+  $(".js-send-img div").attr("class", "");
+  $(".js-send-img div").addClass('block-calculate__exchange-img block-calculate__exchange-img_' + currency);
+  $(".js-send-text").removeClass(allClassText);
+  $(".js-send-text").addClass(classText);
+
+  $(".js-send-text-rate").html(classText);
+  $(".js-send-value-rate").html(rate);
+
+  var recelveValue = $('.js-send').val() * rate;
+  $('.js-recelve').val(recelveValue);
+
   $("input[name=method]").change(function() {
     var value = $('input[name=method]:checked').val();
     var currency;
@@ -762,23 +812,24 @@ $(window).on('load', function () {
   // END mCustomScrollbar
 
 
-new WOW().init();
-    $('.game-img').hide();
+  new WOW().init();
 
-var $win = $(window);
-var $marker = $('.news__title');
-$win.scroll(function() {
-    if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-        $win.unbind('scroll');
-        $('.game-img').show();
-        $('.game-img').addClass('animated fadeInLeft');
-    }
-});
+  $('.game-img').hide();
+
+  var $win = $(window);
+  var $marker = $('.news__title');
+  $win.scroll(function() {
+      if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+          $win.unbind('scroll');
+          $('.game-img').show();
+          $('.game-img').addClass('animated fadeInLeft');
+      }
+  });
 
 
-    $('.js-game-img-close').click(function(){
-  $('.game-img').addClass('animated fadeOutLeft');
-});
+  $('.js-game-img-close').click(function(){
+    $('.game-img').addClass('animated fadeOutLeft');
+  });
 
 
   setTimeout(function () {
