@@ -5,111 +5,204 @@
 
     <div class="content-right__block bounty">
         <div class="bounty__img">
-        <img src="img/bounty.jpg" alt="">
+            <img src="img/bounty.jpg" alt="">
+        </div>
+
+        <div class="bounty__content">
+            <div class="bounty__subtitle">
+                <h3>Bounty</h3>
+            </div>
+
+            <div class="bounty__text">
+                <p>Равным образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке новых предложений. Равным образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия. Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Товарищи! рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>
+            </div>
+
+            <button class="bounty__link btn btn_green" data-remodal-target="modal" title="Участвовать">Участвовать</button>
+        </div>
+
+        <div class="remodal bounty__modal modal" data-remodal-id="modal">
+            <button data-remodal-action="close" class="remodal-close"></button>
+
+            <div class="modal__title">
+                <h3>Social Media Bounty Campaign</h3>
+            </div>
+
+            <form class="modal__form form js-modal-form" action="#" method="post">
+                <div class="form__row">
+                    <label>
+                        <p>Email:</p>
+                        <input type="email" name="email" placeholder="info@mail.ru" required>
+                    </label>
+                </div>
+
+                <div class="form__row">
+                    <label>
+                        <p>Your location:</p>
+                        <input type="text" name="location" placeholder="London" required>
+                    </label>
+                </div>
+
+                <div class="form__row form__row_many-items">
+                    <p>Action in:</p>
+
+                    <input type="radio" id="facebook" name="action" value="facebook" checked="checked">
+                    <label for="facebook">Facebook</label>
+
+                    <input type="radio" id="twitter" name="action" value="twitter">
+                    <label for="twitter">Twitter</label>
+
+                    <input type="radio" id="medium" name="action" value="medium">
+                    <label for="medium">Medium</label>
+
+                    <input type="radio" id="reddit" name="action" value="reddit">
+                    <label for="reddit">Reddit</label>
+
+                    <input type="radio" id="youtube" name="action" value="youtube">
+                    <label for="youtube">Youtube</label>
+
+                    <input type="radio" id="gitHub" name="action" value="gitHub">
+                    <label for="gitHub">GitHub</label>
+
+                    <input type="radio" id="instagram" name="action" value="instagram">
+                    <label for="instagram">Instagram</label>
+
+                    <input type="radio" id="telegram" name="action" value="telegram">
+                    <label for="telegram">Telegram</label>
+
+                    <input type="radio" id="vlog" name="action" value="vlog">
+                    <label for="vlog">Vlog/Blog</label>
+                </div>
+
+                <div class="form__row form__row_two-items">
+                    <label>
+                        <p>Your contact:</p>
+                        <input type="url" name="contact" placeholder="Username URL" required>
+                    </label>
+
+                    <select class="js-modal" data-placeholder="Please Select" required>
+                        <option></option>
+                        <option value="qweqwe">qweqwe</option>
+                        <option value="asdasd">asdasd</option>
+                    </select>
+                </div>
+
+                <div class="form__row">
+                    <label>
+                        <p>Publication link:</p>
+                        <input type="url" name="publication-link" placeholder="URL" required>
+                    </label>
+                </div>
+
+                <div class="form__row">
+                    <label>
+                        <p>ETH address for recelving tokens:</p>
+                        <input type="url" name="eth-address" placeholder="URL" required>
+                    </label>
+                </div>
+
+                <div class="form__row form__row_check">
+                    <label>
+                        <input type="checkbox" name="agree">
+                        <span onclick="window.open('conditions.html','_blank')">I agree with the BOUNTY program rules</span>
+                    </label>
+                </div>
+
+                <div class="form__row form__row_btn">
+                    <input class="form__btn btn btn_green" type="submit" name="submit" value="Send">
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div class="bounty__content">
-        <div class="bounty__subtitle">
-            <h3>Bounty</h3>
+    <div class="content-right__block">
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Facebook link:</p>
+            </div>
+
+            <div class="link-referral__link js-facebook-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=facebook</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-facebook-link">Copy to clipboard</button>
         </div>
 
-        <div class="bounty__text">
-            <p>Равным образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке новых предложений. Равным образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия. Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Товарищи! рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Twitter link:</p>
+            </div>
+
+            <div class="link-referral__link js-twitter-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=twitter</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-twitter-link">Copy to clipboard</button>
         </div>
 
-        <button class="bounty__link btn btn_green" data-remodal-target="modal" title="Участвовать">Участвовать</button>
-    </div>
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Medium link:</p>
+            </div>
 
-    <div class="remodal bounty__modal modal" data-remodal-id="modal">
-        <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="link-referral__link js-medium-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=medium</div>
 
-        <div class="modal__title">
-            <h3>Social Media Bounty Campaign</h3>
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-medium-link">Copy to clipboard</button>
         </div>
 
-        <form class="modal__form form js-modal-form" action="#" method="post">
-            <div class="form__row">
-                <label>
-                    <p>Email:</p>
-                    <input type="email" name="email" placeholder="info@mail.ru" required>
-                </label>
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Reddit link:</p>
             </div>
 
-            <div class="form__row">
-                <label>
-                    <p>Your location:</p>
-                    <input type="text" name="location" placeholder="London" required>
-                </label>
+            <div class="link-referral__link js-reddit-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=reddit</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-reddit-link">Copy to clipboard</button>
+        </div>
+
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Youtube link:</p>
             </div>
 
-            <div class="form__row form__row_many-items">
-                <p>Action in:</p>
+            <div class="link-referral__link js-youtube-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=youtube</div>
 
-                <input type="radio" id="facebook" name="action" value="facebook" checked="checked">
-                <label for="facebook">Facebook</label>
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-youtube-link">Copy to clipboard</button>
+        </div>
 
-                <input type="radio" id="twitter" name="action" value="twitter">
-                <label for="twitter">Twitter</label>
-
-                <input type="radio" id="medium" name="action" value="medium">
-                <label for="medium">Medium</label>
-
-                <input type="radio" id="reddit" name="action" value="reddit">
-                <label for="reddit">Reddit</label>
-
-                <input type="radio" id="youtube" name="action" value="youtube">
-                <label for="youtube">Youtube</label>
-
-                <input type="radio" id="gitHub" name="action" value="gitHub">
-                <label for="gitHub">GitHub</label>
-
-                <input type="radio" id="instagram" name="action" value="instagram">
-                <label for="instagram">Instagram</label>
-
-                <input type="radio" id="telegram" name="action" value="telegram">
-                <label for="telegram">Telegram</label>
-
-                <input type="radio" id="vlog" name="action" value="vlog">
-                <label for="vlog">Vlog/Blog</label>
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Github link:</p>
             </div>
 
-            <div class="form__row form__row_two-items">
-                <label>
-                    <p>Your contact:</p>
-                    <input type="url" name="contact" placeholder="Username URL" required>
-                </label>
+            <div class="link-referral__link js-github-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=github</div>
 
-                <select class="js-modal" data-placeholder="Please Select" required>
-                    <option></option>
-                    <option value="qweqwe">qweqwe</option>
-                    <option value="asdasd">asdasd</option>
-                </select>
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-github-link">Copy to clipboard</button>
+        </div>
+
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Instagram link:</p>
             </div>
 
-            <div class="form__row">
-                <label>
-                    <p>Publication link:</p>
-                    <input type="url" name="publication-link" placeholder="URL" required>
-                </label>
+            <div class="link-referral__link js-instagram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=instagram</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-instagram-link">Copy to clipboard</button>
+        </div>
+
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Telegram link:</p>
             </div>
 
-            <div class="form__row">
-                <label>
-                    <p>ETH address for recelving tokens:</p>
-                    <input type="url" name="eth-address" placeholder="URL" required>
-                </label>
+            <div class="link-referral__link js-telegram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=telegram</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-telegram-link">Copy to clipboard</button>
+        </div>
+
+        <div class="link-referral">
+            <div class="link-referral__link-text">
+                <p>Vlog/blog link:</p>
             </div>
 
-            <div class="form__row form__row_check">
-                <label>
-                    <input type="checkbox" name="agree">
-                    <span onclick="window.open('conditions.html','_blank')">I agree with the BOUNTY program rules</span>
-                </label>
-            </div>
+            <div class="link-referral__link js-blog-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=vlog/blog</div>
 
-            <div class="form__row form__row_btn">
-                <input class="form__btn btn btn_green" type="submit" name="submit" value="Send">
-            </div>
-        </form>
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-blog-link">Copy to clipboard</button>
+        </div>
     </div>
 </div>

@@ -41,5 +41,43 @@
         padding 20px
         box-shadow 0 0 15px 0px rgba(0, 0, 0, 0.05)
 
+        .content-right__block-title
+            &:after
+                color $green-color
+                font-weight 700
+                position absolute
+                top 0
+                left 0
+
+        &:first-child
+            .content-right__block-title
+                &:after
+                    content '01.'
+
+        &:nth-child(2)
+            .content-right__block-title
+                &:after
+                    content '02.'
+
+        &:nth-child(3)
+            .content-right__block-title
+                &:after
+                    content '03.'
+
+        &:nth-child(4)
+            .content-right__block-title
+                &:after
+                    content '04.'
+
+        &:nth-child(5)
+            .content-right__block-title
+                &:after
+                    content '05.'
+
+        &:nth-child(6)
+            .content-right__block-title
+                &:after
+                    content '06.'
+
         &:not(:last-child)
             margin-bottom 26px
