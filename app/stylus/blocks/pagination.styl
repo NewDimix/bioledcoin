@@ -1,0 +1,54 @@
+.pagination
+    {ibt}
+    padding-left 0
+    list-style none
+    font-size 0
+    border 1px solid rgba(61, 83, 100, 0.6)
+    border-radius 5px
+
+    li
+        {ibm}
+        text-align center
+        font-size-func(20)
+        transition all .1s ease
+
+        &:not(:last-child)
+            border-right 1px solid rgba(61, 83, 100, 0.6)
+
+        &:hover
+            background-color rgba(118, 187, 67, 0.25)
+
+        &.active
+            background-color $green-color
+
+            a
+                pointer-events none
+                cursor default
+                color white
+
+    a
+        {ibm}
+        text-decoration none
+        color $dark-color
+        width 40px
+        padding-top 7px
+        padding-bottom 7px
+
+    &__prev, &__next
+        &_disabled
+            &:hover
+                background-color transparent !important
+
+            a
+                pointer-events none
+                cursor default
+
+    &_small
+        li
+            font-size-func(13)
+
+        a
+            width 27px
+            padding-top 5px
+            padding-bottom 5px
+

@@ -196,7 +196,7 @@ $(window).on('load', function () {
     nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 820,
         settings: {
           fade: false
         }
@@ -207,11 +207,11 @@ $(window).on('load', function () {
   $('.js-roadmap-slider').on('swipe', function(event, slick, currentSlide, nextSlide){
     var px = 1090;
 
-    if ($(window).width() < '880') {
+    if ($(window).width() < '992') {
       px = 700;
     }
 
-    if ($(window).width() < '768') {
+    if ($(window).width() < '820') {
       px = 0;
     }
 

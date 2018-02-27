@@ -15,8 +15,17 @@
         background-position center 0
         opacity .5
 
+    &__transactions-table
+        margin-bottom 15px
+
+    &__pagination
+        text-align center
+
     &_no
         .block-transactions__transactions-table
+            display none
+
+        .block-transactions__pagination
             display none
 
         .block-transactions__not
@@ -25,6 +34,9 @@
     &_yes
         .block-transactions__transactions-table
             display table
+
+        .block-transactions__pagination
+            display block
 
         .block-transactions__not
             display none

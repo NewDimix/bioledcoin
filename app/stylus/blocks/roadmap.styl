@@ -6,12 +6,12 @@
         padding-top 38px
         padding-bottom 7px
 
-    @media (min-width 768px)
+    @media (min-width 820px)
         padding-top 45px
         padding-bottom 25px
         min-height 576px
 
-    @media (min-width 880px)
+    @media (min-width 992px)
         min-height 632px
 
     @media (min-width 992px)
@@ -37,7 +37,7 @@
                 font-size-func(38)
                 margin-bottom 40px
 
-            @media (min-width 768px)
+            @media (min-width 820px)
                 font-size-func(41)
                 margin-bottom 55px
 
@@ -54,12 +54,12 @@
         transition all 1s ease
         margin-top 100px
 
-        @media (min-width 768px)
+        @media (min-width 820px)
             width 60%
             margin-top auto
             margin-left auto
 
-        @media (min-width 880px)
+        @media (min-width 992px)
             padding-top 10px
             width 55%
 
@@ -81,12 +81,12 @@
         text-align center
         counter-reset section
 
-        @media (min-width 768px)
+        @media (min-width 820px)
             width 0
             top 0
             left -36%
 
-        @media (min-width 880px)
+        @media (min-width 992px)
             left -46%
 
         @media (min-width 992px)
@@ -103,10 +103,10 @@
             border-style solid
             {ibm}
 
-            @media (min-width 768px)
+            @media (min-width 820px)
                 display block
 
-            @media (min-width 880px)
+            @media (min-width 992px)
                 width 44px
                 height 44px
                 border-width 12px
@@ -117,10 +117,10 @@
                 @media (min-width 480px)
                     margin-right 31px
 
-                @media (min-width 768px)
+                @media (min-width 820px)
                     margin-bottom 70px
 
-                @media (min-width 880px)
+                @media (min-width 992px)
                     margin-bottom 110px
 
                 &:before
@@ -135,7 +135,7 @@
                     @media (min-width 480px)
                         width 45px
 
-                    @media (min-width 768px)
+                    @media (min-width 820px)
                         width 10px
                         height 84px
                         top 100%
@@ -143,7 +143,7 @@
                         transform translateX(-50%)
                         margin-top 7px
 
-                    @media (min-width 880px)
+                    @media (min-width 992px)
                         width 14px
                         height 114px
                         margin-top 10px
@@ -167,15 +167,13 @@
                 left 50%
                 ellipsis()
 
-                @media (min-width 768px)
-                    max-width 90px
+                @media (min-width 820px)
+                    max-width 140px
                     content attr(data-name)
-                    top -5px
-                    transform none
                     left auto
 
-                @media (min-width 880px)
-                    max-width 120px
+                @media (min-width 992px)
+                    max-width 205px
                     font-size-func(20)
                     top 0
 
@@ -183,25 +181,28 @@
                 &:after
                     bottom 200%
 
-                    @media (min-width 768px)
+                    @media (min-width 820px)
                         right 100%
                         bottom auto
-                        margin-right 30px
+                        margin-right 10px
+                        top 50%
+                        transform translateY(-50%)
 
-                    @media (min-width 880px)
-                        margin-right 40px
+                    @media (min-width 992px)
+                        margin-right 20px
 
             &:nth-child(2n-1)
                 &:after
                     top 200%
 
-                    @media (min-width 768px)
+                    @media (min-width 820px)
                         left 100%
-                        top auto
-                        margin-left 30px
+                        margin-left 10px
+                        top 50%
+                        transform translateY(-50%)
 
-                    @media (min-width 880px)
-                        margin-left 40px
+                    @media (min-width 992px)
+                        margin-left 20px
 
             &:first-child
                 background-color #00cccf
@@ -274,7 +275,7 @@
             transition all .5s ease
             outline none
 
-            @media (min-width 880px)
+            @media (min-width 992px)
                 width 11px
                 height 11px
 
@@ -304,7 +305,7 @@
         padding 0
         transition all .5s ease
 
-        @media (min-width 768px)
+        @media (min-width 820px)
             display none !important
 
         &:hover
