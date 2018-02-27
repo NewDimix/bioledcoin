@@ -359,7 +359,7 @@ $(window).on('load', function () {
 
 
   // START progress-bar
-  var progressValue = 33; // fill percentage
+  var progressValue = $(".js-progress-value").val(); // fill percentage
 
   if (progressValue >= 33) {
     $('.progress__stage-item:first-child').addClass('progress__stage-item_active');
