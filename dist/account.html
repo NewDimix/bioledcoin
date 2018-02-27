@@ -118,11 +118,11 @@
     <form class="modal__form form" action="#" method="post">
         <div class="content-right__block block-progress js-block-progress">
             <div class="block-progress__text block-progress__text_big">
-                <p>Main Sale is live 1 LBC = 1 waves</p>
+                <p>Main Sale is live 1 LBC = 1$</p>
             </div>
 
             <div class="block-progress__text block-progress__text_small">
-                <p>Ends in: 2 days 21 : 4 : 16</p>
+                <p>Ends in: <span id="js-days">12</span> days <span id="js-hours">26</span> : <span id="js-min">02</span> : <span id="js-sec">12</span></p>
             </div>
 
             <div class="block-progress__text block-progress__text_bold">
@@ -132,8 +132,8 @@
             <div class="block-progress__progress progress progress_center">
                 <ul class="progress__stages-money">
                     <li class="progress__stage-item">30 000 $</li>
-                    <li class="progress__stage-item">60 000 $</li>
-                    <li class="progress__stage-item">3 000 000 $</li>
+                    <li class="progress__stage-item">600 000 $</li>
+                    <li class="progress__stage-item">25 000 000 $</li>
                 </ul>
 
                 <ul class="progress__bar js-progress-bar">
@@ -511,83 +511,6 @@
     </div>
 </div>
 
-<div class="content-right__settings tab" id="tab6">
-    <div class="content-right__title">
-        <h2>Settings</h2>
-    </div>
-
-    <div class="content-right__block block-settings">
-        <div class="block-settings__title">
-            <p>Two-Factor Authentication</p>
-        </div>
-
-        <div class="block-settings__print-wrap">
-            <div class="block-settings__qr">
-                <img src="img/qr.jpg" alt="QR code">
-            </div>
-
-            <div class="block-settings__info-wrap">
-                <div class="block-settings__key-block">
-                    <div class="block-settings__key-text">
-                        <p>Please write down your authentication key:</p>
-                    </div>
-
-                    <div class="block-settings__key">
-                        <p>NVYUW5DWMJ3HS33CIRMFAR3VKM</p>
-                    </div>
-                </div>
-
-                <button class="block-settings__print-btn btn btn_green" onclick="print()">Print it here</button>
-
-                <div class="block-settings__print-message">
-                    <p>Do not save the QR code in any digital form.<br>The QR code must be printed on paper and saved in a secure place, where only you can access it.</p>
-                </div>
-            </div>
-        </div>
-
-        <form action="#" class="block-settings__form form">
-            <div class="form__row form__row_half-items">
-                <label>
-                    <p>Your Authentication Key:</p>
-
-                    <input class="key" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="key" required>
-                </label>
-
-                <label>
-                    <p>Insert Your 6-Digit Authentication Code:</p>
-
-                    <input class="code" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="code" required>
-                </label>
-            </div>
-
-            <div class="block-settings__notice-title">
-                <p>Important notice</p>
-            </div>
-
-            <div class="block-settings__notice-text">
-                <p>Share your personal link with your friends through social media, e-mail or your private messengers. When your friends registers to the NAGA ICO Token sale, our affiliate software tracks the registration in real-time. Once your friends verified their e-mail address and bought at least 15 NGC, we will pay your 5% of their investment amount in NGC as a bonus. Your bonus will be credited instantly to your token balance.</p>
-            </div>
-
-            <input class="form__button btn btn_green block-settings__btn" type="submit" name="submit" value="Enable Two-Factor Authentication">
-        </form>
-    </div>
-
-    <div class="content-right__block block-settings block-settings_subscribe">
-        <div class="block-settings__title">
-            <p>Подписка на новости</p>
-        </div>
-
-        <form action="#" class="block-settings__form form" style="margin-top: 50px">
-            <div class="form__row form__row_check">
-                <label>
-                    <input type="checkbox" checked="checked" name="subscribe">
-                    <span style="color: #3d5364; font-style: normal">Я согласен получать регулярные новости на свой электронный адрес</span>
-                </label>
-            </div>
-        </form>
-    </div>
-</div>
-
 <div class="content-right__bounty tab" id="tab5">
     <div class="content-right__title">
         <h2>Bounty</h2>
@@ -706,94 +629,181 @@
 
     <div class="content-right__block">
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Facebook link:</p>
             </div>
 
-            <div class="link-referral__link js-facebook-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=facebook</div>
+            <div class="link-referral__link link-referral__link_small js-facebook-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=facebook</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-facebook-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Twitter link:</p>
             </div>
 
-            <div class="link-referral__link js-twitter-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=twitter</div>
+            <div class="link-referral__link link-referral__link_small js-twitter-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=twitter</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-twitter-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Medium link:</p>
             </div>
 
-            <div class="link-referral__link js-medium-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=medium</div>
+            <div class="link-referral__link link-referral__link_small js-medium-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=medium</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-medium-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Reddit link:</p>
             </div>
 
-            <div class="link-referral__link js-reddit-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=reddit</div>
+            <div class="link-referral__link link-referral__link_small js-reddit-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=reddit</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-reddit-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Youtube link:</p>
             </div>
 
-            <div class="link-referral__link js-youtube-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=youtube</div>
+            <div class="link-referral__link link-referral__link_small js-youtube-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=youtube</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-youtube-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Github link:</p>
             </div>
 
-            <div class="link-referral__link js-github-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=github</div>
+            <div class="link-referral__link link-referral__link_small js-github-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=github</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-github-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Instagram link:</p>
             </div>
 
-            <div class="link-referral__link js-instagram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=instagram</div>
+            <div class="link-referral__link link-referral__link_small js-instagram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=instagram</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-instagram-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Telegram link:</p>
             </div>
 
-            <div class="link-referral__link js-telegram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=telegram</div>
+            <div class="link-referral__link link-referral__link_small js-telegram-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=telegram</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-telegram-link">Copy to clipboard</button>
         </div>
 
         <div class="link-referral">
-            <div class="link-referral__link-text">
+            <div class="link-referral__link-text link-referral__link-text_big">
                 <p>Vlog/blog link:</p>
             </div>
 
-            <div class="link-referral__link js-blog-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=vlog/blog</div>
+            <div class="link-referral__link link-referral__link_small js-blog-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=vlog/blog</div>
 
             <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-blog-link">Copy to clipboard</button>
         </div>
+
+        <div class="link-referral">
+            <div class="link-referral__link-text link-referral__link-text_big">
+                <p>VK link:</p>
+            </div>
+
+            <div class="link-referral__link link-referral__link_small js-vk-link">https://ledbiocoin.com/?utm_source=bounty&utm_medium=member48&utm_campaign=vlog/vk</div>
+
+            <button class="link-referral__link-btn btn btn_green js-clipboard" data-clipboard-target=".js-vk-link">Copy to clipboard</button>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__settings tab" id="tab6">
+    <div class="content-right__title">
+        <h2>Settings</h2>
+    </div>
+
+    <div class="content-right__block block-settings">
+        <div class="block-settings__title">
+            <p>Two-Factor Authentication</p>
+        </div>
+
+        <div class="block-settings__print-wrap">
+            <div class="block-settings__qr">
+                <img src="img/qr.jpg" alt="QR code">
+            </div>
+
+            <div class="block-settings__info-wrap">
+                <div class="block-settings__key-block">
+                    <div class="block-settings__key-text">
+                        <p>Please write down your authentication key:</p>
+                    </div>
+
+                    <div class="block-settings__key">
+                        <p>NVYUW5DWMJ3HS33CIRMFAR3VKM</p>
+                    </div>
+                </div>
+
+                <button class="block-settings__print-btn btn btn_green" onclick="print()">Print it here</button>
+
+                <div class="block-settings__print-message">
+                    <p>Do not save the QR code in any digital form.<br>The QR code must be printed on paper and saved in a secure place, where only you can access it.</p>
+                </div>
+            </div>
+        </div>
+
+        <form action="#" class="block-settings__form form">
+            <div class="form__row form__row_half-items">
+                <label>
+                    <p>Your Authentication Key:</p>
+
+                    <input class="key" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="key" required>
+                </label>
+
+                <label>
+                    <p>Insert Your 6-Digit Authentication Code:</p>
+
+                    <input class="code" type="text" placeholder="NVYUW5DWMJ3HS33CIRMFAR3VKM" name="code" required>
+                </label>
+            </div>
+
+            <div class="block-settings__notice-title">
+                <p>Important notice</p>
+            </div>
+
+            <div class="block-settings__notice-text">
+                <p>Share your personal link with your friends through social media, e-mail or your private messengers. When your friends registers to the NAGA ICO Token sale, our affiliate software tracks the registration in real-time. Once your friends verified their e-mail address and bought at least 15 NGC, we will pay your 5% of their investment amount in NGC as a bonus. Your bonus will be credited instantly to your token balance.</p>
+            </div>
+
+            <input class="form__button btn btn_green block-settings__btn" type="submit" name="submit" value="Enable Two-Factor Authentication">
+        </form>
+    </div>
+
+    <div class="content-right__block block-settings block-settings_subscribe">
+        <div class="block-settings__title">
+            <p>Подписка на новости</p>
+        </div>
+
+        <form action="#" class="block-settings__form form" style="margin-top: 50px">
+            <div class="form__row form__row_check">
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe">
+                    <span style="color: #3d5364; font-style: normal">Я согласен получать регулярные новости на свой электронный адрес</span>
+                </label>
+            </div>
+        </form>
     </div>
 </div>
 

@@ -2,9 +2,13 @@
     padding-top 15px
     font-size 0
     overflow hidden
+    margin-bottom 50px
 
     @media (min-width 480px)
         padding-top 19px
+
+    @media (min-width 700px)
+        margin-bottom 0
 
     @media (min-width 768px)
         padding-top 22px
@@ -68,6 +72,7 @@
     &__list
         position relative
         padding-bottom 280px
+        height 1020px
 
         @media (min-width 700px)
             height (1075/1.6)px
@@ -117,122 +122,191 @@
             border 1px solid #5fc79c
             border-radius 10px
             text-align center
-            width 230px
+            position relative
+            width (300/1.6)px
+            margin-bottom 20px
+            margin-left auto
+            margin-right auto
 
             @media (min-width 700px)
+                margin-bottom (30/1.6)px
                 {ibm}
 
             @media (min-width 768px)
                 padding (14/1.4)px (20/1.4)px
+                margin-bottom (30/1.4)px
+                width (300/1.4)px
 
             @media (min-width 992px)
                 padding (14/1.15)px (20/1.15)px
+                margin-bottom (30/1.15)px
+                width (300/1.15)px
 
             @media (min-width 1100px)
                 padding 14px 20px
+                margin-bottom 30px
+                width 300px
+
+            &:before
+                @media (min-width 700px)
+                    content ''
+                    background-color #00ddb5
+                    width (120/1.6)px
+                    height (14/1.6)px
+                    position absolute
+                    border-radius 15px
+
+                @media (min-width 768px)
+                    width (120/1.4)px
+                    height (14/1.4)px
+
+                @media (min-width 992px)
+                    width (120/1.15)px
+                    height (14/1.15)px
+
+                @media (min-width 1100px)
+                    width 120px
+                    height 14px
 
             &:first-of-type
-                width (230/1.6)px
-                margin-bottom 20px
-                margin-left auto
-                margin-right auto
+                &:before
+                    left 50%
+                    transform translateX(-50%)
 
-                @media (min-width 700px)
-                    margin-bottom (60/1.6)px
+                    @media (min-width 700px)
+                        height (120/1.6)px
+                        width (14/1.6)px
+                        bottom (-140/1.6)px
 
-                @media (min-width 768px)
-                    width (230/1.4)px
-                    margin-bottom (60/1.4)px
+                    @media (min-width 768px)
+                        height (120/1.4)px
+                        width (14/1.4)px
+                        bottom (-140/1.4)px
 
-                @media (min-width 992px)
-                    width (230/1.15)px
-                    margin-bottom (60/1.15)px
+                    @media (min-width 992px)
+                        height (120/1.15)px
+                        width (14/1.15)px
+                        bottom (-140/1.15)px
 
-                @media (min-width 1100px)
-                    width 230px
-                    margin-bottom 60px
+                    @media (min-width 1100px)
+                        height 120px
+                        width 14px
+                        bottom -140px
 
             &:nth-of-type(2)
-                width (230/1.6)px
-                margin-bottom 20px
-                margin-left auto
-                margin-right auto
-
-                @media (min-width 700px)
-                    margin-right (420/1.6)px
-                    margin-bottom (80/1.6)px
-
-                @media (min-width 768px)
-                    width (230/1.4)px
-                    margin-right (420/1.4)px
-                    margin-bottom (80/1.4)px
-
-                @media (min-width 992px)
-                    width (230/1.15)px
-                    margin-right (420/1.15)px
-                    margin-bottom (80/1.15)px
-
-                @media (min-width 1100px)
-                    width 230px
-                    margin-right 420px
-                    margin-bottom 80px
+                &:before
+                    transform translateY(300%) rotate(30deg)
 
             &:nth-of-type(3)
-                width (230/1.6)px
-                margin-bottom 20px
-                margin-left auto
-                margin-right auto
-
-                @media (min-width 700px)
-                    margin-bottom (80/1.6)px
-
-                @media (min-width 768px)
-                    width (230/1.4)px
-                    margin-bottom (80/1.4)px
-
-                @media (min-width 992px)
-                    width (230/1.15)px
-                    margin-bottom (80/1.15)px
-
-                @media (min-width 1100px)
-                    width 230px
-                    margin-bottom 80px
+                &:before
+                    transform translateY(300%) rotate(-30deg)
 
             &:nth-of-type(4)
-                width (290/1.6)px
-                margin-bottom 20px
-                margin-left auto
-                margin-right auto
+                &:before
+                    transform translateY(-50%) rotate(5deg)
 
+            &:nth-of-type(5)
+                &:before
+                    transform translateY(-50%) rotate(-5deg)
+
+            &:nth-of-type(6)
+                &:before
+                    transform translateY(-450%) rotate(-35deg)
+
+            &:nth-of-type(7)
+                &:before
+                    transform translateY(-450%) rotate(35deg)
+
+            &:nth-of-type(8)
+                &:before
+                    transform translateX(500%) rotate(35deg)
+
+            &:nth-of-type(9)
+                &:before
+                    transform translateX(-500%) rotate(-35deg)
+
+            &:nth-of-type(2n)
                 @media (min-width 700px)
                     margin-right (420/1.6)px
 
                 @media (min-width 768px)
-                    width (290/1.4)px
                     margin-right (420/1.4)px
 
                 @media (min-width 992px)
-                    width (290/1.15)px
                     margin-right (420/1.15)px
 
                 @media (min-width 1100px)
-                    width 290px
                     margin-right 420px
 
-            &:nth-of-type(5)
-                width (290/1.6)px
-                margin-left auto
-                margin-right auto
+                &:before
+                    @media (min-width 700px)
+                        top 50%
+                        right (-140/1.6)px
+
+                    @media (min-width 768px)
+                        right (-140/1.4)px
+
+                    @media (min-width 992px)
+                        right (-140/1.15)px
+
+                    @media (min-width 1100px)
+                        right -140px
+
+            &:nth-of-type(2n+3)
+                &:before
+                    @media (min-width 700px)
+                        top 50%
+                        left (-140/1.6)px
+
+                    @media (min-width 768px)
+                        left (-140/1.4)px
+
+                    @media (min-width 992px)
+                        left (-140/1.15)px
+
+                    @media (min-width 1100px)
+                        left -140px
+
+            &:nth-last-of-type(2)
+                @media (min-width 700px)
+                    margin-right (50/1.6)px
 
                 @media (min-width 768px)
-                    width (290/1.4)px
+                    margin-right (50/1.4)px
 
                 @media (min-width 992px)
-                    width (290/1.15)px
+                    margin-right (50/1.15)px
 
                 @media (min-width 1100px)
-                    width 290px
+                    margin-right 50px
 
+            &:nth-last-of-type(-n+2)
+                &:before
+                    @media (min-width 700px)
+                        right 50% !important
+                        height (120/1.6)px
+                        width (14/1.6)px
+                        top (-140/1.6)px
+
+                    @media (min-width 768px)
+                        height (120/1.4)px
+                        width (14/1.4)px
+                        top (-140/1.4)px
+
+                    @media (min-width 992px)
+                        height (120/1.15)px
+                        width (14/1.15)px
+                        top (-140/1.15)px
+
+                    @media (min-width 1100px)
+                        height 120px
+                        width 14px
+                        top -140px
+
+            &:last-of-type
+                &:before
+                    @media (min-width 700px)
+                        left 50% !important
 
     &__circle-bg
         display none
@@ -335,22 +409,22 @@
         height 100%
         top 50%
         left 50%
-        transform translate(-50%, -55%)
+        transform translate(-50%, -50%)
         background-image url(../img/product-img-m.png)
+        background-size 130px
         background-position bottom
         background-repeat no-repeat
 
         @media (min-width 700px)
-            background-image url(../img/product-img.png)
-            background-size (390/1.6)px
             background-position center
+            background-size (130/1.6)px
 
         @media (min-width 768px)
-            background-size (390/1.4)px
+            background-size (130/1.4)px
 
         @media (min-width 992px)
-            background-size (390/1.15)px
+            background-size (130/1.15)px
 
         @media (min-width 1100px)
-            background-size 390px
+            background-size 130px
 
