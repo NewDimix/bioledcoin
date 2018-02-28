@@ -308,20 +308,23 @@ $(window).on('load', function () {
   $(window).resize(function() {
     $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
 
-    for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
-      roadmapTitle(i);
-    };
+    if ($(window).width() > '820') {
+      for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
+        roadmapTitle(i);
+      };
+    }
   });
 
   function roadmapTitle(x) {
     var title = $(".roadmap-item:nth-child(" + x + ") .roadmap-item__title h3").text();
-
-    $(".roadmap__dots li:nth-child(" + x + ")").attr("data-name", title);
+    $(".roadmap__dots li:nth-child(" + x + ") button").text(title);
   };
 
-  for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
-    roadmapTitle(i);
-  };
+  if ($(window).width() > '820') {
+    for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
+      roadmapTitle(i);
+    };
+  }
 
 
   // START menu nav left

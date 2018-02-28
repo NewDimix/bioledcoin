@@ -150,58 +150,62 @@
             &:hover
                 cursor pointer
 
-                &:after
+                button
                     color #00b7bb
 
-            &:after
-                counter-increment section
-                content counter(section)
-                position absolute
-                white-space nowrap
-                color $dark-color
-                transition all .5s ease
-                font-weight 300
-                font-size-func(16)
-                transform translateX(-50%)
-                left 50%
-                ellipsis()
-
-                @media (min-width 820px)
-                    max-width 140px
-                    content attr(data-name)
-                    left auto
-
-                @media (min-width 992px)
-                    max-width 205px
-                    font-size-func(20)
-                    top 0
-
             &:nth-child(2n)
-                &:after
-                    bottom 200%
+                button
+                    top 200%
+                    left 50%
+                    transform translateX(-50%)
 
                     @media (min-width 820px)
-                        right 100%
-                        bottom auto
-                        margin-right 10px
                         top 50%
                         transform translateY(-50%)
+                        left 200%
+                        text-align left
 
-                    @media (min-width 992px)
-                        margin-right 20px
+                    &:before
+                        top -25px
+                        left 50%
+                        transform translateX(-50%)
+
+                        @media (min-width 820px)
+                            top 50%
+                            transform translateY(-50%)
+                            left -25px
+
+                        @media (min-width 992px)
+                            left -35.5px
 
             &:nth-child(2n-1)
-                &:after
-                    top 200%
+                button
+                    bottom 200%
+                    left 51%
+                    transform translateX(-50%)
 
                     @media (min-width 820px)
-                        left 100%
-                        margin-left 10px
                         top 50%
                         transform translateY(-50%)
+                        bottom auto
+                        right 200%
+                        left auto
+                        text-align right
 
-                    @media (min-width 992px)
-                        margin-left 20px
+                    &:before
+                        bottom -25px
+                        left 51%
+                        transform translateX(-50%)
+
+                        @media (min-width 820px)
+                            top 50%
+                            transform translateY(-50%)
+                            left auto
+                            bottom auto
+                            right -25px
+
+                        @media (min-width 992px)
+                            right -35.5px
 
             &:first-child
                 background-color #00cccf
@@ -260,35 +264,50 @@
                     background linear-gradient(180deg, #00ceab 10%, #00d8a4 90%)
 
         button
+            hyphens()
             position absolute
-            top 50%
-            left 50%
-            transform translate(-50%, -50%)
-            border-radius 50%
-            border none
             background-color transparent
-            width 8px
-            height 8px
+            border none
             padding 0
-            font-size 0
             transition all .5s ease
             outline none
+            color $dark-color
+            font-weight 300
+            font-size-func(16)
+            font-family GothamPro
+            width 135px
+
+            @media (min-width 820px)
+                width 135px
 
             @media (min-width 992px)
-                width 11px
-                height 11px
+                width 200px
+                font-size-func(20)
 
             &:hover
                 cursor pointer
 
+            &:before
+                content ''
+                position absolute
+                background-color transparent
+                width 8px
+                height 8px
+                border-radius 50%
+                transition all .5s ease
+
+                @media (min-width 992px)
+                    width 11px
+                    height 11px
+
         .slick-active
-            &:after
+            button
                 color #00b7bb
                 font-weight 400
 
-            button
-                background-color white
-                box-shadow 0 0 15px 4px white
+                &:before
+                    background-color white
+                    box-shadow 0 0 15px 4px white
 
     &__arrows
         position absolute
@@ -314,7 +333,8 @@
             outline none
 
         &_prev
-            left 10%
+            left 2%
+            top 50%
             transform rotate(-45deg)
 
             &:hover, &:focus
@@ -325,7 +345,8 @@
                     transform rotate(-45deg)
 
         &_next
-            right 10%
+            right 2%
+            top 50%
             transform rotate(135deg)
 
             &:hover, &:focus
@@ -340,3 +361,9 @@
 
     .slick-list
         position relative
+        width 90%
+        margin-left auto
+        margin-right auto
+
+        @media (min-width 820px)
+            width auto
