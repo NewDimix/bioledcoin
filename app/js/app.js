@@ -364,11 +364,16 @@ $(window).on('load', function () {
 
 
   // START progress-bar
-  var progressValue = $(".js-progress-value").val(); // fill percentage
-
-  if (progressValue >= 50) {
-    $('.progress__stage-item:first-child').addClass('progress__stage-item_active');
-  }
+  var progressValue; // fill percentage
+  $.ajax({
+    url: "https://nodes.wavesnodes.com/assets/balance/3PB9TyoBkRmnzHUSsWPhGeAEka81esmFRNS/Ci4x7rkRo37H3LxMC4bpVfusk8qkcspXTXFSFNSWaajj",
+    success: function (data) {
+      $("#tokenssold").html(100000000000 - data.balance);
+      progressValue = 100 - data.balance / 1000000000;
+      progress();
+    },
+    dataType: "json"
+  });
 
   var progress = function() {
     if ($('.js-progress-bar').is(":visible")) {
@@ -388,6 +393,10 @@ $(window).on('load', function () {
 
       for (i = 0; i < amountValue - 1; i++) {
         $(items[i]).addClass("active");
+      }
+
+      if (progressValue >= 50) {
+        $('.progress__stage-item:first-child').addClass('progress__stage-item_active');
       }
     }
   };
