@@ -305,16 +305,8 @@ $(window).on('load', function () {
 
   $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
 
-  if ($(window).width() > '768') {
-    $('.js-bounty-content').css("min-height", $(".js-bounty-img").height());
-  }
-
   $(window).resize(function() {
     $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
-
-    if ($(window).width() > '768') {
-      $('.js-bounty-content').css("min-height", $(".js-bounty-img").height());
-    }
 
     for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
       roadmapTitle(i);
@@ -793,17 +785,20 @@ $(window).on('load', function () {
 
   new WOW().init();
 
-  $('.game-img').hide();
+  if($('*').is('.game-img')) {
+    $('.game-img').hide();
 
-  var $win = $(window);
-  var $marker = $('.news__title');
-  $win.scroll(function() {
-      if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-          $win.unbind('scroll');
-          $('.game-img').show();
-          $('.game-img').addClass('animated fadeInLeft');
-      }
-  });
+    var $win = $(window);
+    var $marker = $('.news__title');
+
+    $win.scroll(function() {
+        if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+            $win.unbind('scroll');
+            $('.game-img').show();
+            $('.game-img').addClass('animated fadeInLeft');
+        }
+    });
+  }
 
 
   $('.js-game-img-close').click(function(){
