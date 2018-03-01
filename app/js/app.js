@@ -398,7 +398,7 @@ $(window).on('load', function () {
         $(items[i]).addClass("active");
       }
 
-      if (progressValue >= 50) {
+      if (progressValue >= 2.4) {
         $('.progress__stage-item:first-child').addClass('progress__stage-item_active');
       }
     }
@@ -582,7 +582,7 @@ $(window).on('load', function () {
     $(".js-send-value-rate").html(rate);
 
     var recelveValue = $('.js-send').val() * rate;
-    $('.js-recelve').val(recelveValue);
+    $('.js-recelve').val(recelveValue.toFixed(2));
   });
 
   $('.js-next-btn').on('click', function () {
@@ -629,7 +629,7 @@ $(window).on('load', function () {
     }
 
     var recelveValue = $('.js-send').val() * rate;
-    $('.js-recelve').val(recelveValue);
+    $('.js-recelve').val(recelveValue.toFixed(2));
   });
   // END buy page
 
