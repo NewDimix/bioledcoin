@@ -1,16 +1,18 @@
 @@include('elements/bounty/page-start.html')
 @@include('elements/loader.html')
 <header class="header header_bounty js-header-bounty">
-    <div class="container js-header-content-bounty">
-        <div class="header__logo">
+    <div class="container">
+        <div class="header__row js-menu-row">
+            <div class="header__logo">
 @@include('elements/logo.html')
-        </div>
+            </div>
 
-        <div class="header__panel">
+            <div class="header__panel">
 @@include('elements/index/panel.html')
+            </div>
         </div>
 
-        <div class="header__content">
+        <div class="header__content js-header-content-bounty">
 @@include('elements/bounty/text-block.html')
             <ul class="header__tokens tokens">
                 <li class="tokens__item">

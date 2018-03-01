@@ -25,7 +25,10 @@
     @media (min-width 992px)
         height 100%
         padding-top 35px
-        padding-bottom 70px
+        padding-bottom 35px
+
+    &__row
+        clearfix()
 
     &__logo
         width 100px
@@ -38,34 +41,35 @@
             width auto
 
     &__panel
-        padding-top 32px
-        padding-bottom 32px
-        min-height 120px
+        padding-top 26px
+        padding-bottom 26px
+
+        @media (min-width 768px)
+            padding-top 34px
+            padding-bottom 34px
 
         @media (min-width 992px)
             padding-top 18px
+            padding-bottom 0
             float right
 
     &__menu
         margin 10px -10px 20px -10px
 
         @media (min-width 480px)
-            margin-bottom 10px
+            margin-bottom 30px
             background linear-gradient(-27deg, rgba(48, 180, 184, 0.7) 10%, rgba(89, 220, 186, 0.7) 45%, #59dcba 55%, rgba(141, 186, 78, 0.7) 90%) center
             border-top 2px solid rgba(255, 255, 255, 0.7)
             border-bottom 2px solid rgba(255, 255, 255, 0.7)
 
         @media (min-width 768px)
-            margin-bottom 25px
+            margin-bottom 40px
             margin-top 15px
 
         @media (min-width 992px)
             background none
             border none
-            margin-top 18px
-            margin-left 0px
-            margin-right 4.5%
-            margin-bottom 80px
+            margin 18px 4.5% 0 0
 
         @media (min-width 1265px)
             margin-right 96px
@@ -89,6 +93,13 @@
         text-align left
         position relative
 
+        @media (min-width 992px)
+            position absolute
+            top 50%
+            left 10px
+            right 10px
+            transform translateY(-160px)
+
     &__text-block
         @media (min-width 992px)
             display block
@@ -104,7 +115,9 @@
             right 0
 
     .container
+        position relative
         overflow hidden
+        height 100%
 
     &_bounty
         height 100%
@@ -112,22 +125,27 @@
         .header__panel
             float none
             padding-top 18px
-            min-height 100px
             margin-bottom 30px
 
             @media (min-width 480px)
                 margin-bottom 35px
 
-            @media (min-width 768px)
-                min-height 120px
-                margin-bottom 50px
-
-            @media (min-width 992px)
-                min-height 138px
-                margin-bottom 70px
-
         .container
             overflow visible
+
+        .header__content
+            @media (min-width 550px)
+                position absolute
+                top 50%
+                left 10px
+                right 10px
+                transform translateY(-170px)
+
+            @media (min-width 768px)
+                transform translateY(-170px)
+
+            @media (min-width 992px)
+                transform translateY(-130px)
 
         .header__text-block
             padding-top 0
@@ -191,4 +209,10 @@
 
             @media (min-width 768px)
                 min-height 120px
+
+        .header__menu
+                margin 10px -10px 10px -10px
+
+                @media (min-width 768px)
+                    margin-bottom 15px
 

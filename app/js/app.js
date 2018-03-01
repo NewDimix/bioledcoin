@@ -48,13 +48,13 @@ countdown();
 
 
 
-  $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu").outerHeight(true)+parseInt($(".js-header").css("padding-top")));
-  $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top")));
+  $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
+  $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
   $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
 
   $(window).resize(function() {
-    $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu").outerHeight(true)+parseInt($(".js-header").css("padding-top")));
-    $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top")));
+    $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
+    $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
     $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
   });
 
