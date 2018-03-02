@@ -798,22 +798,24 @@ $(window).on('load', function () {
   new WOW().init();
 
   if($('*').is('.game-img')) {
-    $('.game-img').hide();
+    if ($(window).width() >= '768') {
+      $('.game-img').hide();
 
-    var $win = $(window);
-    var $marker = $('.news__title');
+      var $win = $(window);
+      var $marker = $('.news__title');
 
-    $win.scroll(function() {
-        if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-            $win.unbind('scroll');
-            $('.game-img').show();
-            $('.game-img').addClass('animated fadeInLeft');
-        }
-    });
+      $win.scroll(function() {
+          if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+              $win.unbind('scroll');
+              $('.game-img').show();
+              $('.game-img').addClass('animated fadeInLeft');
+          }
+      });
+    }
   }
 
 
-  $('.js-game-img-close').click(function(){
+  $('.js-game-img-close').click(function() {
     $('.game-img').addClass('animated fadeOutLeft');
   });
 
