@@ -47,29 +47,17 @@ countdown();
 
 
 
+// START header height
+$('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
+$('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
+$('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
 
+$(window).resize(function() {
   $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
   $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
   $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
-
-  $(window).resize(function() {
-    $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
-    $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
-    $('.js-header-content').css('min-height', $(".js-stages").outerHeight(true));
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
+// END header height
 
 
 
@@ -302,7 +290,7 @@ $(window).on('load', function () {
   // END slick
 
 
-
+  // START roadmap title and height
   $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
 
   $(window).resize(function() {
@@ -325,6 +313,8 @@ $(window).on('load', function () {
       roadmapTitle(i);
     };
   }
+  // END roadmap title and height
+
 
 
   // START menu nav left
@@ -755,6 +745,8 @@ $(window).on('load', function () {
   }, false);
   // END youtube-load
 
+
+
   // START stop youtube video
   $('.js-youtube-wrap').click(function() {
     if ($(".js-youtube-wrap iframe").is(".youtube")) {
@@ -795,8 +787,14 @@ $(window).on('load', function () {
   // END mCustomScrollbar
 
 
-  new WOW().init();
 
+  // START mCustomScrollbar
+  new WOW().init();
+  // END mCustomScrollbar
+
+
+
+  // START game-img
   if($('*').is('.game-img')) {
     if ($(window).width() >= '768') {
       $('.game-img').hide();
@@ -814,12 +812,14 @@ $(window).on('load', function () {
     }
   }
 
-
   $('.js-game-img-close').click(function() {
     $('.game-img').addClass('animated fadeOutLeft');
   });
+  // END game-img
 
 
+
+  // START dotdotdot
   setTimeout(function () {
     $(".js-overflow").dotdotdot({});
   }, 1000);
@@ -829,4 +829,5 @@ $(window).on('load', function () {
       $(".js-overflow").dotdotdot({});
     }, 1000);
   });
+  // END dotdotdot
 });
