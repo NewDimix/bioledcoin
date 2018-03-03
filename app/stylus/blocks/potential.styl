@@ -3,6 +3,8 @@
     background-color #f8fcfb
 
     &__text
+        hyphens()
+        margin-bottom 40px
         font-size-func(14)
         line-height 24px
         line-height 2.4rem
@@ -14,23 +16,21 @@
         p
             margin-bottom 0
 
-    &__chart
-        @media (min-width 992px)
-            {ibt}
-            width 49%
-            margin-right 2%
-
-    &__text
-        hyphens()
-        margin-bottom 40px
-
     &__chart-wrap
+        text-align center
+        padding-left 50px
+        padding-right 50px
+
+    &__chart
         text-align center
         margin-left 0
         margin-right 0
         margin-bottom 40px
 
         @media (min-width 992px)
+            {ibm}
+            width 42%
+            margin-right 16%
             margin-bottom 0
 
         img
@@ -39,10 +39,11 @@
             max-width 600px
             margin-bottom 20px
 
+
     &__table
         @media (min-width 992px)
-            {ibt}
-            width 49%
+            {ibm}
+            width 42%
 
         table
             width 100%
@@ -67,6 +68,9 @@
 
             @media (min-width 1265px)
                 padding 10px 22px
+
+            &:first-child
+                text-align left
 
             &:last-child
                 text-align center

@@ -180,8 +180,6 @@ $(window).on('load', function () {
     arrows: true,
     slidesToShow: 1,
     adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
     prevArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_prev"><span>Previous</span></button>',
     nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>',
     responsive: [
@@ -238,10 +236,6 @@ $(window).on('load', function () {
   });
 
   $('.roadmap__dots li').click(function(){
-    $(".js-roadmap-slider").trigger("swipe", []);
-  });
-
-  $('.js-roadmap-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     $(".js-roadmap-slider").trigger("swipe", []);
   });
 
