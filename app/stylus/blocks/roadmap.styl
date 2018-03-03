@@ -1,54 +1,5 @@
 .roadmap
-    padding-top 30px
-    padding-bottom 5px
     overflow hidden
-
-    @media (min-width 480px)
-        padding-top 38px
-        padding-bottom 7px
-
-    @media (min-width 820px)
-        padding-top 45px
-        padding-bottom 25px
-        min-height 576px
-
-    @media (min-width 992px)
-        min-height 632px
-
-    @media (min-width 992px)
-        padding-top 55px
-        padding-bottom 30px
-        min-height 793px
-
-    @media (min-width 1265px)
-        padding-top 65px
-        padding-bottom 49px
-
-    &__title
-        hyphens()
-
-        h2
-            text-align center
-            font-weight 300
-            font-size-func(35)
-            margin-top 0
-            margin-bottom 25px
-
-            @media (min-width 480px)
-                font-size-func(38)
-                margin-bottom 40px
-
-            @media (min-width 820px)
-                font-size-func(41)
-                margin-bottom 55px
-
-            @media (min-width 992px)
-                font-size-func(44)
-                margin-bottom 75px
-
-            @media (min-width 1265px)
-                font-size-func(48)
-                margin-bottom 95px
 
     &__slider
         position relative
@@ -118,10 +69,10 @@
                     margin-right 31px
 
                 @media (min-width 820px)
-                    margin-bottom 70px
+                    margin-bottom 30px
 
                 @media (min-width 992px)
-                    margin-bottom 110px
+                    margin-bottom 40px
 
                 &:before
                     content ''
@@ -137,7 +88,7 @@
 
                     @media (min-width 820px)
                         width 10px
-                        height 84px
+                        height 35px
                         top 100%
                         left 50%
                         transform translateX(-50%)
@@ -145,7 +96,7 @@
 
                     @media (min-width 992px)
                         width 14px
-                        height 114px
+                        height 45px
                         margin-top 10px
 
             &:hover
@@ -177,12 +128,12 @@
                             left -25px
 
                         @media (min-width 992px)
-                            left -36px
+                            left -35px
 
             &:nth-child(2n-1)
                 button
                     bottom 200%
-                    left 51%
+                    left 50%
                     transform translateX(-50%)
 
                     @media (min-width 820px)
@@ -195,7 +146,7 @@
 
                     &:before
                         bottom -25px
-                        left 51%
+                        left 50%
                         transform translateX(-50%)
 
                         @media (min-width 820px)
@@ -368,3 +319,6 @@
 
         @media (min-width 820px)
             width auto
+
+    .slick-dotted.slick-slider
+        margin-bottom 0

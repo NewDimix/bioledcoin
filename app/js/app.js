@@ -180,6 +180,8 @@ $(window).on('load', function () {
     arrows: true,
     slidesToShow: 1,
     adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     prevArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_prev"><span>Previous</span></button>',
     nextArrow: '<button type="button" class="roadmap__arrows roadmap__arrows_next"><span>Next</span></button>',
     responsive: [
@@ -193,48 +195,53 @@ $(window).on('load', function () {
   });
 
   $('.js-roadmap-slider').on('swipe', function(event, slick, currentSlide, nextSlide){
-    var px = 1090;
-
-    if ($(window).width() < '992') {
-      px = 700;
-    }
+    var px2 = $('.roadmap__dots li').outerHeight(true);
+    var px3 = (($('.roadmap__dots li').outerHeight()-$('.roadmap-item__title').height())/2);
+    var numberSlides = $(".roadmap__dots li").length - 1;
 
     if ($(window).width() < '820') {
-      px = 0;
+      px2 = 0;
+      px3 = 0;
     }
 
     if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
       $('.js-roadmap-slider').css('padding-top', '10px');
     }
+
     if ($(window).width() < '880') {
       if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
         $('.js-roadmap-slider').css('padding-top', '0');
       }
     }
+
     if ($('.roadmap__dots li:nth-child(2)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*1+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*1+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(3)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*2+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*2+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(4)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*3+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*3+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(5)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*4+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*4+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(6)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*5+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*5+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(7)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px/7*6+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*6+px3+'px');
     }
     if ($('.roadmap__dots li:nth-child(8)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px+'px');
+      $('.js-roadmap-slider').css('padding-top', px2*7+px3+'px');
     }
   });
 
   $('.roadmap__dots li').click(function(){
+    $(".js-roadmap-slider").trigger("swipe", []);
+  });
+
+  $('.js-roadmap-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     $(".js-roadmap-slider").trigger("swipe", []);
   });
 
@@ -291,15 +298,15 @@ $(window).on('load', function () {
 
 
   // START roadmap title and height
-  $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
-
   $(window).resize(function() {
-    $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + 240) + "px");
-
-    if ($(window).width() > '820') {
+    if ($(window).width() >= '820') {
       for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
         roadmapTitle(i);
       };
+
+      $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + $(".js-roadmap-title").outerHeight(true)) + (parseInt($(".js-roadmap").css("padding-top")) * 2) + "px");
+    } else {
+      $(".js-roadmap").css("min-height", "auto");
     }
   });
 
@@ -308,10 +315,14 @@ $(window).on('load', function () {
     $(".roadmap__dots li:nth-child(" + x + ") button").text(title);
   };
 
-  if ($(window).width() > '820') {
+  if ($(window).width() >= '820') {
     for (i = 1; i <= $(".js-roadmap-slider").find('.roadmap-item').length; i++) {
       roadmapTitle(i);
     };
+
+    $(".js-roadmap").css("min-height", ($(".roadmap__dots").height() + $(".js-roadmap-title").outerHeight(true)) + (parseInt($(".js-roadmap").css("padding-top")) * 2) + "px");
+  } else {
+    $(".js-roadmap").css("min-height", "auto");
   }
   // END roadmap title and height
 
@@ -800,7 +811,7 @@ $(window).on('load', function () {
       $('.game-img').hide();
 
       var $win = $(window);
-      var $marker = $('.news__title');
+      var $marker = $('#news');
 
       $win.scroll(function() {
           if ($win.scrollTop() + $win.height() >= $marker.offset().top) {

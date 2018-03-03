@@ -1,7 +1,7 @@
 .team-item
     position relative
     text-align center
-    margin-bottom 40px
+    margin-bottom 65px
     margin-left auto
     margin-right auto
 
@@ -27,7 +27,7 @@
             margin-right 0
 
     &:nth-last-child(2)
-        margin-bottom 40px
+        margin-bottom 65px
 
         @media (min-width 768px)
             margin-bottom 0
@@ -68,6 +68,12 @@
             @media (min-width 1265px)
                 height 254px
 
+    &__content
+        position relative
+
+        @media (min-width 768px)
+            height 255px
+
     &__name
         margin-bottom 7px
         font-size-func(24)
@@ -87,7 +93,14 @@
         overflow hidden
 
         @media (min-width 768px)
-            height 65px
+            height 75px
+
+    &__social-wrap
+        @media (min-width 768px)
+            position absolute
+            left 0
+            right 0
+            bottom 0
 
     &__line
         width 80%
