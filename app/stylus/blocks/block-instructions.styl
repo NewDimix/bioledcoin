@@ -1,0 +1,79 @@
+.block-instructions
+    text-align center
+    padding-bottom 33px
+
+    @media (min-width 768px)
+        text-align left
+
+    &__title
+        position relative
+        margin-bottom 38px
+        font-size-func(18)
+        text-align left
+        hyphens()
+
+    &__videos-wrap
+        text-align center
+
+    &__videos-item
+        position relative
+        height (222/1.2)px
+        width (375/1.2)px
+        overflow hidden
+        background-color white
+        transition all 1s ease
+        margin-left auto
+        margin-right auto
+        margin-bottom 20px
+
+        @media (min-width 1030px)
+            {ibt}
+            margin-left 0
+            margin-right 30px
+            margin-bottom 30px
+
+        @media (min-width 1220px)
+            height (222*1.1)px
+            width (375*1.1)px
+
+        &:focus
+            outline none
+
+        &:nth-child(2n)
+            @media (min-width 1030px)
+                margin-right 0
+
+        &:last-child
+            margin-bottom 0
+
+            @media (min-width 1030px)
+                margin-right 0
+
+        &:nth-last-child(2)
+            @media (min-width 1030px)
+                margin-bottom 0
+
+    &__youtube
+        background-position center
+        background-repeat no-repeat
+        background-size 110%
+        position relative
+        display inline-block
+        overflow hidden
+        transition all 200ms ease-out
+        cursor pointer
+        width inherit
+        height inherit
+
+    &__play
+        background inline('play-icon.svg') no-repeat
+        background-position center
+        background-size 15%
+        position absolute
+        height 100%
+        width 100%
+        opacity .8
+        transition all 0.2s ease-out
+
+        &:hover
+            opacity 1

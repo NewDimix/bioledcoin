@@ -582,6 +582,7 @@ $(window).on('load', function () {
 
   $('.js-next-btn').on('click', function () {
     $('.js-block-progress').slideUp();
+    $('.js-block-instructions').slideUp();
     $('.js-block-payment').slideUp();
     $('.js-block-calculate').slideDown();
     $('.js-block-copy').slideDown();
@@ -589,6 +590,7 @@ $(window).on('load', function () {
 
   $('.js-back-btn').on('click', function () {
     $('.js-block-progress').slideDown();
+    $('.js-block-instructions').slideDown();
     $('.js-block-payment').slideDown();
     $('.js-block-calculate').slideUp();
     $('.js-block-copy').slideUp();
