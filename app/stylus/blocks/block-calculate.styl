@@ -15,6 +15,9 @@
         border-radius 3px
         outline none
 
+        @media (min-width 768px)
+            font-size-func(16)
+
         &:hover, &:focus
             cursor pointer
             color white
@@ -51,11 +54,14 @@
     &__title
         position relative
         margin-bottom 28px
-        font-size-func(18)
+        font-size-func(16)
         margin-right 75px
 
     &__text
-        font-size-func(12)
+        font-size-func(14)
+
+        @media (min-width 768px)
+            font-size-func(16)
 
         &_small
             font-weight 400
@@ -197,9 +203,12 @@
                 text-transform uppercase
                 right 10px
                 top 33px
-                font-size-func(12)
+                font-size-func(14)
                 color $green-color
                 font-weight 700
+
+                @media (min-width 768px)
+                    font-size-func(16)
 
             &.dash
                 &:before

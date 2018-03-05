@@ -12,6 +12,9 @@
         hyphens()
         font-family GothamPro, arial, verdana, sans-serif
 
+        @media (min-width 768px)
+            font-size-func(16)
+
         &:after
             content ''
             position absolute
@@ -35,6 +38,9 @@
         text-transform uppercase
         font-weight 700
         transition all .1s ease
+
+        @media (min-width 768px)
+            font-size-func(16)
 
         &:hover
             cursor pointer
@@ -60,6 +66,7 @@
             max-width 200px
 
         @media (min-width 768px)
+            font-size-func(16)
             min-width 191px
             max-width 400px
             padding-top 16px
@@ -115,6 +122,9 @@
         transition all .1s ease
         overflow hidden
         ellipsis()
+
+        @media (min-width 768px)
+            font-size-func(16)
 
     &__avatar
         {ibm}
@@ -261,6 +271,9 @@
                 border-bottom-right-radius 5px
                 box-shadow 0 3px 20px 0px rgba(0, 0, 0, 0.2)
 
+                @media (min-width 768px)
+                    font-size-func(16)
+
                 li
                     &:last-child
                         border-bottom-left-radius 5px
@@ -371,6 +384,9 @@
                 border-bottom-left-radius 5px
                 border-bottom-right-radius 5px
                 box-shadow 0 3px 25px 0px rgba(0, 0, 0, 0.2)
+
+                @media (min-width 768px)
+                    font-size-func(16)
 
                 li
                     border-bottom-left-radius 5px

@@ -46,7 +46,7 @@
             margin-bottom 0
 
     &__copyright
-        font-size-func(12)
+        font-size-func(14)
         color $grey-color
         text-align center
         hyphens()
@@ -56,22 +56,29 @@
             width 20%
             text-align right
 
+        @media (min-width 768px)
+            font-size-func(16)
+
     &__info
-        font-size-func(12)
+        font-size-func(14)
         color $grey-color
         text-align center
         margin-top 20px
         hyphens()
 
+        @media (min-width 768px)
+            font-size-func(16)
+
     &__links
         padding-left 0
         list-style none
-        font-size-func(12)
+        font-size-func(14)
         text-align center
         margin-top 20px
         margin-bottom 0
 
         @media (min-width 768px)
+            font-size-func(16)
             column-count 3
 
         li

@@ -2,8 +2,11 @@
     &__link-text
         hyphens()
         font-weight 700
-        font-size-func(12)
+        font-size-func(14)
         margin-bottom 10px
+
+        @media (min-width 768px)
+            font-size-func(16)
 
         &_big
             font-size-func(16)
@@ -12,14 +15,17 @@
         hyphens()
         {ibm}
         color #007db3
-        font-size-func(18)
+        font-size-func(16)
         font-weight 700
         margin-right 25px
         margin-bottom 20px
         max-width 100%
 
         &_small
-            font-size-func(12)
+            font-size-func(14)
+
+            @media (min-width 768px)
+                font-size-func(16)
 
     &__link-btn
         {ibm}

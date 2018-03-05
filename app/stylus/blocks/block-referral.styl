@@ -1,6 +1,6 @@
 .block-referral
     &__title
-        font-size-func(18)
+        font-size-func(16)
         color $green-color
         font-weight 700
         margin-bottom 20px
@@ -8,10 +8,13 @@
 
     &__text
         hyphens()
-        font-size-func(12)
+        font-size-func(14)
         color $grey-dark-color
         margin-bottom 20px
         font-weight 300
+
+        @media (min-width 768px)
+            font-size-func(16)
 
         p
             &:not(:last-child)

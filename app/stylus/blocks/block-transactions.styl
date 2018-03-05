@@ -8,12 +8,15 @@
         left 50%
         transform translate(-50%, -50%)
         padding-top 130px
-        font-size-func(12)
+        font-size-func(14)
         color $grey-dark-color
         background-image inline('logo-grey.png')
         background-repeat no-repeat
         background-position center 0
         opacity .5
+
+        @media (min-width 768px)
+            font-size-func(16)
 
     &__transactions-table
         margin-bottom 15px

@@ -147,7 +147,7 @@ a()
 
     &__title
         text-transform uppercase
-        font-size-func(18)
+        font-size-func(16)
         padding-top 8px
         padding-bottom 8px
         font-weight 700
@@ -169,10 +169,13 @@ a()
 
         span
             width 100%
-            font-size-func(12)
+            font-size-func(14)
             line-height 16px
             line-height 1.6rem
             letter-spacing 0
+
+            @media (min-width 768px)
+                font-size-func(16)
 
         > li
             position relative
@@ -242,10 +245,13 @@ a()
                 border-radius 0
                 border none
                 padding 24px 0 24px 65px
-                font-size-func(12)
+                font-size-func(14)
                 font-weight 700
                 border-left 2px solid transparent
                 color rgba(255, 255, 255, 0.7)
+
+                @media (min-width 768px)
+                    font-size-func(16)
 
                 &:before
                     content ''

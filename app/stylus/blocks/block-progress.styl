@@ -5,17 +5,23 @@
         hyphens()
 
         &_big
-            font-size-func(18)
+            font-size-func(16)
             font-weight 400
 
         &_small
-            font-size-func(12)
+            font-size-func(14)
             font-weight 400
             margin-bottom 25px
 
+            @media (min-width 768px)
+                font-size-func(16)
+
         &_bold
-            font-size-func(12)
+            font-size-func(14)
             font-weight 700
+
+            @media (min-width 768px)
+                font-size-func(16)
 
     &__progress
         margin-top 33px
