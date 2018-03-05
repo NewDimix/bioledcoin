@@ -1,8 +1,16 @@
 .video
     background-color #f8fcfb
+    font-size 0
 
     &__videos-wrap
         text-align center
+        margin-bottom 30px
+
+        @media (min-width 1250px)
+            {ibm}
+            width 48%
+            margin-right 4%
+            margin-bottom 0
 
     &__videos-item
         position relative
@@ -19,20 +27,8 @@
             width (375*1.2)px
 
         @media (min-width 768px)
-            height (222*1.9)px
-            width (375*1.9)px
-
-        @media (min-width 992px)
-            height (222*2.5)px
-            width (375*2.5)px
-
-        @media (min-width 1200px)
-            height (222*3.1)px
-            width (375*3.1)px
-
-        @media (min-width 1315px)
-            height (222*3.3)px
-            width (375*3.3)px
+            height (222*1.5)px
+            width (375*1.5)px
 
         &:focus
             outline none
@@ -61,3 +57,12 @@
 
         &:hover
             opacity 1
+
+    &__text
+        font-size-func(14)
+        line-height 24px
+        line-height 2.4rem
+
+        @media (min-width 1250px)
+            {ibm}
+            width 48%
