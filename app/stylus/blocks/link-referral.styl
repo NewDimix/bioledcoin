@@ -1,4 +1,12 @@
 .link-referral
+    &__table
+        td
+            hyphens()
+
+            &:last-child
+                text-align center
+                width 245px
+
     &__link-text
         hyphens()
         font-weight 700
@@ -13,13 +21,9 @@
 
     &__link
         hyphens()
-        {ibm}
         color #007db3
         font-size-func(16)
         font-weight 700
-        margin-right 25px
-        margin-bottom 20px
-        max-width 100%
 
         &_small
             font-size-func(14)
@@ -31,8 +35,5 @@
         {ibm}
         padding-top 13px
         padding-bottom 13px
-        margin-left 5px
-        margin-right 5px
         min-width 195px
-        margin-bottom 20px
         max-width 100%
