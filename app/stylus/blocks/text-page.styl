@@ -44,6 +44,21 @@
                 font-size-func(46)
                 margin-bottom 40px
 
+    &__content
+        margin-bottom 50px
+
+        li
+            &:not(:last-child)
+                margin-bottom 5px
+
+        a
+            color $dark-color
+            text-decoration none
+            border-bottom 1px solid $dark-color
+
+            &:hover
+                color #56768e
+
     &__text
         font-size-func(14)
         line-height 2em
@@ -72,6 +87,21 @@
 
         a
             color $turquoise-color
+
+        &_list
+            li
+                font-size-func(25)
+                padding-top 20px
+                padding-bottom 20px
+
+            h2
+                text-align left
+
+            p
+                font-size-func(14)
+
+                @media (min-width 768px)
+                    font-size-func(16)
 
     &__date
         margin-top 30px
