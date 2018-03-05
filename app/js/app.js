@@ -192,46 +192,17 @@ $(window).on('load', function () {
     ]
   });
 
+  if ($('.js-roadmap-item.slick-active').height() < $('.roadmap__dots').height()) {
+    $('.js-roadmap-slider').css('padding-top', ($('.roadmap__dots').height() - $('.js-roadmap-item.slick-active').height()) / 2);
+  } else {
+    $('.js-roadmap-slider').css('padding-top', '10px');
+  }
+
   $('.js-roadmap-slider').on('swipe', function(event, slick, currentSlide, nextSlide){
-    var px2 = $('.roadmap__dots li').outerHeight(true);
-    var px3 = (($('.roadmap__dots li').outerHeight()-$('.roadmap-item__title').height())/2);
-    var numberSlides = $(".roadmap__dots li").length - 1;
-
-    if ($(window).width() < '820') {
-      px2 = 0;
-      px3 = 0;
-    }
-
-    if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
+    if ($('.js-roadmap-item.slick-active').height() < $('.roadmap__dots').height()) {
+      $('.js-roadmap-slider').css('padding-top', ($('.roadmap__dots').height() - $('.js-roadmap-item.slick-active').height()) / 2);
+    } else {
       $('.js-roadmap-slider').css('padding-top', '10px');
-    }
-
-    if ($(window).width() < '880') {
-      if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
-        $('.js-roadmap-slider').css('padding-top', '0');
-      }
-    }
-
-    if ($('.roadmap__dots li:nth-child(2)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*1+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(3)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*2+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(4)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*3+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(5)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*4+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(6)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*5+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(7)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*6+px3+'px');
-    }
-    if ($('.roadmap__dots li:nth-child(8)').hasClass("slick-active")) {
-      $('.js-roadmap-slider').css('padding-top', px2*7+px3+'px');
     }
   });
 
@@ -242,6 +213,57 @@ $(window).on('load', function () {
   $(window).resize(function() {
     $(".js-roadmap-slider").trigger("swipe", []);
   });
+
+//  $('.js-roadmap-slider').on('swipe', function(event, slick, currentSlide, nextSlide){
+//    var px2 = $('.roadmap__dots li').outerHeight(true);
+//    var px3 = (($('.roadmap__dots li').outerHeight()-$('.roadmap-item__title').height())/2);
+//    var numberSlides = $(".roadmap__dots li").length - 1;
+//
+//    if ($(window).width() < '820') {
+//      px2 = 0;
+//      px3 = 0;
+//    }
+//
+//    if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', '10px');
+//    }
+//
+//    if ($(window).width() < '880') {
+//      if ($('.roadmap__dots li:first-child').hasClass("slick-active")) {
+//        $('.js-roadmap-slider').css('padding-top', '0');
+//      }
+//    }
+//
+//    if ($('.roadmap__dots li:nth-child(2)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*1+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(3)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*2+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(4)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*3+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(5)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*4+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(6)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*5+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(7)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*6+px3+'px');
+//    }
+//    if ($('.roadmap__dots li:nth-child(8)').hasClass("slick-active")) {
+//      $('.js-roadmap-slider').css('padding-top', px2*7+px3+'px');
+//    }
+//  });
+//
+//  $('.roadmap__dots li').click(function(){
+//    $(".js-roadmap-slider").trigger("swipe", []);
+//  });
+//
+//  $(window).resize(function() {
+//    $(".js-roadmap-slider").trigger("swipe", []);
+//  });
 
 
   $('.js-news-slider').slick({
