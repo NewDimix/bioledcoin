@@ -3,7 +3,7 @@
         <h2>Buy LBC Token</h2>
     </div>
 
-    <form class="modal__form form" action="#" method="post">
+    <form class="modal__form form js-calculate" action="#" method="post">
         <div class="content-right__block block-progress js-block-progress">
             <div class="block-progress__text block-progress__text_big">
                 <p>Main Sale is live 1 LBC = 1$</p>
@@ -58,13 +58,13 @@
 
         <div class="content-right__numbering">
             <div class="content-right__block block-payment js-block-payment">
-                <div class="block-payment__title content-right__block-title">
-                    <p>Choose your payment method</p>
+                <div class="block-payment__title">
+                    <p>Калькулятор токенов</p>
                 </div>
 
                 <div class="block-payment__crypto-wrap">
-                    <input type="radio" id="dash" name="method" value="dash" checked="checked">
-                    <label class="block-payment__crypto-item" for="dash">
+                    <input type="radio" id="dash" name="method" value="dash">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="dash">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_dash"></div>
                         </div>
@@ -78,7 +78,7 @@
                     </label>
 
                     <input type="radio" id="etherium" name="method" value="etherium">
-                    <label class="block-payment__crypto-item" for="etherium">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="etherium">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_eth"></div>
                         </div>
@@ -92,7 +92,7 @@
                     </label>
 
                     <input type="radio" id="litecoin" name="method" value="litecoin">
-                    <label class="block-payment__crypto-item" for="litecoin">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="litecoin">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_ltc"></div>
                         </div>
@@ -106,7 +106,7 @@
                     </label>
 
                     <input type="radio" id="bitcoin" name="method" value="bitcoin">
-                    <label class="block-payment__crypto-item" for="bitcoin">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="bitcoin">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_btc"></div>
                         </div>
@@ -120,7 +120,7 @@
                     </label>
 
                     <input type="radio" id="bitcoinCash" name="method" value="bitcoinCash">
-                    <label class="block-payment__crypto-item" for="bitcoinCash">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="bitcoinCash">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_bch"></div>
                         </div>
@@ -134,7 +134,7 @@
                     </label>
 
                     <input type="radio" id="waves" name="method" value="waves">
-                    <label class="block-payment__crypto-item" for="waves">
+                    <label class="block-payment__crypto-item js-youtube-stop js-next-btn" for="waves">
                         <div class="block-payment__img-wrap">
                             <div class="block-payment__img block-payment__img_waves"></div>
                         </div>
@@ -147,14 +147,12 @@
                         </div>
                     </label>
                 </div>
-
-                <button class="block-payment__btn btn btn_green js-next-btn js-youtube-stop" title="Buy LBC token" type="button">Buy LBC token</button>
             </div>
 
             <div class="content-right__block block-calculate js-block-calculate">
                 <button class="block-calculate__back js-back-btn" type="button">Back</button>
 
-                <div class="block-calculate__title content-right__block-title">
+                <div class="block-calculate__title">
                     <p>Calculate your investment amount</p>
                 </div>
 
@@ -205,7 +203,7 @@
             </div>
 
             <div class="content-right__block block-copy js-block-copy">
-                <div class="block-copy__title content-right__block-title">
+                <div class="block-copy__title">
                     <p>Copy this address and make the payment</p>
                 </div>
 
