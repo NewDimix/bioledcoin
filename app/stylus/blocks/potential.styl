@@ -4,13 +4,17 @@
 
     &__text
         hyphens()
-        margin-bottom 40px
+        margin-bottom 20px
         font-size-func(14)
         line-height 24px
         line-height 2.4rem
         text-align center
 
+        @media (min-width 480px)
+            margin-bottom 30px
+
         @media (min-width 768px)
+            margin-bottom 40px
             font-size-func(16)
             text-align left
 
@@ -19,14 +23,22 @@
 
     &__chart-wrap
         text-align center
-        padding-left 50px
-        padding-right 50px
+
+        @media (min-width 480px)
+            padding-left 50px
+            padding-right 50px
 
     &__chart
         text-align center
         margin-left 0
         margin-right 0
-        margin-bottom 40px
+        margin-bottom 20px
+
+        @media (min-width 480px)
+            margin-bottom 30px
+
+        @media (min-width 768px)
+            margin-bottom 40px
 
         @media (min-width 992px)
             {ibm}
