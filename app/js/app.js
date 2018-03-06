@@ -4,7 +4,7 @@ function countdown() {
   if(!element){return;}
 
   var d = new Date();
-  var x = new Date("05 Mar 2018 08:00");
+  var x = new Date("05 Apr 2018 08:00");
 
   d.setTime(Date.parse(x));
 
