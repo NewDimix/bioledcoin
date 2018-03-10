@@ -1,16 +1,28 @@
-.video
+.about
     background-color #f8fcfb
+    background-image url(../img/bg-earth-g.png)
+    background-position center
+    background-repeat no-repeat
     font-size 0
+
+    &__text
+        font-size-func(14)
+        line-height 24px
+        line-height 2.4rem
+        margin-bottom 30px
+
+        @media (min-width 768px)
+            font-size-func(16)
+            margin-bottom 50px
+
+        p
+            text-shadow 0 0 0 white
+
+            @media (min-width 1250px)
+                text-indent 35px
 
     &__videos-wrap
         text-align center
-        margin-bottom 30px
-
-        @media (min-width 1250px)
-            {ibm}
-            width 48%
-            margin-right 4%
-            margin-bottom 0
 
     &__videos-item
         position relative
@@ -29,6 +41,10 @@
         @media (min-width 768px)
             height (222*1.5)px
             width (375*1.5)px
+
+        @media (min-width 1100px)
+            height (222*1.9)px
+            width (375*1.9)px
 
         &:focus
             outline none
@@ -57,19 +73,3 @@
 
         &:hover
             opacity 1
-
-    &__text
-        font-size-func(14)
-        line-height 24px
-        line-height 2.4rem
-
-        @media (min-width 768px)
-            font-size-func(16)
-
-        @media (min-width 1250px)
-            {ibm}
-            width 48%
-
-        p
-            @media (min-width 1250px)
-                text-indent 35px

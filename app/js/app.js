@@ -48,14 +48,36 @@ countdown();
 
 
 // START header height
-$('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
-$('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
-$('.js-header-content-wrap').css('height', $(".js-header").outerHeight(true) - parseInt($(".js-header").css("padding-top")) - $(".js-menu-row").outerHeight(true));
+function headerBountyHeight() {
+if ($('.js-header-bounty').length === 0) return;
 
-$(window).resize(function() {
+$('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
+};
+
+function headerHeight() {
+if ($('.js-header').length === 0) return;
+
+if ($(window).width() > '1100') {
   $('.js-header').css('min-height', $(".js-header-content").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header").css("padding-top"))+parseInt($(".js-header").css("padding-bottom")));
-  $('.js-header-bounty').css('min-height', $(".js-header-content-bounty").outerHeight(true)+$(".js-menu-row").outerHeight(true)+parseInt($(".js-header-bounty").css("padding-top"))+parseInt($(".js-header-bounty").css("padding-bottom")));
-  $('.js-header-content-wrap').css('height', $(".js-header").outerHeight(true) - parseInt($(".js-header").css("padding-top")) - $(".js-menu-row").outerHeight(true));
+
+  if ($('.js-header-content').height() < $('.js-stages').innerHeight()) {
+    $('.js-header-content').css('min-height', $('.js-stages').innerHeight());
+  };
+
+  $('.js-header-content-wrap').css('height', $(".js-header").outerHeight(true) - parseInt($(".js-header").css("padding-top")) - parseInt($(".js-header").css("padding-bottom")) - $(".js-menu-row").outerHeight(true));
+} else {
+  $('.js-header').css('min-height', 'none');
+  $('.js-header-content').css('min-height', 'auto');
+  $('.js-header-content-wrap').css('height', 'auto');
+}
+};
+
+headerHeight();
+headerBountyHeight();
+
+$(window).resize(function () {
+headerHeight();
+headerBountyHeight();
 });
 // END header height
 

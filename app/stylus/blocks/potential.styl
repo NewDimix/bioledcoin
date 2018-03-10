@@ -1,6 +1,9 @@
 .potential
     font-size 0
-    background-color #f8fcfb
+    background-color #bff9f1
+    background-image url(../img/bg-earth-g.png)
+    background-repeat no-repeat
+    background-position center
 
     &__text
         hyphens()
@@ -19,14 +22,8 @@
             text-align left
 
         p
+            text-shadow 0 0 0 #bff9f1
             margin-bottom 0
-
-    &__chart-wrap
-        text-align center
-
-        @media (min-width 480px)
-            padding-left 50px
-            padding-right 50px
 
     &__chart
         text-align center
@@ -40,58 +37,7 @@
         @media (min-width 768px)
             margin-bottom 40px
 
-        @media (min-width 992px)
-            {ibm}
-            width 42%
-            margin-right 16%
-            margin-bottom 0
-
         img
             {ibt}
             width 100%
-            max-width 600px
             margin-bottom 20px
-
-
-    &__table
-        @media (min-width 992px)
-            {ibm}
-            width 42%
-
-        table
-            width 100%
-            border-collapse collapse
-            table-layout fixed
-
-        tr
-            width auto
-
-        td
-            font-size-func(14)
-            padding 6px 14px
-
-            @media (min-width 480px)
-                padding 7px 16px
-
-            @media (min-width 768px)
-                font-size-func(16)
-                padding 8px 18px
-
-            @media (min-width 992px)
-                padding 9px 20px
-
-            @media (min-width 1265px)
-                padding 10px 22px
-
-            &:first-child
-                text-align left
-
-            &:last-child
-                text-align center
-
-    &__icon
-        {ibm}
-        width 13px
-        height 13px
-        margin-right 10px
-        margin-bottom 2px
