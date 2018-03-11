@@ -1,12 +1,87 @@
-.capacity
-    background url(../img/dots-bg.png.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) center
-    animation gradient 10s ease infinite alternate
+@keyframes gradient2 {
+    from {
+        background url(../img/dots-bg.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) bottom / 150%
+    }
+    50% {
+        background url(../img/dots-bg.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) center / 100%
+    }
+    to {
+        background url(../img/dots-bg.png) center / cover no-repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) top / 150%
+    }
+}
 
-    .section__title
-        color white
+.capacity
+    background url(../img/dots-bg.png) center repeat, linear-gradient(-27deg, #30b4b8 21%, #59dcba 50%, #8dba4e 78%) center
+    color white
 
     &__text
-        color white
+        hyphens()
+        font-size-func(14)
+        line-height 24px
+        line-height 2.4rem
+        text-align center
+
+        @media (min-width 768px)
+            text-align left
+            font-size-func(16)
+
+        @media (min-width 1180px)
+            max-width 500px
+
+        p
+            text-shadow 0 0 0 #8dba4e
 
     &__chart
+        text-align left
+        margin-left 0
+        margin-right 0
+
+        @media (min-width 1180px)
+            margin-top -40px
+
+        img
+            width 100%
+            max-width 1000px
+            margin-bottom 15px
+
+            @media (min-width 1180px)
+                margin-bottom -70px
+
+    &__icon
+        width 30px
+        height 30px
+        position absolute
+        left 0
+        top 50%
+        transform translateY(-50%)
+
+    figcaption
         text-align center
+
+        @media (min-width 1180px)
+            text-align right
+
+        ul
+            {ibt}
+            margin-top 0
+            margin-bottom 0
+            padding-left 0
+            list-style none
+            text-align left
+
+            li
+                position relative
+                padding-left 45px
+                font-size-func(18)
+
+                @media (min-width 768px)
+                    font-size-func(23)
+
+                @media (min-width 992px)
+                    font-size-func(28)
+
+                @media (min-width 1180px)
+                    font-size-func(33)
+
+                &:not(:last-child)
+                    margin-bottom 20px
