@@ -411,7 +411,7 @@ $(window).on('load', function () {
     url: "https://nodes.wavesnodes.com/assets/balance/3PB9TyoBkRmnzHUSsWPhGeAEka81esmFRNS/Ci4x7rkRo37H3LxMC4bpVfusk8qkcspXTXFSFNSWaajj",
     success: function (data) {
       $("#tokenssold").html(100000000000 - data.balance);
-      progressValue = 100 - data.balance / 1000000000;
+      progressValue = 100 * (100000000000 - data.balance) / 600000000;
       progress();
     },
     dataType: "json"

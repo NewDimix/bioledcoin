@@ -1,0 +1,74 @@
+.differences
+    font-size 0
+
+    &__table-row
+        &:first-child
+            .differences__table-title
+                display block
+
+        &:nth-child(2n-1)
+            .differences__table-block
+                &:first-child
+                    background-color #009196
+
+                &:last-child
+                    background-color #82bc45
+
+        &:nth-child(2n)
+            .differences__table-block
+                &:first-child
+                    background-color #5fc7d0
+
+                &:last-child
+                    background-color #add07b
+
+    &__table-title
+        color white
+        font-size-func(23)
+        text-transform uppercase
+        text-align center
+        padding-top 5px
+        padding-bottom 5px7
+
+        @media (min-width 1300px)
+            display none
+
+    &__table-block
+        text-align center
+        overflow hidden
+
+        @media (min-width 1300px)
+            {ibt}
+            width 50%
+
+        &:first-child
+            .differences__table-title
+                background-color #395364
+
+        &:last-child
+            .differences__table-title
+                background-color #377224
+
+    &__table-text
+        padding 10px
+        color white
+        text-align center
+        font-size-func(20)
+        margin-bottom 15px
+
+        @media (min-width 480px)
+            margin-bottom 0
+            {ibm}
+            width 60%
+
+    &__table-img
+        margin-bottom 15px
+
+        @media (min-width 480px)
+            margin-bottom 0
+            {ibm}
+            width 40%
+
+        img
+            width auto
+            height 130px
