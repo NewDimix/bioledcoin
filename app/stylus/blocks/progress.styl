@@ -2,17 +2,18 @@
     &__stages-name
         margin-bottom 3px
         padding-left 0
-        lis-style none
+        list-style none
+        position relative
 
         .progress__stage-item
             color #03ddb6
             font-weight 700
-            ellipsis()
 
     &__stages-money
         padding-left 0
-        lis-style none
+        list-style none
         margin-bottom 3px
+        position relative
 
     &__stage-item
         font-size-func(14)
@@ -20,17 +21,20 @@
         padding-top 6px
         padding-bottom 6px
         transition all .15s ease
-        ellipsis()
 
         @media (min-width 768px)
             font-size-func(16)
 
         &:first-child
-            float left
+            position absolute
+            left 0
+            top 50%
+            transform translateY(-50%)
             width 100px
             border-right 1px solid $grey-light-color
 
         &:nth-child(2)
+            margin-left 110px
             text-align right
             text-transform none
 
@@ -47,7 +51,7 @@
         margin-bottom 3px
 
         li
-            {ibt}
+            {ibm}
             width 9px
             height 9px
             background-color rgba(255, 255, 255, 0.4)

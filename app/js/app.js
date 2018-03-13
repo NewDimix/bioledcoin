@@ -83,34 +83,6 @@ headerBountyHeight();
 
 
 
-// START polyfill.object-fit settings
-objectFit.polyfill({
-  selector: '.js-news-img',
-  fittype: 'cover',
-  disableCrossDomain: 'true'
-});
-
-objectFit.polyfill({
-  selector: '.js-team-img',
-  fittype: 'cover',
-  disableCrossDomain: 'true'
-});
-
-objectFit.polyfill({
-  selector: '.js-panel-avatar',
-  fittype: 'cover',
-  disableCrossDomain: 'true'
-});
-
-objectFit.polyfill({
-  selector: '.js-news-block-img',
-  fittype: 'cover',
-  disableCrossDomain: 'true'
-});
-// END polyfill.object-fit settings
-
-
-
 $(window).on('load', function () {
   // START preloader
   $preloader = $('.js-loader'),

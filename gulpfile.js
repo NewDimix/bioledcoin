@@ -82,6 +82,7 @@ gulp.task('css-vendors', function () {
     'node_modules/remodal/dist/remodal-default-theme.css',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
     'node_modules/animate.css/animate.css',
+    'node_modules/object-fit-cover/objectfitcover.min.css',
     'angular-material.css',
     'patch.css',
     'site.css',
@@ -130,13 +131,14 @@ gulp.task('js-vendors', function () {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/object-fit/dist/polyfill.object-fit.js',
     'node_modules/remodal/dist/remodal.min.js',
     'node_modules/clipboard/dist/clipboard.min.js',
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'node_modules/jquery-validation/dist/jquery.validate.min.js',
     'node_modules/jquery.dotdotdot/dist/jquery.dotdotdot.js',
-    'node_modules/wow.js/dist/wow.min.js'
+    'node_modules/wow.js/dist/wow.min.js',
+    'node_modules/object-fit-cover/objectfitcover.min.js',
+    'node_modules/picturefill/dist/picturefill.min.js'
   ])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())

@@ -52,6 +52,7 @@
             padding-top 18px
             padding-bottom 0
             float right
+            margin-left 4.5%
 
     &__menu
         margin 10px -10px 20px -10px
@@ -59,20 +60,21 @@
         @media (min-width 664px)
             margin-bottom 30px
             background linear-gradient(-27deg, rgba(48, 180, 184, 0.7) 10%, rgba(89, 220, 186, 0.7) 45%, #59dcba 55%, rgba(141, 186, 78, 0.7) 90%) center
+
+        @media (min-width 768px)
+            margin-bottom 60px
+            margin-top 15px
+            margin-left -10px
+            margin-right -10px
             border-top 2px solid rgba(255, 255, 255, 0.7)
             border-bottom 2px solid rgba(255, 255, 255, 0.7)
 
-        @media (min-width 768px)
-            margin-bottom 40px
-            margin-top 15px
-
         @media (min-width 1150px)
-            background none
             border none
-            margin 18px 4.5% 0 0
-
-        @media (min-width 1265px)
-            margin-right 96px
+            background none
+            margin-top 18px
+            margin-left 4.5%
+            margin-right 10px
 
         li
             @media (min-width 664px)
@@ -80,11 +82,8 @@
                 margin-bottom -2px
 
             &:not(:last-child)
-                @media (min-width 664px)
-                    margin-right 20px
-
                 @media (min-width 768px)
-                    margin-right 45px
+                    margin-right 10px
 
                 @media (min-width 1150px)
                     margin-right 0
