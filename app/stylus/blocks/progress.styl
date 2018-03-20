@@ -9,6 +9,9 @@
             color #03ddb6
             font-weight 700
 
+            &_ttn
+                text-transform none
+
     &__stages-money
         padding-left 0
         list-style none
@@ -17,10 +20,10 @@
 
     &__stage-item
         font-size-func(14)
-        text-transform uppercase
         padding-top 6px
         padding-bottom 6px
         transition all .15s ease
+        text-transform uppercase
 
         @media (min-width 768px)
             font-size-func(16)
@@ -36,7 +39,6 @@
         &:nth-child(2)
             margin-left 110px
             text-align right
-            text-transform none
 
         &_active
             border-right 3px solid #03ddb6 !important
