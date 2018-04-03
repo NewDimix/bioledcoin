@@ -83,7 +83,6 @@ gulp.task('css-vendors', function () {
     'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
     'node_modules/animate.css/animate.css',
     'node_modules/object-fit-cover/objectfitcover.min.css',
-    'angular-material.css',
     'patch.css',
     'site.css',
     'style.css'
